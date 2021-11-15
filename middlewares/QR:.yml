@@ -1,0 +1,37 @@
+QR:
+    - id
+    - nombre
+Pagina web:
+    - id
+    - url
+Listado Enlaces:
+    - id
+    - url multiples
+Vcard Plus
+    - id
+    - imagen
+    - nombre
+    - apellido
+    - telefono movil
+    - telefono fijo
+    - fax
+    - Correo electronico
+    - pagina web personal;
+    - Direccion 
+    - numero
+    - codigo postal
+    - Ciudad
+    - Estado
+    - pais 
+    - empresa
+    - profesion
+    - Resumen
+    - Redes sociales
+    - Pantalla bienvenida
+Negocio
+    - imagen
+    - empresa
+    - titulo
+    - subtitulo
+    - boton a una url
+    
