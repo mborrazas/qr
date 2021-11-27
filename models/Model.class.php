@@ -5,8 +5,8 @@ class Model
 {
     protected $ip;
     protected $user;
-    protected $password;
-    protected $name;
+    protected $passwordDB;
+    protected $nameDB;
     protected $conexion;
 
     public function __construct()
@@ -15,9 +15,9 @@ class Model
         try{
             $this->conexion = new mysqli(
                 $this->ip,
-                $this->user,
-                $this->password,
-                $this->name
+                $this->userDB,
+                $this->passwordDB,
+                $this->nameDB
             );
         }catch(Exception $e){
             error_log($e->getMessage());
@@ -28,8 +28,9 @@ class Model
     {
              
         $this->ip = IP;
-        $this->user = USER;
-        $this->password = PASSWORD;
-        $this->name = NAME;
+        $this->userDB = USERDB;
+        $this->passwordDB = PASSWORDDB;
+        $this->nameDB = NAMEDB;
     }
+
 }

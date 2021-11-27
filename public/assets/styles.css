@@ -17,6 +17,10 @@ html {
     height: 294px;
 }
 
+.col a {
+    width: 100%;
+}
+
 #home #titleHeader {
     padding-right: 88px;
     color: rgb(0, 0, 0);
@@ -106,9 +110,21 @@ html {
     background-color: #e5e8ef;
 }
 
-#step1 #containerTypes {
+#step1 aside, #step2 aside {
+    background: white;
+    width: 31%;
+    height: 100vh;
+    float: right;
+    flex: 1;
+    display: flex;
+}
+
+#step1 #containerTypes, #step2 #containerData {
     width: 67%;
     padding-left: 16%;
+    display: inline-block;
+    max-height: 90vh;
+    overflow: scroll;
 }
 
 #step2 #containerData,
@@ -167,20 +183,26 @@ html {
 #step1 .element {
     background-color: white;
     display: inline-block;
-    margin-right: 24px;
     text-align: center;
     box-shadow: 0 4px 6px #cdd1e0;
     border: 2px solid #CDD1E0;
     cursor: pointer;
     border-radius: 8px;
-    width: 178px;
-    height: 216px;
     padding: 20px 16px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 #step1 .element .title {
     color: #000;
-    font-size: 30px;
+    font-size: 16px;
+}
+
+#step1 .element p {
+    color: #5A5B70;
+    font-size: 13px;
+    text-align: center;
+    line-height: 18px;
 }
 
 #step2,
@@ -208,12 +230,6 @@ html {
 #step2 .subtitle {
     font-size: 28px;
     font-weight: 500;
-}
-
-#step2 .row {
-    padding-left: 15%;
-    padding-right: 15%;
-    margin-top: 82px;
 }
 
 #step2 button,
@@ -325,7 +341,7 @@ html {
     display: flex;
 }
 
-#bar .col button {
+#bar .col button, #bar #next {
     position: relative;
     margin: 0 auto;
     margin-top: 10px;
@@ -336,16 +352,39 @@ html {
     width: 44%;
 }
 
+#bar .step {
+    border: 2px solid #F3F5FE;
+    padding: 10px;
+    border-radius: 28px;
+    color: #606060;
+    font-size: 13px;
+    margin-right: 20px;
+    padding: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 #bar #cancelar {
     color: #000;
     border: 2px solid #CDD1E0;
     box-shadow: none;
     background-color: #FFF;
+    transition: all 0.2s ease-in-out;
 }
 
-#bar #siguiente {
+#bar #cancelar:hover {
+    background-color: rgba(117, 157, 254, 0.04);
+    border-color: rgb(139, 140, 165);
+}
+
+#bar #next {
     border: 2px solid #000;
     box-shadow: none;
     background: #000;
     color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+#bar #next:hover{
+    background-color: #27272D;
 }

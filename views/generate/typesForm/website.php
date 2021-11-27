@@ -1,0 +1,9 @@
+<div class="containerItem">
+    <h3 class="title">Nombre de tu código QR</h3>
+    <input type="text" name="name" placeholder="Ej. Mi código QR">
+</div>
+<div class="containerItem">
+    <h3 class="title">Información de la página web</h3>
+    <label class="label" for="url">URL de la página web</label>
+    <input type="text" name="url" placeholder="Ej. https://www.miweb.com/">
+</div>
