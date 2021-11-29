@@ -43,6 +43,12 @@
     <textarea name="resume" id="" cols="30" rows="10" placeholder="Ej. Lorem Ipsum"></textarea>
 </div>
 <div class="containerItem">
-    <h3 class="title">Nombre de tu código QR</h3>
+    <h3 class="title">Redes Sociales</h3>
     <input type="text" name="name" placeholder="Ej. Mi código QR">
+</div>
+<div class="containerItem">
+    <h3 class="title">Pantalla de bienvenida</h3>
+    <div class="containerEnlace">
+        <button>Vista previa</button>
+    </div>
 </div>

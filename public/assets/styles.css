@@ -110,7 +110,7 @@ html {
     background-color: #e5e8ef;
 }
 
-#step1 aside, #step2 aside {
+#step1 aside, #step2 aside, #step3 aside, #step4 aside {
     background: white;
     width: 31%;
     height: 100vh;
@@ -128,9 +128,11 @@ html {
 }
 
 #step2 #containerData,
-#step3 #containerData {
+#step3 #containerData,
+#step4 #containerData{
     width: 67%;
     padding-left: 16%;
+    display: inline-block;
 }
 
 #step2 #title {
@@ -139,17 +141,48 @@ html {
 }
 
 #step2 .containerItem,
-#step3 .containerItem {
+#step3 .containerItem,
+#step4 .containerItem{
     background: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 77%;
+    width: 89%;
     margin: 0 auto;
     margin-top: 20px;
     padding-left: 42px;
     padding-right: 42px;
     box-shadow: -1px 2px 0 #cdd1e0;
     border-radius: 6px;
+}
+
+#step4 #loginContainer{
+    display: none;
+}
+
+#step4 .buttonAction{
+    width: 100%;
+    background: black;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 13px;
+    font-family: Manrope, sans-serif;
+}
+
+#step4 #containerData #registerContainer h3, #step4 #containerData #loginContainer h3 {
+    text-align: left;
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+}
+
+#step4 .haveAccount{
+    font-family: Manrope, sans-serif;
+    font-size: 13px;
+    margin-top: 15px;
+}
+#step4 .haveAccount span{
+    color:#759DFE;
+    cursor: pointer;
 }
 
 #step2 .containerItem input {
@@ -206,7 +239,8 @@ html {
 }
 
 #step2,
-#step3 {
+#step3,
+#step4{
     min-height: 100vh;
     background-color: #e4e7ee;
     text-align: center;
@@ -283,12 +317,21 @@ html {
     text-align: left;
 }
 
+#step3 .imgFrame{
+    height: 80px;
+}
+
 #step3 #miniFrame {
-    min-height: fit-content;
-    height: 159px;
     padding: 20px;
     background: #f1f1f1;
     border-radius: 6px;
+}
+
+#step3 #containerFrames {
+    overflow: hidden;
+    height: 80px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 #step3 #miniFrame .one {
@@ -297,6 +340,15 @@ html {
     height: fit-content;
 }
 
+#step3 #miniFrame label{
+    color: gray;
+    text-align: left;
+    width: 100%;
+    padding-left: 13px;
+    margin-top: 6px;
+}
+
+
 #step3 #miniFrame .one label {
     width: 100%;
     text-align: left;
@@ -304,6 +356,21 @@ html {
 
 #step3 #miniFrame .one input {
     display: block;
+}
+
+#step4 .containerItem .title{
+    font-size: 25px;
+    font-weight: 400;
+}
+#step4 .containerItem .subtitle{
+    color:gray
+}
+
+#step4 #containerData h2{
+    text-align: left;
+    padding-left: 45px;
+    margin-top: 23px;
+    font-weight: 300;
 }
 
 #containerTipos {
@@ -352,6 +419,13 @@ html {
     width: 44%;
 }
 
+#step4 label{
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    color: #5A5B70;
+}
+
 #bar .step {
     border: 2px solid #F3F5FE;
     padding: 10px;
@@ -387,4 +461,14 @@ html {
 
 #bar #next:hover{
     background-color: #27272D;
+}
+
+.input{
+    border: 2.5px solid #CDD1E0;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.width100{
+    width: 100%;
 }

@@ -6,7 +6,7 @@
     <section id="containerTypes">
         <h2 id="title">Elige un tipo de QR</h2>
         <div class="row">
-            <div class="col element">
+            <div class="col element" data-type="website">
                 <h3 class="title">Página web</h3>
                 <p>Abre una URL</p>
             </div>
