@@ -2,6 +2,9 @@
 
 abstract class QRmodel extends Model
 {
+
+    const WEBSITE = 'website';
+    
     private $url;
     private $id;
     private $design;
@@ -9,15 +12,16 @@ abstract class QRmodel extends Model
     private $welcomescreen;
     private $active;
     private $userId;
+    private $typeQR;
 
-    public function __construct($design, $name, $welcomescreen = '', $active = 0, $userId = 0, $id = null, $url = 'test')
+    public function __construct($design, $name, $welcomescreen = '', $active = 0, $userId = 0, $id = null, $url = '')
     {
         $this->design = $design;
         $this->name = $name;
         $this->welcomescreen = $welcomescreen;
         $this->active = $active;
         $this->id = $id;
-        $this->url = 'test';
+        $this->url = $url;
         $this->userId = $userId;
         parent::__construct();
     }
@@ -35,6 +39,10 @@ abstract class QRmodel extends Model
     public function setWelcomeScreen($welcomescreen)
     {
         $this->welcomescreen = $welcomescreen;
+    }
+
+    public function setTypeQR($typeQR){
+        $this->typeQR = $typeQR;
     }
 
     public function getActive(){
@@ -84,22 +92,37 @@ abstract class QRmodel extends Model
         return $this->userId;
     }
 
+    public function getTypeQR(){
+        return $this->typeQR;
+    }
+
     abstract function __toJson();
+
+    private function generateUrl($length = 30) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
 
     public function save()
     {   
          try {
-            $sql = "INSERT INTO codes(url,name,design,welcomeScreen,active,userId,dataQR) VALUES(?,?,?,?,?,?,?);";
+            $sql = "INSERT INTO codes(url,name,design,welcomeScreen,active,userId,dataQR,typeQR) VALUES(?,?,?,?,?,?,?,?);";
             $sentencia = $this->conexion->prepare($sql);
             $sentencia->bind_param(
-                "ssssiis",
-                $this->getUrlQR(),
+                "ssssiiss",
+                $this->generateUrl(),
                 $this->getName(),
                 $this->getdesgin(),
                 $this->getWelcomeScreen(),
                 $this->getActive(),
                 $this->getUserId(),
-                $this->__toJson()
+                $this->__toJson(),
+                $this->getTypeQR()
             );
             $sentencia->execute();
             if ($sentencia->error) {

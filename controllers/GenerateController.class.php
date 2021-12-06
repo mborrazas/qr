@@ -83,7 +83,8 @@ class GenerateController
         $data = $item['data'];
         switch($item['type']){
             case 'website':
-                $model = new websiteQRmodel($item['design'], $data['name'], '', $_SESSION['user']);
+                $model = new websiteQRmodel(json_encode($item['design']), $data['name'], '', $_SESSION['user']);
+                $model->setTypeQR(QRmodel::WEBSITE);
                 $model->save();
                 break;
         }
