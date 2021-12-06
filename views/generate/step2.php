@@ -1,4 +1,5 @@
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/head.php"; ?>
+<?php $type = $parametros['type'] ?? 'website'; ?>
 <body class="container-fluid" id="step2">
 <header>
 
@@ -6,10 +7,10 @@
 <form method="POST" action="/generate/step2" id="formList">
     <section id="containerData">
         <h2 id="title">2. Contenido de tu código QR</h2>
-        <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/generate/typesForm/website.php"; ?>
+        <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/generate/typesForm/".$type.".php"; ?>
     </section>
     <aside>
-
+        <h2>Ejemplo</h2>
 
     </aside>
     <section id="bar">

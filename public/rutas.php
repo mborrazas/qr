@@ -8,6 +8,7 @@ Routes::Add("/generate/step2", "post", "GenerateController::requestStep2");
 Routes::Add("/generate/step3", "get", "GenerateController::step3");
 Routes::Add("/generate/step3", "post", "GenerateController::requestStep3");
 Routes::Add("/generate/step4", "get", "UserController::step4");
-Routes::Add("/generate/step4", "post", "UserController::requestStep4");
+Routes::Add("/generate/createAccount", "post", "UserController::createAccount");
+Routes::Add("/generate/login", "post", "UserController::login");
 
 Routes::Run();

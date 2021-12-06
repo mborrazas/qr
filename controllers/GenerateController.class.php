@@ -49,8 +49,11 @@ class GenerateController
         return generarHtml("generate/step2", ['type' => $qr['type']]);
     }
 
-    public static function requestStep2()
+    public static function requestStep2($request)
     {
+        $qr = self::getQR();
+        $qr['data'] = $request['post'];
+        self::saveQR($qr);
         header('Location: /generate/step3');
     }
 
@@ -59,9 +62,22 @@ class GenerateController
         return generarHtml("generate/step3", []);
     }
 
-    public static function requestStep3()
+    public static function requestStep3($request)
     {
+        $qr = self::getQR();
+        $qr['design'] = $request['post'];
+        self::saveQR($qr);
         header('Location: /generate/step4');
+    }
+
+    private static function saveDataForQR(){
+        if(!isset($item['type'])){
+            throw new Exception('Error en el tipo de QR.');
+        }
+        switch($item){
+            case 'website':
+                break;
+        }
     }
 
 }
