@@ -133,4 +133,37 @@ abstract class QRmodel extends Model
             error_log($e->getMessage());
         }
     }
+
+    public static function getQRForUrl(string $url){
+        $model = new Model();
+        $conexion = $model->getConexion();
+        try {
+            $sql = "SELECT * FROM codes where url = ?;";
+            $sentencia = $conexion->prepare($sql);
+            $sentencia->bind_param(
+                "s",
+                $url
+            );
+            $sentencia->execute();
+            $dataQR = $sentencia->get_result();
+            while ($row = $dataQR->fetch_assoc()) {
+               return self::createDataToModel($row);
+            }
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
+    }
+
+    private static function createDataToModel($data){
+        switch($data['typeQR']){
+            case self::WEBSITE:
+                $website = new websiteQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
+                $dataWebsite = json_decode($data['dataQR'], true);
+                $website->setUrl($dataWebsite['url']);
+                return $website;
+                break;
+        }
+    }
+
+   
 }

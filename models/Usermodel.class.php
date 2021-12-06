@@ -55,7 +55,7 @@ class Usermodel extends Model
             if ($sentencia->error) {
                 throw new Exception("Hubo un problema al guardar el usuario: " . $sentencia->error);
             }
-            return true;
+            return $sentencia->insert_id;
         } catch (Exception $e) {
             error_log($e->getMessage());
         }

@@ -19,10 +19,14 @@ class Model
                 $this->passwordDB,
                 $this->nameDB
             );
-         
+            return $this->conexion;
         }catch(Exception $e){
             error_log($e->getMessage());
         }  
+    }
+
+    public function getConexion(){
+        return $this->conexion;
     }
 
     protected function init()

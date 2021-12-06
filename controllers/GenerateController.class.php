@@ -67,13 +67,26 @@ class GenerateController
         $qr = self::getQR();
         $qr['design'] = $request['post'];
         self::saveQR($qr);
-        header('Location: /generate/step4');
+        if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
+            header('Location: /generate/createqr');
+        }else{
+            header('Location: /generate/step4');
+        }
+    }
+
+    public static function step5(){
+        header('Location: /generate/step6');
+        return generarHtml("generate/step5", []);
+    }
+
+    public static function step6(){
+        return generarHtml("generate/step6", []);
     }
 
     public static function createqr(){
         $qr = self::getQR();
         self::saveDataForQR($qr);
-        
+        header('Location: /generate/step5');
     }
 
     private static function saveDataForQR($item){
@@ -85,6 +98,7 @@ class GenerateController
             case 'website':
                 $model = new websiteQRmodel(json_encode($item['design']), $data['name'], '', $_SESSION['user']);
                 $model->setTypeQR(QRmodel::WEBSITE);
+                $model->setUrl($data['url']);
                 $model->save();
                 break;
         }
