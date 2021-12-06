@@ -43,5 +43,21 @@ class Usermodel extends Model
 
     public function save()
     {
+        try {
+            $sql = "INSERT INTO users(email,password) VALUES(?,?);";
+            $sentencia = $this->conexion->prepare($sql);
+            $sentencia->bind_param(
+                "ss",
+                $this->getEmail(),
+                $this->encryptPassword()
+            );
+            $sentencia->execute();
+            if ($sentencia->error) {
+                throw new Exception("Hubo un problema al guardar el usuario: " . $sentencia->error);
+            }
+            return true;
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
     }
 }

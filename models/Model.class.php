@@ -10,7 +10,7 @@ class Model
     protected $conexion;
 
     public function __construct()
-    {
+    {   
         $this->init();
         try{
             $this->conexion = new mysqli(
@@ -19,6 +19,7 @@ class Model
                 $this->passwordDB,
                 $this->nameDB
             );
+         
         }catch(Exception $e){
             error_log($e->getMessage());
         }  

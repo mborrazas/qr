@@ -1,6 +1,6 @@
 <?php 
     const IP="localhost";
-    const NAME="qr";
-    const USER="root";
-    const PASSWORD="";
+    const NAMEDB="qr";
+    const USERDB="test";
+    const PASSWORDDB="";
 

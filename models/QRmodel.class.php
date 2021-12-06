@@ -10,15 +10,16 @@ abstract class QRmodel extends Model
     private $active;
     private $userId;
 
-    public function __construct($design, $name, $welcomescreen, $active, $userId = 0, $id = null, $url = '')
+    public function __construct($design, $name, $welcomescreen = '', $active = 0, $userId = 0, $id = null, $url = 'test')
     {
         $this->design = $design;
         $this->name = $name;
         $this->welcomescreen = $welcomescreen;
         $this->active = $active;
         $this->id = $id;
-        $this->url = $url;
+        $this->url = 'test';
         $this->userId = $userId;
+        parent::__construct();
     }
 
     public function setDesign($design)
@@ -71,7 +72,7 @@ abstract class QRmodel extends Model
         return $this->id;
     }
 
-    public function getUrl(){
+    public function getUrlQR(){
         return $this->url;
     }
 
@@ -84,4 +85,29 @@ abstract class QRmodel extends Model
     }
 
     abstract function __toJson();
+
+    public function save()
+    {   
+         try {
+            $sql = "INSERT INTO codes(url,name,design,welcomeScreen,active,userId,dataQR) VALUES(?,?,?,?,?,?,?);";
+            $sentencia = $this->conexion->prepare($sql);
+            $sentencia->bind_param(
+                "ssssiis",
+                $this->getUrlQR(),
+                $this->getName(),
+                $this->getdesgin(),
+                $this->getWelcomeScreen(),
+                $this->getActive(),
+                $this->getUserId(),
+                $this->__toJson()
+            );
+            $sentencia->execute();
+            if ($sentencia->error) {
+                throw new Exception("Hubo un problema al guardar el qr: " . $sentencia->error);
+            }
+            return true;
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+        }
+    }
 }

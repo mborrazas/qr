@@ -4,9 +4,9 @@ class websiteQRmodel extends QRmodel
 {
     private $url;
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen = '',$userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setUrl($url){
@@ -16,8 +16,8 @@ class websiteQRmodel extends QRmodel
     public function getUrl(){
         return $this->url;
     }
-
-    function __toJson()
+    
+    public function __toJson()
     {
         return json_encode([
            'url' => $this->getUrl()

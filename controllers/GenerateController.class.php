@@ -70,12 +70,21 @@ class GenerateController
         header('Location: /generate/step4');
     }
 
-    private static function saveDataForQR(){
+    public static function createqr(){
+        $qr = self::getQR();
+        self::saveDataForQR($qr);
+        
+    }
+
+    private static function saveDataForQR($item){
         if(!isset($item['type'])){
             throw new Exception('Error en el tipo de QR.');
         }
-        switch($item){
+        $data = $item['data'];
+        switch($item['type']){
             case 'website':
+                $model = new websiteQRmodel($item['design'], $data['name'], '', $_SESSION['user']);
+                $model->save();
                 break;
         }
     }
