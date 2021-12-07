@@ -5,7 +5,8 @@ class GenerateController
 {
 
     private static function getQR()
-    {   session_start();
+    {
+        session_start();
         if (isset($_SESSION['qr'])) {
             $qr = json_decode($_SESSION['qr'], true);
         } else {
@@ -18,7 +19,8 @@ class GenerateController
         return $qr;
     }
 
-    private static function saveQR($qr){
+    private static function saveQR($qr)
+    {
         $_SESSION['qr'] = json_encode($qr);
         return;
     }
@@ -31,7 +33,7 @@ class GenerateController
 
     public static function requestListTypes($request)
     {
-        if(!isset($request['post']['type'])){
+        if (!isset($request['post']['type'])) {
             throw new Exception('El tipo es requerido.');
         }
         $qr = self::getQR();
@@ -43,7 +45,7 @@ class GenerateController
     public static function step2()
     {
         $qr = self::getQR();
-        if($qr['type'] == ''){
+        if ($qr['type'] == '') {
             throw new Exception('El tipo es requerido.');
         }
         return generarHtml("generate/step2", ['type' => $qr['type']]);
@@ -51,7 +53,7 @@ class GenerateController
 
     public static function requestStep2($request)
     {
-        $qr = self::getQR();
+        $qr = [];
         $qr['data'] = $request['post'];
         self::saveQR($qr);
         header('Location: /generate/step3');
@@ -67,41 +69,78 @@ class GenerateController
         $qr = self::getQR();
         $qr['design'] = $request['post'];
         self::saveQR($qr);
-        if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
+        if (isset($_SESSION['user']) && $_SESSION['user'] !== null) {
             header('Location: /generate/createqr');
-        }else{
+        } else {
             header('Location: /generate/step4');
         }
     }
 
-    public static function step5(){
+    public static function step5()
+    {
         header('Location: /generate/step6');
         return generarHtml("generate/step5", []);
     }
 
-    public static function step6(){
-        return generarHtml("generate/step6", []);
+    public static function step6()
+    {
+        $qr = self::getQR();
+        return generarHtml("generate/step6", ['url' => $qr['url']]);
     }
 
-    public static function createqr(){
+    private static function generateQR($url)
+    {
+        require $_SERVER["DOCUMENT_ROOT"] . "/../qrlib.php";
+        $ruta_qr = $_SERVER["DOCUMENT_ROOT"] . "/{$url}.png";
+        QRcode::png('http://1dcb-2800-a4-17c3-2f00-4501-9088-d3b2-c839.ngrok.io/site?data=' . $url, $ruta_qr, "Q", 10, 1);
+    }
+
+    public static function createqr()
+    {
         $qr = self::getQR();
         self::saveDataForQR($qr);
         header('Location: /generate/step5');
     }
 
-    private static function saveDataForQR($item){
-        if(!isset($item['type'])){
+    private static function saveDataForQR($item)
+    {
+         if (!isset($item['data']['typeText'])) {
             throw new Exception('Error en el tipo de QR.');
         }
         $data = $item['data'];
-        switch($item['type']){
-            case 'website':
-                $model = new websiteQRmodel(json_encode($item['design']), $data['name'], '', $_SESSION['user']);
+        switch ($data['typeText']) {
+            case QRmodel::WEBSITE:
+                $model = new websiteQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
                 $model->setTypeQR(QRmodel::WEBSITE);
                 $model->setUrl($data['url']);
-                $model->save();
+                $url = $model->save();
+                self::generateQR($url);
+                $qr = self::getQR();
+                $qr['url'] = $url;
+                self::saveQR($qr);
+                break;
+            case QRmodel::LINKS:
+                $model = new listOfLinksQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
+                $model->setTypeQR(QRmodel::LINKS);
+                $model->setTitle($data['title']);
+                $model->setLinks($data['links']);
+                $model->setDescription($data['description']);
+                $url = $model->save();
+                self::generateQR($url);
+                $qr = self::getQR();
+                $qr['url'] = $url;
+                self::saveQR($qr);
+                break;
+            case QRmodel::VCARD:
+                 $model = new vcardplusQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
+                $model->setTypeQR(QRmodel::VCARD);
+                $model->setData($data);
+                $url = $model->save();
+                self::generateQR($url);
+                $qr = self::getQR();
+                $qr['url'] = $url;
+                self::saveQR($qr);
                 break;
         }
     }
-
 }

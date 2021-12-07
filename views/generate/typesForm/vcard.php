@@ -1,16 +1,17 @@
+<input type="text" name="typeText" value='vcard' hidden />
 <div class="containerItem">
     <h3 class="title">Nombre de tu código QR</h3>
-    <input type="text" name="name" placeholder="Ej. Mi código QR">
+    <input type="text" name="qrName" placeholder="Ej. Mi código QR">
 </div>
 <div class="containerItem">
     <h3 class="title">Diseño</h3>
 </div>
 <div class="containerItem">
     <h3 class="title">Información de la Vcard</h3>
-    <label for="name">Nombre *</label>
-    <input type="text" name="name" placeholder="Ej. Pablo">
-    <label for="name">Apellido</label>
-    <input type="text" name="name" placeholder="Ej. Pablo">
+    <label for="peopleName">Nombre *</label>
+    <input type="text" name="peopleName" placeholder="Ej. Pablo">
+    <label for="peopleLastname">Apellido</label>
+    <input type="text" name="peopleLastname" placeholder="Ej. Pablo">
     <h3 class="title">Información de contacto</h3>
     <div>
         <label for="mobilePhone">Teléfono móvil</label>

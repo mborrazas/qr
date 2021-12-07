@@ -11,7 +11,6 @@
     </section>
     <aside>
         <h2>Ejemplo</h2>
-
     </aside>
     <section id="bar">
         <div class="row">

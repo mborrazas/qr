@@ -11,6 +11,9 @@ class TemplateController
             }
             $dataQR = trim($request['get']['data']);          
             $info = QRmodel::getQRForUrl($dataQR);
+            if($info instanceof websiteQRmodel){
+                header('Location: '.$info->getUrl());
+            }
         }catch(Exception $e){
 
         }

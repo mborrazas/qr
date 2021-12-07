@@ -6,6 +6,7 @@ class vcardplusQRmodel extends QRmodel
     private $peopleName;
     private $surname;
     private $mobilePhone;
+    private $phone;
     private $landline;
     private $fax;
     private $email;
@@ -22,9 +23,9 @@ class vcardplusQRmodel extends QRmodel
     private $socialNetworks;
 
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen, $userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setImage($image)
@@ -39,12 +40,20 @@ class vcardplusQRmodel extends QRmodel
 
     public function setPeopleName($peopleName)
     {
-        $this->peopleName = peopleName;
+        $this->peopleName = $peopleName;
     }
 
     public function getPeopleName()
     {
         return $this->peopleName;
+    }
+
+    public function setPhone($phone){
+        $this->phone = $phone;
+    }
+
+    public function getPhone(){
+        return $this->phone;
     }
 
     public function setSurname($surname)
@@ -207,6 +216,21 @@ class vcardplusQRmodel extends QRmodel
         return $this->socialNetworks;
     }
 
+    public function setData($data){
+        $this->setMobilePhone($data['mobilePhone']);
+        $this->setName($data['name']);
+        $this->setPhone($data['phone']);
+        $this->setFax($data['fax']);
+        $this->setEmail($data['email']);
+        $this->setPersonalWebsite($data['website']);
+        $this->setCity($data['city']);
+        $this->setState($data['state']);
+        $this->setCountry($data['country']);
+        $this->setCompany($data['company']);
+        $this->setProfession($data['profesion']);
+        $this->setSummary($data['resume']);
+    }
+
     function __toJson()
     {
         return json_encode([
@@ -214,6 +238,7 @@ class vcardplusQRmodel extends QRmodel
             'peopleName' => $this->getPeopleName(),
             'surname' => $this->getSurname(),
             'mobilePhone' => $this->getMobilePhone(),
+            'phone' => $this->getPhone(),
             'landline' => $this->getLandline(),
             'fax' => $this->getFax(),
             'email' => $this->getEmail(),

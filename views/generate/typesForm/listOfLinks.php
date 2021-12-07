@@ -1,14 +1,15 @@
+<input type="text" name="typeText" value='links' hidden />
 <div class="containerItem">
     <h3 class="title">Nombre de tu código QR</h3>
-    <input type="text" name="name" placeholder="Ej. Mi código QR">
+    <input type="text" name="qrName" placeholder="Ej. Mi código QR">
 </div>
 <div class="containerItem">
     <h3 class="title">Diseño</h3>
 </div>
 <div class="containerItem">
     <h3 class="title">Información de la lista de enlaces</h3>
-    <label class="label" for="titulo">Titulo</label>
-    <input type="text" name="titulo" placeholder="">
+    <label class="label" for="title">Titulo</label>
+    <input type="text" name="title" placeholder="">
     <label class="label" for="description">Descripción</label>
     <input type="text" name="description" placeholder="">
 </div>

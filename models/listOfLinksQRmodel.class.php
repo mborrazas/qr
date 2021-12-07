@@ -5,11 +5,12 @@ class listOfLinksQRmodel extends QRmodel
     private $logo;
     private $description;
     private $links;
+    private $title;
     private $socialNetworks;
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen = '', $userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setLogo($logo){
@@ -36,6 +37,14 @@ class listOfLinksQRmodel extends QRmodel
         return $this->links;
     }
 
+    public function setTitle($title){
+        $this->title = $title;
+    }
+
+    public function getTitle(){
+        return $this->title;
+    }
+
     public function setSocialNetworks($socialNetworks){
         $this->socialNetworks = $socialNetworks;
     }
@@ -48,6 +57,7 @@ class listOfLinksQRmodel extends QRmodel
     {
         return json_encode([
             'logo' => $this->getLogo(),
+            'title' => $this->getTitle(),
             'description' => $this->getDescription(),
             'links' => $this->getLinks(),
             'socialNetworks' => $this->getSocialNetworks()

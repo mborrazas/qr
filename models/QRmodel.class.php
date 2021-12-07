@@ -4,6 +4,8 @@ abstract class QRmodel extends Model
 {
 
     const WEBSITE = 'website';
+    const LINKS = 'links';
+    const VCARD = 'vcard';
     
     private $url;
     private $id;
@@ -111,11 +113,12 @@ abstract class QRmodel extends Model
     public function save()
     {   
          try {
+            $url = $this->generateUrl();
             $sql = "INSERT INTO codes(url,name,design,welcomeScreen,active,userId,dataQR,typeQR) VALUES(?,?,?,?,?,?,?,?);";
             $sentencia = $this->conexion->prepare($sql);
             $sentencia->bind_param(
                 "ssssiiss",
-                $this->generateUrl(),
+                $url,
                 $this->getName(),
                 $this->getdesgin(),
                 $this->getWelcomeScreen(),
@@ -128,7 +131,7 @@ abstract class QRmodel extends Model
             if ($sentencia->error) {
                 throw new Exception("Hubo un problema al guardar el qr: " . $sentencia->error);
             }
-            return true;
+            return $url;
         } catch (Exception $e) {
             error_log($e->getMessage());
         }
