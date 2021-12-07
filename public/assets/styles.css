@@ -834,6 +834,47 @@ aside h2 {
     margin-top: 0px;
 }
 
+#listOfLinks #addLink {
+    width: 100%;
+    background: transparent;
+    border: 3px solid rgb(205, 209, 224);
+    color: black;
+    margin-top: 18px;
+}
+
+#listOfLinks #socialNetworks button {
+    background: transparent;
+    border: 1px solid #CDD1E0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#listOfLinks #socialNetworks button svg {
+    height: 40px;
+}
+
+#listOfLinks #containerLinksSocialNetwork {
+    height: fit-content;
+}
+
+#listOfLinks #containerLinksSocialNetwork .item {
+    height: 54px;
+    display: none;
+}
+
+#listOfLinks #containerLinksSocialNetwork .item .logo {
+    float: left;
+}
+
+#listOfLinks #containerLinksSocialNetwork .item .logo svg {
+    height: 30px;
+}
+
+#listOfLinks #containerLinksSocialNetwork .item input {
+    float: right;
+    width: 70%;
+}
+
 .hide {
     display: none;
 }

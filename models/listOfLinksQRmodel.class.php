@@ -34,7 +34,7 @@ class listOfLinksQRmodel extends QRmodel
     }
 
     public function getLinks(){
-        return $this->links;
+        return json_decode($this->links, true);
     }
 
     public function setTitle($title){
@@ -46,11 +46,11 @@ class listOfLinksQRmodel extends QRmodel
     }
 
     public function setSocialNetworks($socialNetworks){
-        $this->socialNetworks = $socialNetworks;
+         $this->socialNetworks = $socialNetworks;
     }
 
     public function getSocialNetworks(){
-        return $this->socialNetworks;
+        return json_decode($this->socialNetworks, true);
     }
 
     function __toJson()
@@ -59,8 +59,8 @@ class listOfLinksQRmodel extends QRmodel
             'logo' => $this->getLogo(),
             'title' => $this->getTitle(),
             'description' => $this->getDescription(),
-            'links' => $this->getLinks(),
-            'socialNetworks' => $this->getSocialNetworks()
+            'links' => json_encode($this->getLinks()),
+            'socialNetworks' => json_encode($this->getSocialNetworks())
         ]);
     }
     

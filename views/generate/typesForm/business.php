@@ -1,6 +1,7 @@
+<input type="text" name="typeText" value='business' hidden />
 <div class="containerItem">
     <h3 class="title">Nombre de tu código QR</h3>
-    <input type="text" name="name" placeholder="Ej. Mi código QR">
+    <input type="text" name="qrName" placeholder="Ej. Mi código QR">
 </div>
 <div class="containerItem">
     <h3 class="title">Diseño</h3>
@@ -54,8 +55,8 @@
 <div class="containerItem">
     <h3 class="title">Información de contacto</h3>
     <div class="containerButton">
-        <label class="label" for="name">Nombre</label>
-        <input type="text" name="name" placeholder="Ej. ">
+        <label class="label" for="namePerson">Nombre</label>
+        <input type="text" name="namePerson" placeholder="Ej. ">
         <label class="label" for="phone">Teléfono</label>
         <input type="text" name="phone" placeholder="Ej. 00 000 000">
     </div>
@@ -68,7 +69,7 @@
 </div>
 <div class="containerItem">
     <h3 class="title">Sobre la empresa</h3>
-    <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
+    <textarea name="aboutCompany" id="" cols="30" rows="10" placeholder=""></textarea>
 </div>
 <div class="containerItem">
     <h3 class="title">Redes Sociales</h3>

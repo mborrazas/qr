@@ -104,7 +104,7 @@ class GenerateController
 
     private static function saveDataForQR($item)
     {
-         if (!isset($item['data']['typeText'])) {
+        if (!isset($item['data']['typeText'])) {
             throw new Exception('Error en el tipo de QR.');
         }
         $data = $item['data'];
@@ -123,17 +123,56 @@ class GenerateController
                 $model = new listOfLinksQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
                 $model->setTypeQR(QRmodel::LINKS);
                 $model->setTitle($data['title']);
-                $model->setLinks($data['links']);
                 $model->setDescription($data['description']);
+                $enlaces = [];
+                for ($i = 0; $i < count($data['textoEnlace']); $i++) {
+                    $enlaces[] = ["text" => $data['textoEnlace'][$i], 'link' => $data['url'][$i]];
+                }
+                $model->setLinks(json_encode($enlaces));
+                $social = [];
+                for ($i = 0; $i < count($data['linkSocialNetwork']); $i++) {
+                    $social[] = ["type" => $data['typeSocialNetwork'][$i], 'link' => $data['linkSocialNetwork'][$i]];
+                }
+                $model->setSocialNetworks(json_encode($social));
                 $url = $model->save();
                 self::generateQR($url);
                 $qr = self::getQR();
                 $qr['url'] = $url;
                 self::saveQR($qr);
                 break;
-            case QRmodel::VCARD:
-                 $model = new vcardplusQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
-                $model->setTypeQR(QRmodel::VCARD);
+            case QRmodel::BUSINESS:
+                $model = new bussinesQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
+                $model->setTypeQR(QRmodel::BUSINESS);
+                $model->setData($data);
+                $url = $model->save();
+                self::generateQR($url);
+                $qr = self::getQR();
+                $qr['url'] = $url;
+                self::saveQR($qr);
+                break;
+            case QRmodel::APPS:
+                $model = new appsQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
+                $model->setTypeQR(QRmodel::APPS);
+                $model->setData($data);
+                $url = $model->save();
+                self::generateQR($url);
+                $qr = self::getQR();
+                $qr['url'] = $url;
+                self::saveQR($qr);
+                break;
+            case QRmodel::PDF:
+                $model = new pdfQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
+                $model->setTypeQR(QRmodel::PDF);
+                $model->setData($data);
+                $url = $model->save();
+                self::generateQR($url);
+                $qr = self::getQR();
+                $qr['url'] = $url;
+                self::saveQR($qr);
+                break;
+            case QRmodel::MENU:
+                $model = new menuQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
+                $model->setTypeQR(QRmodel::MENU);
                 $model->setData($data);
                 $url = $model->save();
                 self::generateQR($url);

@@ -11,9 +11,12 @@ class TemplateController
             }
             $dataQR = trim($request['get']['data']);          
             $info = QRmodel::getQRForUrl($dataQR);
-            if($info instanceof websiteQRmodel){
+             if($info instanceof websiteQRmodel){
                 header('Location: '.$info->getUrl());
+            }elseif($info instanceof listOfLinksQRmodel){
+                
             }
+            return generarHtml("site/links", ['data' => $info]);
         }catch(Exception $e){
 
         }

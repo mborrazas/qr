@@ -1,7 +1,7 @@
-<input type="text" name="typeText" value='website' />
+<input type="text" name="typeText" value='pdf' />
 <div class="containerItem">
     <h3 class="title">Nombre de tu código QR</h3>
-    <input type="text" name="name" placeholder="Ej. Mi código QR">
+    <input type="text" name="qrName" placeholder="Ej. Mi código QR">
 </div>
 <div class="containerItem">
     <h3 class="title">Archivo pdf</h3>

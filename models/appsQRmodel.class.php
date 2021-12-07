@@ -1,6 +1,6 @@
 <?php
 
-class appQRmodel extends QRmodel
+class appsQRmodel extends QRmodel
 {
 
     private $appName;
@@ -10,9 +10,9 @@ class appQRmodel extends QRmodel
     private $website;
     private $links;
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen, $userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setAppName($appName)
@@ -73,6 +73,14 @@ class appQRmodel extends QRmodel
     public function getLinks()
     {
         return $this->links;
+    }
+
+    public function setData($data){
+        $this->setAppName($data['nameApp']);
+        $this->setAppCompany($data['appCompany']);
+        $this->setDescription($data['description']);
+        $this->setWebsite($data['website']);
+      //  $this->setLinks($data['links']);
     }
 
     function __toJson()

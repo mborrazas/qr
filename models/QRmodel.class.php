@@ -6,7 +6,11 @@ abstract class QRmodel extends Model
     const WEBSITE = 'website';
     const LINKS = 'links';
     const VCARD = 'vcard';
-    
+    const BUSINESS = 'business';
+    const APPS = 'apps';
+    const PDF = 'pdf';
+    const MENU = 'menu';
+
     private $url;
     private $id;
     private $design;
@@ -43,15 +47,18 @@ abstract class QRmodel extends Model
         $this->welcomescreen = $welcomescreen;
     }
 
-    public function setTypeQR($typeQR){
+    public function setTypeQR($typeQR)
+    {
         $this->typeQR = $typeQR;
     }
 
-    public function getActive(){
+    public function getActive()
+    {
         return $this->active;
     }
 
-    public function setActive($active){
+    public function setActive($active)
+    {
         $this->active = $active;
     }
 
@@ -70,37 +77,45 @@ abstract class QRmodel extends Model
         return $this->welcomescreen;
     }
 
-    public function setId($id){
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function setUrl($url){
+    public function setUrl($url)
+    {
         $this->url = $url;
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function getUrlQR(){
+    public function getUrlQR()
+    {
         return $this->url;
     }
 
-    public function setUserId($userId){
+    public function setUserId($userId)
+    {
         $this->userId = $userId;
     }
 
-    public function getUserId(){
+    public function getUserId()
+    {
         return $this->userId;
     }
 
-    public function getTypeQR(){
+    public function getTypeQR()
+    {
         return $this->typeQR;
     }
 
     abstract function __toJson();
 
-    private function generateUrl($length = 30) {
+    private function generateUrl($length = 30)
+    {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -111,8 +126,8 @@ abstract class QRmodel extends Model
     }
 
     public function save()
-    {   
-         try {
+    {
+        try {
             $url = $this->generateUrl();
             $sql = "INSERT INTO codes(url,name,design,welcomeScreen,active,userId,dataQR,typeQR) VALUES(?,?,?,?,?,?,?,?);";
             $sentencia = $this->conexion->prepare($sql);
@@ -129,6 +144,8 @@ abstract class QRmodel extends Model
             );
             $sentencia->execute();
             if ($sentencia->error) {
+                var_dump($sentencia);
+                die;
                 throw new Exception("Hubo un problema al guardar el qr: " . $sentencia->error);
             }
             return $url;
@@ -137,7 +154,8 @@ abstract class QRmodel extends Model
         }
     }
 
-    public static function getQRForUrl(string $url){
+    public static function getQRForUrl(string $url)
+    {
         $model = new Model();
         $conexion = $model->getConexion();
         try {
@@ -150,23 +168,30 @@ abstract class QRmodel extends Model
             $sentencia->execute();
             $dataQR = $sentencia->get_result();
             while ($row = $dataQR->fetch_assoc()) {
-               return self::createDataToModel($row);
+                return self::createDataToModel($row);
             }
         } catch (Exception $e) {
             error_log($e->getMessage());
         }
     }
 
-    private static function createDataToModel($data){
-        switch($data['typeQR']){
+    private static function createDataToModel($data)
+    {
+        switch ($data['typeQR']) {
             case self::WEBSITE:
                 $website = new websiteQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
                 $dataWebsite = json_decode($data['dataQR'], true);
                 $website->setUrl($dataWebsite['url']);
                 return $website;
                 break;
+            case self::LINKS:
+                $links = new listOfLinksQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
+                $dataLinks = json_decode($data['dataQR'], true);
+                $links->setLinks($dataLinks['links']);
+                $links->setDescription($dataLinks['description']);
+                $links->setSocialNetworks($dataLinks['socialNetworks']);
+                return $links;
+                break;
         }
     }
-
-   
 }

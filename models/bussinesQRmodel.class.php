@@ -17,9 +17,9 @@ class bussinesQRmodel extends QRmodel
     private $aboutCompany;
     private $socialNetworks;
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen, $userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setImage($image)
@@ -143,6 +143,18 @@ class bussinesQRmodel extends QRmodel
 
     public function getSocialNetworks(){
         return $this->socialNetworks;
+    }
+
+    public function setData($data){
+        $this->setCompany($data['company']);
+        $this->setTitle($data['title']);
+        $this->setSubtitle($data['subtitle']);
+        $this->setLocation($data['location']);
+        $this->setFacilities($data['facilities']);
+        $this->setNamePerson($data['namePerson']);
+        $this->setTelefono($data['phone']);
+        $this->setWebsite($data['website']);
+        $this->setAboutCompany($data['aboutCompany']);
     }
 
     function __toJson()

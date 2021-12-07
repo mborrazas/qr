@@ -1,3 +1,4 @@
+<input type="text" name="typeText" value='galery' hidden />
 <div class="containerItem">
     <h3 class="title">Nombre de tu código QR</h3>
     <input type="text" name="name" placeholder="Ej. Mi código QR">

@@ -7,9 +7,9 @@ class menuQRmodel extends QRmodel
     private $description;
     private $menu;
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen, $userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setImg($img)
@@ -50,6 +50,12 @@ class menuQRmodel extends QRmodel
     public function getMenu()
     {
         return $this->menu;
+    }
+
+    public function setData($data){
+        $this->setNameMenu($data['nameRistorante']);
+        $this->setDescription($data['description']);
+        $this->setMenu('hola');
     }
 
     function __toJson()
