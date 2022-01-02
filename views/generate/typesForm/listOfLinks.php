@@ -2,19 +2,54 @@
     <input type="text" name="typeText" value='links' hidden />
     <div class="containerItem">
         <h3 class="title">Nombre de tu código QR</h3>
-        <input type="text" name="qrName" placeholder="Ej. Mi código QR">
+        <input type="text" name="qrName" placeholder="Ej. Mi código QR" required>
     </div>
     <div class="containerItem">
         <h3 class="title">Diseño</h3>
-        <label class="label" for="background">Color de fondo</label>
-        <input type="color" name="background" placeholder="">
-        <label class="label" for="backgroundLink">Color de fondo para link</label>
-        <input type="color" name="backgroundLink" placeholder="">
-        <label class="label" for="colorText">Color de texto para link</label>
-        <input type="color" name="colorText" placeholder="">
+        <button type="button" class="btnDesign" data-first="#2F6BFD" data-second="#FFFFFF" data-third="#0E379A">
+            <span style="background-color: #2F6BFD;"></span>
+            <span style="background-color: #FFFFFF;"></span>
+            <span style="background-color: #0E379A;"></span>
+        </button>
+        <button type="button" class="btnDesign" data-first="#28EDC9" data-second="#FFFFFF" data-third="#03A183">
+            <span style="background-color: #28EDC9;"></span>
+            <span style="background-color: #FFFFFF;"></span>
+            <span style="background-color: #03A183;"></span>
+        </button>
+        <button type="button" class="btnDesign" data-first="#EDE728" data-second="#FFFFFF" data-third="#A39E0A">
+            <span style="background-color: #EDE728;"></span>
+            <span style="background-color: #FFFFFF;"></span>
+            <span style="background-color: #A39E0A;"></span>
+        </button>
+        <button type="button" class="btnDesign" data-first="#DDBAE3" data-second="#FFFFFF" data-third="#866D8A">
+            <span style="background-color: #DDBAE3;"></span>
+            <span style="background-color: #FFFFFF;"></span>
+            <span style="background-color: #866D8A;"></span>
+        </button>
+        <div id="containerStyles">
+            <div id="swatch">
+                <input type="color" id="background" name="background" value="#2F6BFD">
+                <div class="info">
+                    <h2>Color de fondo</h2>
+                </div>
+            </div>
+            <div id="swatch">
+                <input type="color" id="backgroundLink" name="backgroundLink" value="#FFFFFF">
+                <div class="info">
+                    <h2>Color de fondo para link</h2>
+                </div>
+            </div>
+            <div id="swatch">
+                <input type="color" id="colorText" name="colorText" value="#0E379A">
+                <div class="info">
+                    <h2>Color de texto para link</h2>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="containerItem">
         <h3 class="title">Información de la lista de enlaces</h3>
+        <input type="file" name="imgTitle">
         <label class="label" for="title">Titulo</label>
         <input type="text" name="title" placeholder="">
         <label class="label" for="description">Descripción</label>
@@ -24,6 +59,9 @@
         <h3 class="title">Enlaces</h3>
         <div id="containerEnlaces">
             <div class="containerEnlace">
+                <div class="delete">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(254, 66, 86); font-size: 24px;"><path d="M20,7H4A1,1,0,0,0,4,9H5.08l.77,9.25a3,3,0,0,0,3,2.75h6.32a3,3,0,0,0,3-2.75L18.92,9H20a1,1,0,0,0,0-2ZM16.16,18.08a1,1,0,0,1-1,.92H8.84a1,1,0,0,1-1-.92L7.09,9h9.82Z"></path><path d="M9,5h6a1,1,0,0,0,0-2H9A1,1,0,0,0,9,5Z"></path></svg>
+                </div>
                 <label class="label" for="textoEnlace">Texto de enlace</label>
                 <input type="text" name="textoEnlace[]" placeholder="Escribe aquí el texto del enlace...">
                 <label class="label" for="url">URL</label>
@@ -46,6 +84,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="dribble" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="facebook" class="item">
                 <div class="logo">
@@ -57,6 +98,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="facebook" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="flickr" class="item">
                 <div class="logo">
@@ -76,6 +120,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="flickr" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="github" class="item">
                 <div class="logo">
@@ -94,6 +141,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="github" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="google+" class="item">
                 <div class="logo">
@@ -124,6 +174,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="line" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="linkedin" class="item">
                 <div class="logo">
@@ -136,6 +189,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="linkedin" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="pinterest" class="item">
                 <div class="logo">
@@ -147,6 +203,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="pinterest" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="reddit" class="item">
                 <div class="logo">
@@ -172,6 +231,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="reddit" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="skype" class="item">
                 <div class="logo">
@@ -183,6 +245,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="skype" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="snapchat" class="item">
                 <div class="logo">
@@ -194,6 +259,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="snapchat" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="tripAdvisor" class="item">
                 <div class="logo">
@@ -205,6 +273,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="tripAdvisor" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="tumblr" class="item">
                 <div class="logo">
@@ -216,6 +287,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="tumblr" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="twitter" class="item">
                 <div class="logo">
@@ -227,6 +301,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="twitter" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="vimeo" class="item">
                 <div class="logo">
@@ -238,6 +315,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="vimeo" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="vkontakte" class="item">
                 <div class="logo">
@@ -249,6 +329,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="vkontakte" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="web" class="item">
                 <div class="logo">
@@ -260,6 +343,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="web" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="xing" class="item">
                 <div class="logo">
@@ -279,6 +365,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="xing" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="youtube" class="item">
                 <div class="logo">
@@ -290,6 +379,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="youtube" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
             <div id="instagram" class="item">
                 <div class="logo">
@@ -302,6 +394,9 @@
                 </div>
                 <input type="text" name='typeSocialNetwork[]' value="instagram" hidden />
                 <input type="text" name='linkSocialNetwork[]' />
+                <div class="close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
             </div>
         </div>
         <div id="socialNetworks">

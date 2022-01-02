@@ -9,9 +9,9 @@ class imagesQRmodel extends QRmodel
     private $website;
     private $button;
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen, $userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setImages($images){

@@ -8,7 +8,6 @@ class bussinesQRmodel extends QRmodel
     private $subtitle;
     private $button;
     private $hours;
-    private $location;
     private $facilities;
     private $namePerson;
     private $telefone;
@@ -16,6 +15,13 @@ class bussinesQRmodel extends QRmodel
     private $website;
     private $aboutCompany;
     private $socialNetworks;
+    private $address;
+    private $numAddress;
+    private $postalCode;
+    private $city;
+    private $state;
+    private $country;
+
 
     public function __construct($design, $name, $welcomescreen, $userId)
     {
@@ -82,12 +88,52 @@ class bussinesQRmodel extends QRmodel
         return $this->hours;
     }
 
-    public function setLocation($location){
-        $this->location = $location;
+    public function setPostalCode($postalCode){
+        $this->postalCode = $postalCode;
     }
 
-    public function getLocation(){
-        return $this->location;
+    public function getPostalCode(){
+        return $this->postalCode;
+    }
+
+    public function setAddress($address){
+        $this->address = $address;
+    }
+
+    public function getAddress(){
+        return $this->address;
+    }
+
+    public function setCity($city){
+        $this->city = $city;
+    }
+
+    public function getCity(){
+        return $this->city;
+    }
+
+    public function getAddressNumber(){
+        return $this->numAddress;
+    }
+
+    public function setAddressNumber($addresNumber){
+        $this->numAddress = $addresNumber;
+    }
+
+    public  function setState($state){
+        $this->state = $state;
+    }
+
+    public function getState(){
+        return $this->state;
+    }
+
+    public function setCountry($country){
+        $this->country = $country;
+    }
+
+    public function getCountry(){
+        return $this->country;
     }
 
     public function setFacilities($facilities){
@@ -146,15 +192,84 @@ class bussinesQRmodel extends QRmodel
     }
 
     public function setData($data){
+        $hours = [];
+        if(isset($data['checkMonday']) && $data['checkMonday'] == 'on'){
+            $hours['Lunes'] = [
+              'opening' => $data['openingHoursMonday'],
+                'closes' => $data['closesHoursMonday']
+            ];
+        }
+        if(isset($data['checkTuesday']) && $data['checkTuesday'] == 'on'){
+            $hours['Martes'] = [
+                'opening' => $data['openingHoursTuesday'],
+                'closes' => $data['closesHoursTuesday']
+            ];
+        }
+        if(isset($data['checkWednesday']) && $data['checkWednesday'] == 'on'){
+            $hours['Miercoles'] = [
+                'opening' => $data['openingHoursWednesday'],
+                'closes' => $data['closesHoursWednesday']
+            ];
+        }
+        if(isset($data['checkThursday']) && $data['checkThursday'] == 'on'){
+            $hours['Jueves'] = [
+                'opening' => $data['openingHoursThursday'],
+                'closes' => $data['closesHoursThursday']
+            ];
+        }
+        if(isset($data['checkFriday']) && $data['checkFriday'] == 'on'){
+            $hours['Viernes'] = [
+                'opening' => $data['openingHoursFriday'],
+                'closes' => $data['closesHoursFriday']
+            ];
+        }
+        if(isset($data['checkSaturday']) && $data['checkSaturday'] == 'on'){
+            $hours['Sabado'] = [
+                'opening' => $data['openingHoursSaturday'],
+                'closes' => $data['closesHoursSaturday']
+            ];
+        }
+        if(isset($data['checkSunday']) && $data['checkSunday'] == 'on'){
+            $hours['Domingo'] = [
+                'opening' => $data['openingHoursSunday'],
+                'closes' => $data['closesHoursSunday']
+            ];
+        }
+        $facilities = [];
+        $facilitiesAux = [
+            'wifi',
+            'seat',
+            'accessible',
+            'toilet',
+            'child',
+            'pet',
+            'parking',
+            'train',
+            'taxi',
+            'bed',
+            'cafe',
+            'bar',
+            'restaurant'
+        ];
+        foreach ($facilitiesAux as $facilitie){
+            if(isset($data[$facilitie]) && $data[$facilitie]){
+                $facilities[] = $facilitie;
+            }
+        }
         $this->setCompany($data['company']);
         $this->setTitle($data['title']);
         $this->setSubtitle($data['subtitle']);
-        $this->setLocation($data['location']);
-        $this->setFacilities($data['facilities']);
         $this->setNamePerson($data['namePerson']);
         $this->setTelefono($data['phone']);
         $this->setWebsite($data['website']);
         $this->setAboutCompany($data['aboutCompany']);
+        $this->setAddress($data['address']);
+        $this->setState($data['state']);
+        $this->setCity($data['city']);
+        $this->setCountry($data['country']);
+        $this->setHours(json_encode($hours));
+        $this->setButton(json_encode(['text' => $data['textBoton'], 'url' => $data['url']]));
+        $this->setFacilities(json_encode($facilities));
     }
 
     function __toJson()
@@ -166,13 +281,17 @@ class bussinesQRmodel extends QRmodel
             'subtitle' => $this->getSubtitle(),
             'button' => $this->getButton(),
             'hours' => $this->getHours(),
-            'location' => $this->getLocation(),
             'facilities' => $this->getFacilities(),
             'namePerson' => $this->getNamePerson(),
             'telefone' => $this->getTelefono(),
             'website' => $this->getWebsite(),
             'aboutCompany' => $this->getAboutCompany(),
-            'socialNetwork' => $this->getSocialNetworks()
+            'socialNetwork' => $this->getSocialNetworks(),
+            'address' => $this->getAddress(),
+            'numeration' => $this->getAddressNumber(),
+            'state' => $this->getState(),
+            'country' => $this->getCountry(),
+            'city' => $this->getCity()
         ]);
     }
 }

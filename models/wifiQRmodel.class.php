@@ -2,24 +2,15 @@
 
 class wifiQRmodel extends QRmodel
 {
-    
-    private $name;
+
     private $networkname;
     private $networkpassword;
     private $typeEscription;
     private $hiddenNetwork;
 
-    public function __construct($design, $name, $welcomescreen)
+    public function __construct($design, $name, $welcomescreen, $userId)
     {
-        parent::__construct($design, $name, $welcomescreen);
-    }
-
-    public function serName($name){
-        $this->name = $name;
-    }
-
-    public function getName(){
-        return $this->name;
+        parent::__construct($design, $name, $welcomescreen, 0, $userId);
     }
 
     public function setNetworkName($networkname){
@@ -57,7 +48,6 @@ class wifiQRmodel extends QRmodel
     function __toJson()
     {
         return json_encode([
-            'name' => $this->getName(),
             'networkName' => $this->getNetworkName(),
             'networkpassword' => $this->getNetworkPassword(),
             'typeEncription' => $this->getTypeEscription(),

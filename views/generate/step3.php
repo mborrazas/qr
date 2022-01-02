@@ -69,7 +69,7 @@
     <section id="bar">
         <div class="row">
             <div class="col">
-                <button id="cancelar">Cancelar</button>
+                <button id="cancelar">Atras</button>
             </div>
             <div class="col">
                 <span class="step">Tipo de QR</span>
@@ -90,6 +90,10 @@
         var form = $('#formList');
         $('#next').click(function(){
             form.submit();
+        });
+        $('#cancelar').click(function(e){
+            e.preventDefault();
+            history.go(-1);
         });
     });
 </script>

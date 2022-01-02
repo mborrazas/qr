@@ -8,7 +8,8 @@ class appsQRmodel extends QRmodel
     private $logo;
     private $description;
     private $website;
-    private $links;
+    private $android;
+    private $apple;
 
     public function __construct($design, $name, $welcomescreen, $userId)
     {
@@ -65,14 +66,20 @@ class appsQRmodel extends QRmodel
         return $this->website;
     }
 
-    public function setLinks($links)
-    {
-        $this->links = $links;
+    public function setApple($apple){
+        $this->apple = $apple;
     }
 
-    public function getLinks()
-    {
-        return $this->links;
+    public function getApple(){
+        return $this->apple;
+    }
+
+    public function setAndroid($android){
+        $this->android = $android;
+    }
+
+    public function getAndroid(){
+        return $this->android;
     }
 
     public function setData($data){
@@ -80,7 +87,8 @@ class appsQRmodel extends QRmodel
         $this->setAppCompany($data['appCompany']);
         $this->setDescription($data['description']);
         $this->setWebsite($data['website']);
-      //  $this->setLinks($data['links']);
+        $this->setAndroid($data['android']);
+        $this->setApple($data['apple']);
     }
 
     function __toJson()
@@ -91,7 +99,8 @@ class appsQRmodel extends QRmodel
             'logo' => $this->getLogo(),
             'description' => $this->getDescription(),
             'website' => $this->getWebsite(),
-            'links' => $this->getLinks()
+            'apple' => $this->getApple(),
+            'android' => $this->getAndroid()
         ]);
     }
 

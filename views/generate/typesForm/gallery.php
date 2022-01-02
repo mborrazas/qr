@@ -1,4 +1,4 @@
-<input type="text" name="typeText" value='menu' hidden />
+<input type="text" name="typeText" value='gallery' hidden />
 <div class="containerItem">
     <h3 class="title">Nombre de tu código QR</h3>
     <input type="text" name="qrName" placeholder="Ej. Mi código QR" required>
@@ -48,36 +48,24 @@
 </div>
 
 <div class="containerItem">
-    <h3 class="title">Información del Menú</h3>
-    <input type="file" name="imgTitle">
-    <label class="label" for="nameRistorante">Nombre del establecimiento</label>
-    <input type="text" name="nameRistorante" placeholder="Ej. Ristorante Tavolo Grande">
-    <label class="label" for="description">Descripción</label>
-    <input type="text" name="description" placeholder="Ej. Italian Trattoria">
+    <h3 class="title">Imágenes</h3>
+    <input type="file" name="imgTitle[]" multiple>
 </div>
 <div class="containerItem">
-    <h3 class="title">Menú</h3>
-    <div id="sections">
-        <div class="section">
-            <p>Seccion 1</p>
-            <label for="name">Nombre</label>
-            <input type="text" name="nameSection[]" placeholder="Ej. Entradas">
-            <label for="description">Descripcion</label>
-            <input type="text" name="descriptionSection[]" placeholder="Ej. Las mejores entradas">
-            <div id="containerProducts">
-                <input type="file" name="productImg[]">
-                <input type="text" name="nameProduct[]" placeholder="Ej: Arroz" />
-                <input type="text" name="descriptionProduct[]" placeholder="Ej: El mejor" />
-                <input type="number" name="priceProduct[]" placeholder="Ej: 4.50">
-            </div>
-            <button>Agregar articulo</button>
-        </div>
+    <h3 class="title">Información</h3>
+    <label class="label" for="title">Título</label>
+    <input type="text" name="title" placeholder="My photos">
+    <label class="label" for="description">Descripción</label>
+    <input type="text" name="description" placeholder="Trips 2019">
+    <label class="label" for="website">Sitio web</label>
+    <input type="text" name="website" placeholder="https://www.google.com">
+    <button id="addButton">Agregar botón</button>
+    <div id="containerButton">
+        <label class="label" for="textBoton">Botón</label>
+        <input type="text" name="textBoton" placeholder="Escribe aquí el texto del botón...">
+        <input type="text" name="url" placeholder="http://...">
     </div>
-    <button id="addSection">Agregar seccion</button>
 </div>
 <div class="containerItem">
     <h3 class="title">Pantalla de bienvenida</h3>
-    <div class="containerEnlace">
-        <button>Vista previa</button>
-    </div>
 </div>

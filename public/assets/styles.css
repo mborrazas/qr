@@ -139,9 +139,11 @@ html {
     display: inline-block;
 }
 
-#step2 #title {
+#step2 #titleForm {
     font-size: 20px;
     color: #000;
+    text-align: left;
+    margin-left: 90px;
 }
 
 #step2 .containerItem,
@@ -214,10 +216,6 @@ html {
     margin-top: 20px;
 }
 
-#step2 #title {
-    text-align: left;
-    margin-left: 90px;
-}
 
 #step1 .element {
     background-color: white;
@@ -420,6 +418,7 @@ html {
 }
 
 #bar .col button,
+#bar .col a,
 #bar #next {
     position: relative;
     margin: 0 auto;
@@ -429,6 +428,8 @@ html {
     border-radius: 5px;
     height: 60px;
     width: 44%;
+    text-align: center;
+    text-decoration: none;
 }
 
 #step4 label {
@@ -448,6 +449,16 @@ html {
     padding: 15px;
     margin-top: 10px;
     cursor: pointer;
+}
+
+#bar .step.selected{
+    border: 2px solid #708aff;
+}
+
+#bar .step.disabled{
+    border: 0px;
+    background: #f1f1f1;
+    color: gray;
 }
 
 #bar #cancelar {
@@ -552,6 +563,24 @@ aside h2 {
     text-align: center;
 }
 
+#containerScreen #message{
+    padding-top: 57%;
+    color: #759dfe;
+}
+
+.containerEnlace .delete{
+    color: rgb(254, 66, 86);
+    float: right;
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.containerEnlace .delete svg{
+    height: 22px;
+}
+
 #containerExample #phone #listOfLinks #title h3 {
     font-size: 16px;
     text-align: center;
@@ -590,6 +619,25 @@ aside h2 {
     padding-top: 5px;
 }
 
+#containerButtons{
+    background: #e3e3e3;
+    border-radius: 4px;
+}
+
+#containerButtons .item{
+    background: transparent;
+    padding: 0px;
+    width: 42px;
+}
+#containerButtons .item.active{
+    border: 2px solid #759dfe;
+    background: white;
+}
+
+#containerButtons .item svg{
+    height: 38px;
+}
+
 #containerExample #phone #listOfLinks #links p {
     font-size: 13px;
     font-weight: 300;
@@ -617,9 +665,14 @@ aside h2 {
 
 #containerExample #phone #wifi #containerWifi {
     background: white;
-    height: 129px;
+    height: 170px;
     border-radius: 6px;
     padding-top: 14px;
+}
+
+#containerExample #phone #wifi #containerWifi svg{
+    width: 28px;
+    margin-bottom: 10px;
 }
 
 #containerExample #phone #wifi #containerWifi p {
@@ -834,47 +887,364 @@ aside h2 {
     margin-top: 0px;
 }
 
-#listOfLinks #addLink {
-    width: 100%;
-    background: transparent;
-    border: 3px solid rgb(205, 209, 224);
-    color: black;
-    margin-top: 18px;
+#containerExample #phone #menu #containerMenu {
+    position: absolute;
+    top: 39%;
+    background: white;
+    margin-left: 9px;
+    margin-right: 21px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 5px #a7a7a7;
 }
 
-#listOfLinks #socialNetworks button {
-    background: transparent;
-    border: 1px solid #CDD1E0;
-    border-radius: 4px;
+#containerExample #phone #menu #containerMenu .item {
+    margin-top: 16px;
+    border-bottom: 1px solid #efefef;
+    height: 98px;#$
+}
+
+#containerExample #phone #menu #containerMenu .item img{
+    width: 30px;
+    height: 30px;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#containerExample #phone #menu #containerMenu .info {
+    align-items: flex-start;
+    flex-direction: column;
+    float: right;
+    padding-right: 14px;
+    width: 68%;
+    text-align: left;
+    padding-left: 11px;
+}
+#containerExample #phone #menu #containerMenu .info .title{
+    font-size: 14px;
+    margin-bottom: 1px;
+    color: #000;
+}
+
+#containerExample #phone #menu #containerMenu .info .subtitle{
+    color: #8B8CA5;
+    font-size: 12px;
+    margin-bottom: 6px;
+    font-weight: 100;
+    line-height: 14px;
+}
+
+#containerExample #phone #menu #containerMenu .info .price{
+    color: rgb(168, 103, 21);
+    font-size: 12px;
+}
+
+#containerExample #phone #video{
+    background: #e18364;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+    padding-top: 16px;
+}
+
+#containerExample #phone #video p{
+    color: #FFF;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+#containerExample #phone #video #title{
+    font-size: 22px;
+    padding-left: 24px;
+    padding-right: 15px;
+    text-align: left;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+#containerExample #phone #video #subitle{
+    padding-left: 25px;
+    padding-right: 50px;
+    text-align: left;
+}
+
+#containerExample #phone #video img{
+    width: 100%;
+    height: 113px;
+    margin-bottom: 18px;
+}
+
+#containerExample #phone #video button{
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding: 12px;
+    border-radius: 7px;
+    width: 66%;
+    float: left;
+    margin-left: 25px;
+}
+
+#containerExample #phone #gallery{
+    border-radius: 16px 16px 0 0;
+    background: rgb(34, 40, 71);
+    height: 37vh;
+}
+
+#containerExample #phone #gallery #title{
+ margin-top: 0px;
+}
+
+#containerExample #phone #gallery #title h2{
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding-top: 18px;
+    padding-bottom: 7px;
+    color: white;
+    font-weight: 400;
+}
+#containerExample #phone #gallery #title p{
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    padding-left: 25px;
+    padding-right: 25px;
     margin-bottom: 10px;
 }
+#containerExample #phone #website #title{
+    margin-top: 10px;
+}
+#containerExample #phone #website h3{
+    font-size: 18px;
+    text-align: left;
+    margin-left: 14px;
+    margin-top: 11px;
+    margin-bottom: 0px;
+}
+#containerExample #phone #website #title p{
+    margin-top: 6px;
+    background: #cbcbcb;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #363636;
+    border-radius: 15px;
+    font-size: 12px;
+}
 
-#listOfLinks #socialNetworks button svg {
+#containerExample #phone #website #subtitle{
+
+    font-size: 12px;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 0px;
+    padding-right: 31px;
+
+}
+
+#containerExample #phone #website button{
+    margin-bottom: 13px;
+    color: white;
+    border-radius: 4px;
+    padding: 6px;
+    width: 67%;
+    background: black;
+    border: 0px;
+}
+
+#containerExample #phone #website #containerWebsite{
+    background: white;
+    margin-right: 12px;
+    margin-left: 13px;
+    border-radius: 7px;
+}
+
+#containerExample #phone #website #containerWebsite img{
+    width: 100%;
+}
+
+#containerExample #phone #menu h3{
+color: rgb(168, 103, 21);
+font-size: 16px;
+line-height: 22px;
+padding: 20px 24px 0px;
+}
+
+#containerExample #phone #backgroundPdf img{
+    height: 290px;
+    position: absolute;
+    top: 169px;
+    left: 41px;
+    border: 5px solid white;
+    border-radius: 7px;
+}
+
+#listOfLinks #addLink {
+width: 100%;
+background: transparent;
+border: 3px solid rgb(205, 209, 224);
+color: black;
+margin-top: 18px;
+}
+
+#socialNetworks button {
+background: transparent;
+border: 1px solid #CDD1E0;
+border-radius: 4px;
+margin-bottom: 10px;
+}
+
+#socialNetworks button svg {
+height: 40px;
+}
+
+#socialNetworks button svg {
     height: 40px;
 }
 
-#listOfLinks #containerLinksSocialNetwork {
-    height: fit-content;
+#containerLinksSocialNetwork {
+height: fit-content;
 }
 
-#listOfLinks #containerLinksSocialNetwork .item {
-    height: 54px;
+#containerLinksSocialNetwork .item {
+height: 54px;
+display: none;
+}
+
+#containerLinksSocialNetwork .item .logo {
+float: left;
+}
+
+#containerLinksSocialNetwork .item .logo svg {
+height: 30px;
+}
+
+#containerLinksSocialNetwork .item input {
+width: 62%;
+}
+
+#containerLinksSocialNetwork .item .close {
+    display: inline-block;
+    float: right;
+    height: 23px;
+    width: 23px;
+    cursor: pointer;
+}
+#containerData .containerItem .btnDesign {
+    background: transparent !important;
+    border: 2px solid #CDD1E0;
+    width: 132px;
+    border: 2px solid #CDD1E0;
+    height: 52px;
+    display: inline-flex;
+    padding: 8px;
+    transition: all 0.2s ease-in-out;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFF;
+}
+
+#containerData .containerItem #addButton{
+    width: 100%;
+    margin-top: 10px;
+    height: 48px;
+}
+
+#containerData .containerItem #containerButton{
     display: none;
 }
 
-#listOfLinks #containerLinksSocialNetwork .item .logo {
-    float: left;
+#containerData .containerItem .btnDesign:not(:last-child) {
+margin-right: 5px;
 }
 
-#listOfLinks #containerLinksSocialNetwork .item .logo svg {
-    height: 30px;
+.containerItem .btnDesign span {
+height: 30px;
+width: 30px;
+display: inline-block;
+flex-shrink: 0;
+border-radius: 4px;
+border: 1px solid #E5E7EF;
 }
 
-#listOfLinks #containerLinksSocialNetwork .item input {
-    float: right;
-    width: 70%;
+.containerItem .btnDesign span:not(:first-child) {
+margin-left: 10px;
+}
+
+#swatch {
+background: white;
+box-shadow: 1em 1em 18em rgb(0 0 0 / 10%);
+display: flex;
+flex-direction: column;
+width: 150px;
+height: 150px;
+flex: 1;
+border-radius: 4px;
+margin-right: 10px;
+}
+
+#swatch .info {
+padding: 1em;
+}
+
+#swatch h1 {
+margin: 0;
+text-transform: uppercase;
+}
+
+#containerStyles {
+display: flex;
+text-align: center;
+align-items: center;
+align-content: center;
+margin-top: 10px;
+}
+
+#swatch h2 {
+font-weight: normal;
+margin: 0;
+font-size: 12px;
+padding: 0px;
+}
+
+input[type="color"] {
+appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+background: none;
+border: 0;
+cursor: pointer;
+height: 15em;
+padding: 0;
+width: 15em;
+}
+
+*:focus {
+border-radius: 0;
+outline: none;
+}
+
+::-webkit-color-swatch-wrapper {
+padding: 0;
+}
+
+::-webkit-color-swatch {
+border: 0;
+border-radius: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+border: 0;
+}
+
+::-moz-focus-inner {
+padding: 0;
 }
 
 .hide {
-    display: none;
+display: none;
 }

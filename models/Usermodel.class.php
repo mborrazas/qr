@@ -60,4 +60,29 @@ class Usermodel extends Model
             error_log($e->getMessage());
         }
     }
+
+    public function getUser(){
+        try{
+            $sql = "SELECT * from users where email = ? AND password = ?";
+            $sentencia = $this->conexion->prepare($sql);
+            $sentencia->bind_param(
+                "ss",
+                $this->getEmail(),
+                $this->encryptPassword()
+            );
+            $sentencia->execute();
+            if ($sentencia->error) {
+                throw new Exception("Hubo un problema al seleccionar el usuario: " . $sentencia->error);
+            }
+            $usuarioDB = $sentencia->get_result();
+            while ($row = $usuarioDB->fetch_assoc()) {
+                $usuario = new self();
+                $usuario->setEmail($row['email']);
+                $usuario->setId($row['id']);
+                return $usuario;
+            }
+        }catch(Exception $e){
+            error_log($e->getMessage());
+        }
+    }
 }

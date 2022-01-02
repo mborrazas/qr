@@ -38,10 +38,9 @@ class UserController
 
     public static function login($request)
     {
-        if (!isset($request['post']['email'])) {
+         if (!isset($request['post']['email'])) {
             throw new Exception('El email no ingresado.');
         }
-      
         if (!isset($request['post']['password']) || $request['post']['password'] === '') {
             throw new Exception('La contraseña esta vacia.');
         }
@@ -49,7 +48,7 @@ class UserController
             $userModel = new Usermodel();
             $userModel->setEmail($request['post']['email']);
             $userModel->setPassword($request['post']['password']);
-            $user = $userModel->save();
+            $user = $userModel->getUser();
             self::createSesion($user);
             header("Location: /generate/createqr");
         }catch(Exception $e){

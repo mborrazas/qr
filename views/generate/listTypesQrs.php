@@ -36,7 +36,7 @@
                 <h3 class="title">Carta / Menú</h3>
                 <p>Despliega el menú de un restaurante o bar</p>
             </div>
-            <div class="col element seletType" data-type="galery">
+            <div class="col element seletType" data-type="gallery">
                 <h3 class="title">Imágenes</h3>
                 <p>Enseña una galería de imágenes</p>
             </div>
@@ -61,6 +61,20 @@
                     <div id="speaker"></div>
                 </div>
                 <div id="containerScreen">
+                    <div id="message">
+                        <p>Selecciona un tipo de QR</p>
+                    </div>
+                    <div class="hide" id="website">
+                        <div id="title">
+                           <p>http://www.tutiendaonline.com</p>
+                        </div>
+                        <div id="containerWebsite">
+                            <img src="https://qrty.mobi/static/media/mockup_url.fc2d63b8.png" alt="">
+                            <h3>Tu tienda online</h3>
+                            <p id="subtitle">Compra productos al mejor precio</p>
+                            <button>Ver más</button>
+                        </div>
+                    </div>
                     <div class="hide" id="listOfLinks">
                         <div id="title">
                             <img src="https://d25rq8gxcq0p71.cloudfront.net/dictionary-images/324/419665d2-74b7-49d4-b3c8-3aea253f966f.jpg"
@@ -127,7 +141,7 @@
                             <p>Nuestra selección de hamburguesas te sorprenderá. Su sabor te deleitará.</p>
                         </div>
                         <div id="backgroundPdf">
-                            <img src="" alt="">
+                            <img src="/assets/img/pdfmenu.jpeg" alt="">
                         </div>
                     </div>
                     <div  id="menu" class="hide">
@@ -138,19 +152,19 @@
                         <div id="containerMenu">
                             <h3>ENTRANTES</h3>
                             <div class="item">
-                                <img src="" alt="">
+                                <img src="https://qrty.mobi/static/media/mockup_menu_bone.0c9fb772.png" alt="">
                                 <div class="info">
-                                    <p>T-Bone</p>
-                                    <p>Nuestra pieza estrella. Una vez lo pruebas, no hay vuelta atrás.</p>
-                                    <p>65€</p>
+                                    <p class="title">T-Bone</p>
+                                    <p class="subtitle">Nuestra pieza estrella. Una vez lo pruebas, no hay vuelta atrás.</p>
+                                    <p class="price">65€</p>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="" alt="">
+                                <img src="https://qrty.mobi/static/media/mockup_menu_chorizo.49c1c4fb.png" alt="">
                                 <div class="info">
-                                    <p>Chorizo Criollo</p>
-                                    <p>Nuestra pieza estrella. Una vez lo pruebas, no hay vuelta atrás.</p>
-                                    <p>65€</p>
+                                    <p class="title">Chorizo Criollo</p>
+                                    <p class="subtitle">Nuestra pieza estrella. Una vez lo pruebas, no hay vuelta atrás.</p>
+                                    <p class="price">65€</p>
                                 </div>
                             </div>
                         </div>
@@ -163,17 +177,18 @@
                                 Con cariño M y P.
                             </p>
                         </div>
-                        <div id="gallery"></div>
+                        <div id="imagesGallery"></div>
                     </div>
                     <div class="hide" id="video">
-                        <p>Tech & Corp</p>
-                        <img src="" alt="">
-                        <p>Manifiesto Tech & Corp</p>
-                        <p>Un decálogo para que conozcas todo lo que somos en Tech & Corp.</p>
+                        <p id="firstTitle">Tech & Corp</p>
+                        <img src="https://qrty.mobi/static/media/mockup_business.8d33c299.png" alt="">
+                        <p id="title">Manifiesto Tech & Corp</p>
+                        <p id="subitle">Un decálogo para que conozcas todo lo que somos en Tech & Corp.</p>
                         <button>Saber más</button>
                     </div>
                     <div class="hide" id="wifi">
                         <div id="containerWifi">
+                            <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 40 40" aria-hidden="true" style="font-size: 54px;"><path d="M19.994 21.581c2.877 0 5.209 2.333 5.209 5.209s-2.333 5.209-5.209 5.209c-2.877 0-5.209-2.333-5.209-5.209s2.333-5.209 5.209-5.209zM19.994 23.070c-2.055 0-3.721 1.666-3.721 3.721s1.666 3.721 3.721 3.721c2.055 0 3.721-1.666 3.721-3.721s-1.666-3.721-3.721-3.721zM19.994 14.884c3.495 0 6.768 1.34 9.242 3.7l0.23 0.224-1.052 1.052c-2.222-2.222-5.214-3.488-8.419-3.488-3.102 0-6.003 1.185-8.201 3.276l-0.217 0.212-1.052-1.052c2.499-2.499 5.867-3.924 9.471-3.924zM19.994 7.442c5.482 0 10.619 2.123 14.477 5.853l0.255 0.251-1.052 1.052c-3.609-3.609-8.476-5.669-13.68-5.669-5.086 0-9.85 1.967-13.432 5.425l-0.248 0.244-1.052-1.052c3.886-3.886 9.129-6.104 14.733-6.104zM19.994-0c7.467 0 14.467 2.906 19.71 8.005l0.284 0.28-1.052 1.052c-4.996-4.996-11.738-7.849-18.942-7.849-7.071 0-13.696 2.748-18.662 7.574l-0.279 0.275-1.052-1.052c5.273-5.273 12.391-8.285 19.994-8.285z"></path></svg>
                             <p>¿Unirse a la red Wi-fi
                                 “Mi Restaurante”?</p>
                             <button id="cancelButton">Cancelar</button>
@@ -187,16 +202,16 @@
     <section id="bar">
         <div class="row">
             <div class="col">
-                <button id="cancelar">Cancelar</button>
+                <a id="cancelar" href="/">Cancelar</a>
             </div>
             <div class="col">
-                <span class="step">Tipo de QR</span>
-                <span class="step">Contenido</span>
-                <span class="step">Diseño del QR</span>
+                <span class="step selected">Tipo de QR</span>
+                <span class="step disabled">Contenido</span>
+                <span class="step disabled">Diseño del QR</span>
             </div>
             <div class="col">
                 <input type="text" hidden name="type" id="inputType"/>
-                <input type="button" id="next" value="Siguiente">
+                <input type="button" id="next" disabled="true" value="Siguiente">
             </div>
         </div>
     </section>
@@ -210,7 +225,8 @@
         });
 
         function selectElement() {
-            $(".selected").removeClass("selected");
+            $(".element.selected").removeClass("selected");
+            $("#next").prop('disabled', false);
             $(this).addClass('selected');
             $('#inputType').val($(this).attr("data-type"));
             $('#containerScreen>div').addClass('hide');
