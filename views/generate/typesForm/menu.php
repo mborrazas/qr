@@ -65,19 +65,16 @@
             <label for="description">Descripcion</label>
             <input type="text" name="descriptionSection[]" placeholder="Ej. Las mejores entradas">
             <div id="containerProducts">
-                <input type="file" name="productImg[]">
-                <input type="text" name="nameProduct[]" placeholder="Ej: Arroz" />
-                <input type="text" name="descriptionProduct[]" placeholder="Ej: El mejor" />
-                <input type="number" name="priceProduct[]" placeholder="Ej: 4.50">
+                <div class="productMenu">
+                    <input type="text" name="idProduct[]" value="1:1" class="idProduct" hidden />
+                    <input type="file" name="productImg[]">
+                    <input type="text" name="nameProduct[]" placeholder="Ej: Arroz" />
+                    <input type="text" name="descriptionProduct[]" placeholder="Ej: El mejor" />
+                    <input type="number" name="priceProduct[]" placeholder="Ej: 4.50">
+                </div>
             </div>
-            <button>Agregar articulo</button>
+            <button class="addArticleMenu">Agregar articulo</button>
         </div>
     </div>
-    <button id="addSection">Agregar seccion</button>
-</div>
-<div class="containerItem">
-    <h3 class="title">Pantalla de bienvenida</h3>
-    <div class="containerEnlace">
-        <button>Vista previa</button>
-    </div>
+    <button id="addSectionMenu">Agregar seccion</button>
 </div>

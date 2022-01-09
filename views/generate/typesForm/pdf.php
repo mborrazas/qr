@@ -6,43 +6,33 @@
 
 <div class="containerItem">
     <h3 class="title">Diseño</h3>
-    <button type="button" class="btnDesign" data-first="#2F6BFD" data-second="#FFFFFF" data-third="#0E379A">
-        <span style="background-color: #2F6BFD;"></span>
-        <span style="background-color: #FFFFFF;"></span>
+    <button type="button" class="btnDesign" data-first="#0E379A" data-second="#000000">
         <span style="background-color: #0E379A;"></span>
+        <span style="background-color: #000000;"></span>
     </button>
-    <button type="button" class="btnDesign" data-first="#28EDC9" data-second="#FFFFFF" data-third="#03A183">
+    <button type="button" class="btnDesign" data-first="#28EDC9" data-second="#438E8E">
         <span style="background-color: #28EDC9;"></span>
-        <span style="background-color: #FFFFFF;"></span>
-        <span style="background-color: #03A183;"></span>
+        <span style="background-color: #438E8E;"></span>
     </button>
-    <button type="button" class="btnDesign" data-first="#EDE728" data-second="#FFFFFF" data-third="#A39E0A">
+    <button type="button" class="btnDesign" data-first="#28ED28" data-second="#00A301">
+        <span style="background-color: #28ED28;"></span>
+        <span style="background-color: #00A301;"></span>
+    </button>
+    <button type="button" class="btnDesign" data-first="#EDE728" data-second="#A39E0A">
         <span style="background-color: #EDE728;"></span>
-        <span style="background-color: #FFFFFF;"></span>
         <span style="background-color: #A39E0A;"></span>
-    </button>
-    <button type="button" class="btnDesign" data-first="#DDBAE3" data-second="#FFFFFF" data-third="#866D8A">
-        <span style="background-color: #DDBAE3;"></span>
-        <span style="background-color: #FFFFFF;"></span>
-        <span style="background-color: #866D8A;"></span>
     </button>
     <div id="containerStyles">
         <div id="swatch">
-            <input type="color" id="background" name="background" value="#2F6BFD">
+            <input type="color" id="background" name="background" value="#0E379A">
             <div class="info">
                 <h2>Color de fondo</h2>
             </div>
         </div>
         <div id="swatch">
-            <input type="color" id="backgroundLink" name="backgroundLink" value="#FFFFFF">
+            <input type="color" id="backgroundLink" name="backgroundLink" value="#00000">
             <div class="info">
-                <h2>Color de fondo para link</h2>
-            </div>
-        </div>
-        <div id="swatch">
-            <input type="color" id="colorText" name="colorText" value="#0E379A">
-            <div class="info">
-                <h2>Color de texto para link</h2>
+                <h2>Color secundario</h2>
             </div>
         </div>
     </div>
@@ -62,10 +52,4 @@
     <input type="text" name="description" placeholder="Ej. Full Tech Manifiesto">
     <label class="label" for="website">Sitio web</label>
     <input type="text" name="website" placeholder="Ej. https://www.google.com">
-</div>
-<div class="containerItem">
-    <h3 class="title">Pantalla de bienvenida</h3>
-    <div class="containerEnlace">
-        <button>Vista previa</button>
-    </div>
 </div>

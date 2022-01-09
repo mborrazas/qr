@@ -15,12 +15,12 @@
         <form method="POST" action="/generate/createAccount" id="formList">
             <h3>Crear cuenta</h3>
             <label for="email" >Correo electrónico</label>
-            <input type="email" placeholder="nombre@email.com" name="email" class="input width100" />
+            <input type="email" placeholder="nombre@email.com" name="email" class="input width100"  required />
             <label for="password">Contraseña</label>
-            <input type="password" placeholder="Escribe tu contraseña aquí..." name="password" class="input width100">
+            <input type="password" placeholder="Escribe tu contraseña aquí..." name="password" class="input width100" required minlength="8">
             <label for="passwordConfirm">Repetir contraseña</label>
-            <input type="password" placeholder="Escribe tu contraseña aquí..." name="passwordConfirm" class="input width100">
-            <input type="checkbox" name="terms">
+            <input type="password" placeholder="Escribe tu contraseña aquí..." name="passwordConfirm" class="input width100" required minlength="8">
+            <input type="checkbox" name="terms" required>
             <p>He leído y acepto los terminos y condiciones</p>
             <input type="submit" value="Crear cuenta" class="buttonAction">
             <p class="haveAccount">¿Ya tienes cuenta? <span id="login">Iniciar Sesión</span></p>
@@ -42,25 +42,6 @@
 
         </div>
     </section>
-    <aside>
-    </aside>
-    <section id="bar">
-        <div class="row">
-            <div class="col">
-                <button id="cancelar">Cancelar</button>
-            </div>
-            <div class="col">
-                <span class="step">Tipo de QR</span>
-                <span class="step">Contenido</span>
-                <span class="step">Diseño del QR</span>
-            </div>
-            <div class="col">
-                <input type="text" hidden name="type" id="inputType" />
-                <input type="button" id="next" value="Siguiente">
-            </div>
-        </div>
-    </section>
-
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/footer.php"; ?>
 <script>
     $( document ).ready(function() {

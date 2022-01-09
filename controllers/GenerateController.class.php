@@ -275,6 +275,7 @@ class GenerateController
                     $model->setTypeQR(QRmodel::GALLERY);
                     $model->setTitle($data['title']);
                     $model->setDescription($data['description']);
+                    $model->setButton(json_encode(['text' => $data['textBoton'], 'url' => $data['url']]));
                     $images = [];
                     foreach ($img as $image){
                         $images[] = $image;
@@ -288,7 +289,7 @@ class GenerateController
                     break;
                     case QRmodel::VIDEO:
                      $model = new videoQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
-                     $model->setTypeQR(QRmodel::GALLERY);
+                     $model->setTypeQR(QRmodel::VIDEO);
                      $model->setDescription($data['description']);
                      $model->setVideo(json_encode($img['video'] ?? ''));
                      $url = $model->save();

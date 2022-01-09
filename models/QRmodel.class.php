@@ -202,6 +202,7 @@ abstract class QRmodel extends Model
                 $datavcard = json_decode($data['dataQR'], true);
                 $vcard->setSocialNetworks(json_decode($datavcard['socialNetworks'], true));
                 $vcard->setImage($datavcard['image']);
+                $vcard->setData($datavcard);
                 return $vcard;
                 break;
             case self::BUSINESS:
@@ -212,6 +213,7 @@ abstract class QRmodel extends Model
                 $business->setCompany($databusiness['company']);
                 $business->setTitle($databusiness['title']);
                 $business->setSubtitle($databusiness['subtitle']);
+                $business->setEmail($databusiness['email'] ?? null);
                 $business->setNamePerson($databusiness['namePerson']);
                 $business->setTelefono($databusiness['telefone']);
                 $business->setWebsite($databusiness['website']);
@@ -229,7 +231,7 @@ abstract class QRmodel extends Model
                 $apps = new appsQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
                 $dataapps = json_decode($data['dataQR'], true);
                 $apps->setLogo($dataapps['logo']);
-                $apps->setAppName($dataapps['nameApp']);
+                $apps->setAppName($dataapps['appName']);
                 $apps->setAppCompany($dataapps['appCompany']);
                 $apps->setDescription($dataapps['description']);
                 $apps->setWebsite($dataapps['website']);
@@ -246,12 +248,18 @@ abstract class QRmodel extends Model
             case self::GALLERY:
                 $images = new imagesQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
                 $dataimages = json_decode($data['dataQR'], true);
+                $images->setTitle($dataimages['title']);
+                $images->setDescription($dataimages['description']);
+                $images->setButton(json_decode($dataimages['button']));
+                $images->setWebsite($dataimages['website']);
                 $images->setImages($dataimages['images']);
                 return $images;
                 break;
             case self::WIFI:
                 $wifi = new wifiQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
                 $datawifi = json_decode($data['dataQR'], true);
+                $wifi->setNetworkPassword($datawifi['networkpassword']);
+                $wifi->setNetworkName($datawifi['networkName']);
                 return $wifi;
                 break;
             case self::VIDEO:

@@ -19,7 +19,9 @@ class UserController
         if (!isset($request['post']['passwordConfirm']) || $request['post']['passwordConfirm'] === '') {
             throw new Exception('El confirmar contraseña esta vacio.');
         }
-     
+        if(!isset($request['post']['terms']) || $request['post']['terms'] !== 'on'){
+            throw new Exception('Los terminos y condiciones no fueron aceptados.');
+        }
         if ($request['post']['password'] !== $request['post']['passwordConfirm']) {
             throw new Exception('Las contraseñas no coinciden.');
         }

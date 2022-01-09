@@ -64,5 +64,6 @@ class imagesQRmodel extends QRmodel
             'button' => $this->getButton()
         ]);
     }
-
 }
+
+

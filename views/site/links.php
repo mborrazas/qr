@@ -6,10 +6,14 @@ if($data instanceof listOfLinksQRmodel){
     $design = json_decode($data->getdesgin());
     $title = $data->getTitle();
     $description = $data->getDescription();
-   // $logo = $data->getLogo();
+    $socialNetworks = $data->getSocialNetworks();
+    $logo = $data->getLogo();
 }
 ?>
     <style>
+        *{
+            font-family: Manrope, sans-serif;
+        }
         body{
             background: <?php echo $design->background ?? 'white'; ?>;
             text-align: center;
@@ -59,6 +63,4 @@ if(!is_null($title)){ ?>
    <a href="<?php echo $link['link']?>"><?php echo $link['text']?></a>
 <?php }
 require 'social.php';
-
-   
-  ?>
+    ?>

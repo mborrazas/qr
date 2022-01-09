@@ -139,6 +139,10 @@ html {
     display: inline-block;
 }
 
+#step4 #containerData{
+    padding-left: 0;
+}
+
 #step2 #titleForm {
     font-size: 20px;
     color: #000;
@@ -148,7 +152,8 @@ html {
 
 #step2 .containerItem,
 #step3 .containerItem,
-#step4 .containerItem {
+#step4 .containerItem ,
+#step6 .containerItem {
     background: white;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -249,7 +254,8 @@ html {
 
 #step2,
 #step3,
-#step4 {
+#step4,
+#step6{
     min-height: 100vh;
     background-color: #e4e7ee;
     text-align: center;
@@ -643,6 +649,65 @@ aside h2 {
     font-weight: 300;
 }
 
+#step2 #containerExample #phone #listOfLinks #links p{
+    margin-top: 0;
+}
+
+#step2 #listOfLinks #title{
+    padding-top: 12px;
+}
+
+#step2 .containerHourName{
+    display: inline-block;
+    margin-right: 46px;
+}
+#step2 .hourSelect{
+    width: 34%;
+    color: #8B8CA5;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #b3b3b3;
+    background: #f1f1f1;
+}
+#step2 .containerHourName input{
+    display: inline-block;
+    width: 50%;
+    height: 26px;
+}
+#step2 .containerHourName label{
+    display: inline-block;width: 50%;height: 26px;margin-top: ;
+}
+#step2 .hour{
+    margin-bottom: 14px;
+}
+
+#step2 .titleHour{
+    margin-bottom: 20px;
+}
+
+#step2 #pdf h2{
+    padding-top: 0px;
+    font-size: 24px;
+}
+
+#step2 #pdf p{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+#step2 #containerWifi p{
+    margin-top: 0px;
+}
+#step2 #containerWifi button{
+    width: 44%;
+    width: 36%;
+    height: 53px;
+    font-size: 12px;
+}
+
+#step2 #gallery h2{
+    font-size: 17px;
+}
 #containerExample #phone #listOfLinks #links img {
     float: left;
 }
@@ -780,7 +845,9 @@ aside h2 {
     padding-left: 13px;
     padding-right: 13px;
 }
-
+#step2 #containerExample #phone #apps #title h3{
+    margin-top: 13px;
+}
 #containerExample #phone #apps #title p {
     font-size: 11px;
 }
@@ -789,6 +856,23 @@ aside h2 {
     margin-bottom: 0px;
 }
 
+#step2 #containerExample #phone #menu #title h2{
+    padding-top: 0px;
+}
+
+#step2 #containerExample #phone #menu .title{
+    margin-top: 0px;
+    padding-left: 2px;
+}
+
+#step2 #containerExample #phone #menu .subtitle{
+    padding: 10px 0px 0px 0px;
+    margin-top: -6px;
+}
+#step2 #containerExample #phone #menu .price{
+    margin-top: 0px;
+    padding-left: 0px;
+}
 #containerExample #phone #apps #containerInfo {
     background: white;
     height: 100vh;
@@ -1080,14 +1164,28 @@ padding: 20px 24px 0px;
     border-radius: 7px;
 }
 
-#listOfLinks #addLink {
-width: 100%;
+#addLink {
+width: 100% !important;
 background: transparent;
 border: 3px solid rgb(205, 209, 224);
 color: black;
 margin-top: 18px;
+    width: 100%;
 }
 
+#addSectionMenu, .addArticleMenu{
+    width: 100% !important;
+    margin-top: 10px !important;
+    background: white !important;
+    border:1px solid gray !important;
+    color: gray !important;
+}
+#containerProducts{
+    background-color: #F3F5FE;
+}
+.productMenu{
+    background-color: #F3F5FE;
+}
 #socialNetworks button {
 background: transparent;
 border: 1px solid #CDD1E0;

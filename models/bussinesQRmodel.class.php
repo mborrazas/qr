@@ -267,6 +267,7 @@ class bussinesQRmodel extends QRmodel
         $this->setState($data['state']);
         $this->setCity($data['city']);
         $this->setCountry($data['country']);
+        $this->setEmail($data['email']);
         $this->setHours(json_encode($hours));
         $this->setButton(json_encode(['text' => $data['textBoton'], 'url' => $data['url']]));
         $this->setFacilities(json_encode($facilities));
@@ -284,6 +285,7 @@ class bussinesQRmodel extends QRmodel
             'facilities' => $this->getFacilities(),
             'namePerson' => $this->getNamePerson(),
             'telefone' => $this->getTelefono(),
+            'email' => $this->getEmail(),
             'website' => $this->getWebsite(),
             'aboutCompany' => $this->getAboutCompany(),
             'socialNetwork' => $this->getSocialNetworks(),

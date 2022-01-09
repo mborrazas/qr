@@ -181,7 +181,7 @@
                  form.submit();
             });
 
-            $('#website').show();
+            $('#<?php echo $type;?>').show();
 
             $('#cancelar').click(function(e){
                 e.preventDefault();
@@ -220,6 +220,35 @@
                     $(this).addClass('active');
                 }
 
+            });
+
+            $('#addSectionMenu').click(function (e){
+                e.preventDefault();
+                $item = $('.section').clone();
+                $('#sections').append($item);
+            });
+
+
+            $('.hour .checkbox').change(function(e) {
+                $parent = $(this).parent();
+                $sibling = $parent.siblings();
+                if(this.checked) {
+                    $sibling.each(function(item, data) {
+                        $(data).removeAttr('disabled');
+                       $(data).css("background-color", "white");
+                    });
+                }else{
+                    $sibling.each(function(item, data) {
+                        $(data).attr('disabled', true);
+                        $(data).css("background-color", "#f1f1f1");
+                    });
+                }
+            });
+
+            $('.addArticleMenu').click(function(e){
+                e.preventDefault();
+                $item = $(this).siblings('#containerProducts').last().clone();
+                $('#containerProducts').append($item);
             });
 
             $('.close').click(function (e){

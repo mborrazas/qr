@@ -1,4 +1,4 @@
-<div id="listOfLinks">
+<div>
     <input type="text" name="typeText" value='links' hidden />
     <div class="containerItem">
         <h3 class="title">Nombre de tu código QR</h3>
@@ -49,6 +49,7 @@
     </div>
     <div class="containerItem">
         <h3 class="title">Información de la lista de enlaces</h3>
+        <label class="label" for="imgTitle">Imagen</label>
         <input type="file" name="imgTitle">
         <label class="label" for="title">Titulo</label>
         <input type="text" name="title" placeholder="">
@@ -568,12 +569,6 @@
             </button>
         </div>
         <div class="containerEnlace">
-        </div>
-    </div>
-    <div class="containerItem">
-        <h3 class="title">Pantalla de bienvenida</h3>
-        <div class="containerEnlace">
-            <button>Vista previa</button>
         </div>
     </div>
 </div>

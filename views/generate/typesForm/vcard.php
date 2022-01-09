@@ -5,43 +5,33 @@
 </div>
 <div class="containerItem">
     <h3 class="title">Diseño</h3>
-    <button type="button" class="btnDesign" data-first="#2F6BFD" data-second="#FFFFFF" data-third="#0E379A">
-        <span style="background-color: #2F6BFD;"></span>
-        <span style="background-color: #FFFFFF;"></span>
+    <button type="button" class="btnDesign" data-first="#0E379A" data-second="#000000">
         <span style="background-color: #0E379A;"></span>
+        <span style="background-color: #000000;"></span>
     </button>
-    <button type="button" class="btnDesign" data-first="#28EDC9" data-second="#FFFFFF" data-third="#03A183">
+    <button type="button" class="btnDesign" data-first="#28EDC9" data-second="#438E8E">
         <span style="background-color: #28EDC9;"></span>
-        <span style="background-color: #FFFFFF;"></span>
-        <span style="background-color: #03A183;"></span>
+        <span style="background-color: #438E8E;"></span>
     </button>
-    <button type="button" class="btnDesign" data-first="#EDE728" data-second="#FFFFFF" data-third="#A39E0A">
+    <button type="button" class="btnDesign" data-first="#28ED28" data-second="#00A301">
+        <span style="background-color: #28ED28;"></span>
+        <span style="background-color: #00A301;"></span>
+    </button>
+    <button type="button" class="btnDesign" data-first="#EDE728" data-second="#A39E0A">
         <span style="background-color: #EDE728;"></span>
-        <span style="background-color: #FFFFFF;"></span>
         <span style="background-color: #A39E0A;"></span>
-    </button>
-    <button type="button" class="btnDesign" data-first="#DDBAE3" data-second="#FFFFFF" data-third="#866D8A">
-        <span style="background-color: #DDBAE3;"></span>
-        <span style="background-color: #FFFFFF;"></span>
-        <span style="background-color: #866D8A;"></span>
     </button>
     <div id="containerStyles">
         <div id="swatch">
-            <input type="color" id="background" name="background" value="#2F6BFD">
+            <input type="color" id="background" name="background" value="#0E379A">
             <div class="info">
                 <h2>Color de fondo</h2>
             </div>
         </div>
         <div id="swatch">
-            <input type="color" id="backgroundLink" name="backgroundLink" value="#FFFFFF">
+            <input type="color" id="backgroundLink" name="backgroundLink" value="#00000">
             <div class="info">
-                <h2>Color de fondo para link</h2>
-            </div>
-        </div>
-        <div id="swatch">
-            <input type="color" id="colorText" name="colorText" value="#0E379A">
-            <div class="info">
-                <h2>Color de texto para link</h2>
+                <h2>Color secundario</h2>
             </div>
         </div>
     </div>
@@ -49,37 +39,38 @@
 
 <div class="containerItem">
     <h3 class="title">Información de la Vcard</h3>
+    <label for="imgTitle" class="label">Imagen</label>
     <input type="file" name="imgTitle">
-    <label for="peopleName">Nombre *</label>
+    <label for="peopleName" class="label">Nombre *</label>
     <input type="text" name="peopleName" placeholder="Ej. Pablo">
-    <label for="peopleLastname">Apellido</label>
+    <label for="peopleLastname" class="label">Apellido</label>
     <input type="text" name="peopleLastname" placeholder="Ej. Pablo">
     <h3 class="title">Información de contacto</h3>
     <div>
-        <label for="mobilePhone">Teléfono móvil</label>
+        <label for="mobilePhone" class="label">Teléfono móvil</label>
         <input type="text" name="mobilePhone" placeholder="Ej. 00 000 000">
-        <label for="phone">Teléfono Fijo</label>
+        <label for="phone" class="label">Teléfono Fijo</label>
         <input type="text" name="phone" placeholder="Ej. 00 000 000">
-        <label for="fax">Fax</label>
+        <label for="fax" class="label">Fax</label>
         <input type="text" name="fax" placeholder="Ej. 00 000 000">
     </div>
-    <label for="email">Correo electrónico</label>
+    <label for="email" class="label">Correo electrónico</label>
     <input type="email" name="email" placeholder="Ej. nombre@correo.com">
-    <label for="website">Página web personal</label>
+    <label for="website" class="label">Página web personal</label>
     <input type="text" name="website" placeholder="Ej. https://...">
     <div class="city">
-        <label for="city">Ciudad</label>
+        <label for="city" class="label">Ciudad</label>
         <input type="text" name="city" placeholder="">
-        <label for="state">Estado</label>
+        <label for="state" class="label">Estado</label>
         <input type="text" name="state" placeholder="">
     </div>
-    <label for="country">País</label>
+    <label for="country" class="label">País</label>
     <input type="text" name="country" placeholder="">
     <h3>Empresa</h3>
     <div class="company">
-        <label for="company">Empresa</label>
+        <label for="company" class="label">Empresa</label>
         <input type="text" name="company" placeholder="Ej. Empresa S.L">
-        <label for="company">Profesión</label>
+        <label for="company" class="label">Profesión</label>
         <input type="text" name="profession" placeholder="Ej. Tu profesión / puesto">
     </div>
     <h3>Resumen</h3>
@@ -525,11 +516,5 @@
         </button>
     </div>
     <div class="containerEnlace">
-    </div>
-</div>
-<div class="containerItem">
-    <h3 class="title">Pantalla de bienvenida</h3>
-    <div class="containerEnlace">
-        <button>Vista previa</button>
     </div>
 </div>

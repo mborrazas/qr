@@ -218,17 +218,18 @@ class vcardplusQRmodel extends QRmodel
 
     public function setData($data){
         $this->setMobilePhone($data['mobilePhone']);
-        $this->setName($data['name']);
         $this->setPhone($data['phone']);
         $this->setFax($data['fax']);
         $this->setEmail($data['email']);
-        $this->setPersonalWebsite($data['website']);
+        $this->setPersonalWebsite($data['personalWebsite']);
         $this->setCity($data['city']);
         $this->setState($data['state']);
         $this->setCountry($data['country']);
         $this->setCompany($data['company']);
-        $this->setProfession($data['profesion']);
-        $this->setSummary($data['resume']);
+        $this->setProfession($data['profession']);
+        $this->setSummary($data['summary']);
+        $this->setPeopleName($data['peopleName']);
+        $this->setSurname($data['surname']);
     }
 
     function __toJson()
