@@ -133,7 +133,7 @@ html {
 
 #step2 #containerData,
 #step3 #containerData,
-#step4 #containerData {
+#step4 #containerData{
     width: 67%;
     padding-left: 16%;
     display: inline-block;
@@ -153,7 +153,8 @@ html {
 #step2 .containerItem,
 #step3 .containerItem,
 #step4 .containerItem ,
-#step6 .containerItem {
+#step6 .containerItem,
+#step5 .containerItem{
     background: white;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -255,7 +256,8 @@ html {
 #step2,
 #step3,
 #step4,
-#step6{
+#step6,
+#step5{
     min-height: 100vh;
     background-color: #e4e7ee;
     text-align: center;
@@ -1308,6 +1310,41 @@ font-size: 12px;
 padding: 0px;
 }
 
+#step5 .totalToPay{
+    color: #5A5B70;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#step5 .price{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+#step5 .descriptionPlan{
+    color: #5A5B70;
+    font-size: 13px;
+    text-align: center;
+}
+
+#step5 .buttonToPay{
+    background: #272727!important;
+    color: white;
+    padding: 14px;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 500;
+}
+
+#step5 svg{
+    height: 27px;
+}
+
 input[type="color"] {
 appearance: none;
 -moz-appearance: none;
@@ -1319,6 +1356,8 @@ height: 15em;
 padding: 0;
 width: 15em;
 }
+
+
 
 *:focus {
 border-radius: 0;

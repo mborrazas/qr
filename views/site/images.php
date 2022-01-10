@@ -24,7 +24,6 @@ if ($data instanceof imagesQRmodel) { ?>
                 background: <?php echo $design->background ?? 'white'; ?>;
                 height: 237px;
                 padding-top: 17px;
-                background: rgb(34, 40, 71);
                 color: white;
             }
 
@@ -52,12 +51,6 @@ if ($data instanceof imagesQRmodel) { ?>
                 border: 2px solid #CDD1E0;
             }
 
-            #name {
-                font-size: 22px;
-                margin-top: 154px;
-                margin-bottom: 10px;
-            }
-
             #subtitle {
                 font-size: 13px;
                 color: rgb(90, 91, 112);
@@ -76,52 +69,6 @@ if ($data instanceof imagesQRmodel) { ?>
                 font-size: 31px;
                 color: <?php echo $design->colorText ?? 'black'; ?>
             }
-
-            .item svg {
-                height: 30px;
-            }
-
-            .item {
-                border-bottom: 1px solid #CDD1E0;
-                height: 82px;
-            }
-
-            .item .icon {
-                display: inline-block;
-                background: #dddddd;
-                border-radius: 4px;
-                padding: 8px;
-                width: 40px;
-                margin-left: 34px;
-            }
-
-            .item .text {
-                width: 68%;
-                display: inline-block;
-            }
-
-            .item .text .gray {
-                color: #8B8CA5;
-                font-size: 13px;
-                margin-top: 0px;
-                margin-bottom: 0px;
-                font-family: Manrope, sans-serif;
-            }
-
-            .item .text .value {
-                font-size: 15px;
-                margin-bottom: 3px;
-                font-family: Manrope, sans-serif;
-            }
-
-            #containerInfo {
-                box-shadow: 0 4px 6px 0 #cdd1e0;
-                border: 1px solid #E5E7EF;
-                border-radius: 12px;
-                margin-right: 10px;
-                margin-left: 10px;
-            }
-
             a {
                 background: transparent;
                 margin-bottom: 12px;

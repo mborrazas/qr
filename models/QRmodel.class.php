@@ -147,8 +147,6 @@ abstract class QRmodel extends Model
             );
             $sentencia->execute();
             if ($sentencia->error) {
-                var_dump($sentencia);
-                die;
                 throw new Exception("Hubo un problema al guardar el qr: " . $sentencia->error);
             }
             return $url;
@@ -239,10 +237,22 @@ abstract class QRmodel extends Model
                 $apps->setApple($dataapps['apple']);
                 return $apps;
                 break;
+            case self::MENU:
+                $menu = new menuQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
+                $datamenu = json_decode($data['dataQR'], true);
+                $menu->setDescription($datamenu['description']);
+                $menu->setNameMenu($datamenu['nameMenu']);
+                $menu->setMenu($datamenu['menu']);
+                return $menu;
+                break;
             case self::PDF:
                 $pdf = new pdfQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
                 $datapdf = json_decode($data['dataQR'], true);
                 $pdf->setPdf($datapdf['pdf']);
+                $pdf->setDescription($datapdf['description']);
+                $pdf->setCompany($datapdf['company']);
+                $pdf->setTitle($datapdf['title']);
+                $pdf->setOnlypdf($datapdf['onlypdf']);
                 return $pdf;
                 break;
             case self::GALLERY:
@@ -265,6 +275,11 @@ abstract class QRmodel extends Model
             case self::VIDEO:
                 $video = new videoQRmodel($data['design'], $data['name'], $data['welcomescreen'], $data['userId']);
                 $datavideo = json_decode($data['dataQR'], true);
+                $video->setCompany($datavideo['company']);
+                $video->setButton(json_decode($datavideo['button']));
+                $video->setDescription($datavideo['description']);
+                $video->setVideoTitle($datavideo['videoTitle']);
+                $video->setVideo($datavideo['video']);
                 return $video;
                 break;
         }

@@ -8,11 +8,12 @@ Routes::Add("/generate/step2", "post", "GenerateController::requestStep2");
 Routes::Add("/generate/step3", "get", "GenerateController::step3");
 Routes::Add("/generate/step3", "post", "GenerateController::requestStep3");
 Routes::Add("/generate/step4", "get", "UserController::step4");
-Routes::Add("/generate/step5", "get", "GenerateController::step5");
 Routes::Add("/generate/step6", "get", "GenerateController::step6");
 Routes::Add("/generate/createAccount", "post", "UserController::createAccount");
 Routes::Add("/generate/login", "post", "UserController::login");
 Routes::Add("/generate/createqr", "get", "GenerateController::createqr");
 Routes::Add("/site", "get", "TemplateController::init");
-
+Routes::Add("/payment/success", "get", "PaymentsController::success");
+Routes::Add("/payment/cancel", "get", "PaymentsController::cancel");
+Routes::Add("/generate/step5", "get", "PaymentsController::init");
 Routes::Run();

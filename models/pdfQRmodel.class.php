@@ -8,6 +8,7 @@ class pdfQRmodel extends QRmodel
     private $title;
     private $description;
     private $siteUrl;
+    private $onlypdf;
 
     public function __construct($design, $name, $welcomescreen, $userId)
     {
@@ -54,20 +55,32 @@ class pdfQRmodel extends QRmodel
         return $this->siteUrl;
     }
 
+    public function setOnlypdf($onlypdf){
+        $this->onlypdf = $onlypdf;
+    }
+
+    public function getOnlypdf(){
+        return $this->onlypdf;
+    }
+
     public function setData($data){
         $this->setDescription($data['description']);
         $this->setTitle($data['title']);
         $this->setSiteurl($data['website']);
         $this->setCompany($data['company']);
+        $this->setSiteurl($data['website']);
+        $this->setOnlypdf($data['onlypdf']);
     }
 
     function __toJson()
     {
         return json_encode([
            'pdf' => $this->getPdf(),
-           'description' => $this->getTitle(),
+           'description' => $this->getDescription(),
            'company' => $this->getCompany(),
-           'website' => $this->getSiteurl()
+           'website' => $this->getSiteurl(),
+            'title' => $this->getTitle(),
+            'onlypdf' => $this->getOnlypdf()
         ]);
     }
 

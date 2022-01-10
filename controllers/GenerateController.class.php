@@ -109,12 +109,6 @@ class GenerateController
         }
     }
 
-    public static function step5()
-    {
-        header('Location: /generate/step6');
-        return generarHtml("generate/step5", []);
-    }
-
     public static function step6()
     {
         $qr = self::getQR();
@@ -291,7 +285,10 @@ class GenerateController
                      $model = new videoQRmodel(json_encode($item['design']), $data['qrName'], '', $_SESSION['user']);
                      $model->setTypeQR(QRmodel::VIDEO);
                      $model->setDescription($data['description']);
-                     $model->setVideo(json_encode($img['video'] ?? ''));
+                     $model->setVideo($img['video'] ?? '');
+                     $model->setCompany($data['company']);
+                     $model->setVideoTitle($data['title']);
+                     $model->setButton(json_encode(['text' => $data['textBoton'], 'url' => $data['url']]));
                      $url = $model->save();
                      self::generateQR($url);
                      $qr = self::getQR();

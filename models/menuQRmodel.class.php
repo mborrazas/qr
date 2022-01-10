@@ -53,9 +53,33 @@ class menuQRmodel extends QRmodel
     }
 
     public function setData($data){
+        $menu = [];
+        $count = 0;
+        foreach($data['idSeccion'] as $sections){
+            $menu[$sections] = ['products' => []];
+            if(isset($data['nameSection'][$count])){
+                $menu[$sections]['name'] = $data['nameSection'][$count];
+            }
+            if(isset($data['descriptionSection'][$count])){
+                $menu[$sections]['description'] = $data['descriptionSection'][$count];
+            }
+            if(isset($data['descriptionSection'][$count])){
+                $menu[$sections]['description'] = $data['descriptionSection'][$count];
+            }
+            foreach ($data['idProduct'] as $key => $idProduct){
+                if($idProduct == $sections){
+                    $menu[$sections]['products'][] = [
+                      'name' => $data['nameProduct'][$key] ?? '',
+                      'description' => $data['descriptionProduct'][$key] ?? '',
+                      'price' => $data['priceProduct'][$key] ?? '',
+                    ];
+                }
+            }
+            $count++;
+        }
         $this->setNameMenu($data['nameRistorante']);
         $this->setDescription($data['description']);
-        $this->setMenu('hola');
+        $this->setMenu(json_encode($menu));
     }
 
     function __toJson()

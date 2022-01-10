@@ -14,8 +14,8 @@
     <button type="button" class="btnDesign" data-first="#28ED28">
         <span style="background-color: #28ED28;"></span>
     </button>
-    <button type="button" class="btnDesign" data-first="#EDE728">
-        <span style="background-color: #EDE728;"></span>
+    <button type="button" class="btnDesign" data-first="#ED4C28">
+        <span style="background-color: #ED4C28;"></span>
     </button>
     <div id="containerStyles">
         <div id="swatch">

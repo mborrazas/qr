@@ -222,10 +222,14 @@
 
             });
 
+            let sections = 1;
             $('#addSectionMenu').click(function (e){
                 e.preventDefault();
+                sections++;
                 $item = $('.section').clone();
                 $('#sections').append($item);
+                $('#sections .idProduct:last').val(sections.toString());
+                $('#sections .idSeccion:last').val(sections.toString());
             });
 
 

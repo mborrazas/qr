@@ -30,6 +30,8 @@ class TemplateController
                  return generarHtml("site/video", ['data' => $info]);
              }elseif($info instanceof wifiQRmodel){
                  return generarHtml("site/wifi", ['data' => $info]);
+             }elseif($info instanceof menuQRmodel){
+                 return generarHtml("site/menu", ['data' => $info]);
              }
         }catch(Exception $e){
 
