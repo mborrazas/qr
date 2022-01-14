@@ -12,7 +12,7 @@ class PaymentsController
         if(self::hasSuscription()){
             header('Location: /generate/step6');
         }
-        
+
         $payment = new Paymentsmodel();
         $payment->setState('init');
         $payment->setAmount('0,50');

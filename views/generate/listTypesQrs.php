@@ -1,7 +1,6 @@
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/head.php"; ?>
 <body class="container-fluid" id="step1">
-<header>
-</header>
+<?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/header.php"; ?>
 <form method="POST" action="/generate" id="formList">
     <section id="containerTypes">
         <h2 id="title">Elige un tipo de QR</h2>

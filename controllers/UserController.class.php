@@ -7,6 +7,11 @@ class UserController
         return generarHtml("generate/step4", []);
     }
 
+    public static function logout(){
+        unset($_SESSION['user']);
+        header('Location: /generate');
+    }
+
     public static function createAccount($request)
     {
         if (!isset($request['post']['email'])) {
@@ -30,7 +35,8 @@ class UserController
             $userModel = new Usermodel();
             $userModel->setEmail($request['post']['email']);
             $userModel->setPassword($request['post']['password']);
-            $user = $userModel->save();
+            $userModel->save();
+            $user = $userModel->getUser();
             self::createSesion($user);
             header("Location: /generate/createqr");
         }catch(Exception $e){

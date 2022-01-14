@@ -85,7 +85,7 @@ class Paymentsmodel extends Model
 
     public function approved($paymentId){
         try {
-            $sql = "UPDATE payments SET state = 'approved' WHERE id = ?;";
+            $sql = "UPDATE payments SET statePayment = 'approved' WHERE id = ?;";
             $sentencia = $this->conexion->prepare($sql);
             $sentencia->bind_param(
                 "i",

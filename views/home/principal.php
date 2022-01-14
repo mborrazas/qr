@@ -1,31 +1,16 @@
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/head.php"; ?>
-
 <body id="home" class="container-fluid">
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+
+    </a>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#step4" class="nav-link">Precios</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Inicia sesión</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Registrate</a></li>
+    </ul>
+</header>
     <section id="first" class="row">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#">Logo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Planes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicia sesión</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="registrate" href="#">Registrate</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
         <div class="leftHeader col">
             <h2 id="titleHeader">
                 Crea tus propios códigos QR y comparte tu información con los demás
@@ -34,20 +19,20 @@
                 Es muy fácil. Puedes generar, gestionar tus códigos QR.
             </p>
             <a href="/generate">
-                <button id="buttonHeader">
+                <button class="button">
                     Crear código QR
                 </button>
             </a>
         </div>
         <div class="rightHeader col">
-            <img src="header.png" alt="">
+            <img src="https://qrty.mobi/static/media/main_banner_x2.d3be16a9.png" alt="">
         </div>
     </section>
     <section id="step2">
-        <h2>Crea tu QR en minutos</h2>
+        <h2 id="title">Crea tu QR en minutos</h2>
         <div class="row">
             <div class="col">
-                <img src="step1.svg" alt="">
+                <img src="https://qrty.mobi/static/media/step_1.d650ec93.svg" alt="">
                 <h2 class="subtitle">Elige el contenido de tu QR
                 </h2>
                 <p>
@@ -55,7 +40,7 @@
                 </p>
             </div>
             <div class="col">
-                <img src="step2.svg" alt="">
+                <img src="https://qrty.mobi/static/media/step_2.94540cdc.svg" alt="">
                 <h2 class="subtitle"> Personaliza y diseñalo a medida
                 </h2>
                 <p>
@@ -63,65 +48,78 @@
                 </p>
             </div>
             <div class="col">
-                <img src="step3.svg" alt="">
+                <img src="https://qrty.mobi/static/media/step_3.e66c4ab2.svg" alt="">
                 <h2 class="subtitle">Descarga tu código QR
                 </h2>
                 <p>Consigue tu código QR en distintos formatos (pdf, png, svg), imprímelo o muéstralo en formato digital y listo!
                 </p>
             </div>
         </div>
-        <button>
-            Crear código QR
-        </button>
-    </section>
-    <section id="step3">
-        <h2>Crea distintos tipos de QR</h2>
-        <p class="subtitle">Los códigos QR pueden tener una amplia cantidad de contenidos y nosotros tenemos todos esos formatos.</p>
-        <div id="containerTipos">
-            <div class="item">
-                <p>Menú</p>
-            </div>
-            <div class="item">
-                <p>Vcard Plus</p>
-            </div>
-            <div class="item">
-                <p>Negocio
-                </p>
-            </div>
-            <div class="item">
-                <p>Página web
-                </p>
-            </div>
-            <div class="item">
-                <p>Apps
-                </p>
-            </div>
-            <div class="item">
-                <p>
-                    WIFI
-                </p>
-            </div>
-            <div class="item">
-                <p>Video</p>
-            </div>
-            <div class="item">
-                <p>PDF</p>
-            </div>
-            <div class="item">
-                <p>Imágenes</p>
-            </div>
-            <div class="item">
-                <p>
-                    Listado de enlaces
-                </p>
-            </div>
-        </div>
-        <button>
-            Crear código QR
-        </button>
+        <a href="/generate">
+            <button>
+                Crear código QR
+            </button>
+        </a>
     </section>
     <section id="step4">
         <h2>Suscríbete y accede a nuestros beneficios</h2>
+        <div id="box">
+            <div id="top">
+                <p id="title">Accede a todas estas ventajas que te ofrecemos</p>
+                <div id="list">
+                    <p class="floatleft">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 24px;"><path class="custom-color--circle-check-green" fill="#31d3b3" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path><path fill="#000" d="M10 17.41l-4.71-4.7 1.42-1.42 3.29 3.3 7.29-7.3 1.42 1.42-8.71 8.7z"></path></svg>
+                        Crea QR dinámicos ilimitados
+                    </p>
+                    <p class="floatright">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 24px;"><path class="custom-color--circle-check-green" fill="#31d3b3" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path><path fill="#000" d="M10 17.41l-4.71-4.7 1.42-1.42 3.29 3.3 7.29-7.3 1.42 1.42-8.71 8.7z"></path></svg>
+                        Escaneos ilimitados
+                    </p>
+                    <p class="floatleft">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 24px;"><path class="custom-color--circle-check-green" fill="#31d3b3" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path><path fill="#000" d="M10 17.41l-4.71-4.7 1.42-1.42 3.29 3.3 7.29-7.3 1.42 1.42-8.71 8.7z"></path></svg>
+                        Variedad de tipos de QR
+                    </p>
+                    <p class="floatright">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 24px;"><path class="custom-color--circle-check-green" fill="#31d3b3" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path><path fill="#000" d="M10 17.41l-4.71-4.7 1.42-1.42 3.29 3.3 7.29-7.3 1.42 1.42-8.71 8.7z"></path></svg>
+                        Analítica completa de QR
+                    </p>
+                    <p class="floatleft">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 24px;"><path class="custom-color--circle-check-green" fill="#31d3b3" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path><path fill="#000" d="M10 17.41l-4.71-4.7 1.42-1.42 3.29 3.3 7.29-7.3 1.42 1.42-8.71 8.7z"></path></svg>
+                        Edición y gestión de QR
+                    </p>
+                    <p class="floatright">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 24px;"><path class="custom-color--circle-check-green" fill="#31d3b3" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path><path fill="#000" d="M10 17.41l-4.71-4.7 1.42-1.42 3.29 3.3 7.29-7.3 1.42 1.42-8.71 8.7z"></path></svg>
+                        Variedad de formatos de descarga
+                    </p>
+                </div>
+            </div>
+            <div id="bottom">
+                <div class="item">
+                    <p class="title">
+                        Plan de prueba
+                    </p>
+                    <div class="days">(14 días)</div>
+                    <p class="price">0,50 €*</p>
+                    <a href="/generate">
+                        <button class="button">
+                            Comprar
+                        </button>
+                    </a>
+                </div>
+                <div class="item">
+                    <p class="title">
+                        Plan Anual
+                    </p>
+                    <div class="days">(12 meses)</div>
+                    <p class="price">200,00 €</p>
+                    <a href="/generate">
+                        <button class="button">
+                            Comprar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
 

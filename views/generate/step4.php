@@ -1,8 +1,6 @@
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/head.php"; ?>
 <body class="container-fluid" id="step4">
-<header>
-
-</header>
+<?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/header.php"; ?>
 
     <section id="containerData">
         <h2>¡Felicitaciones!</h2>
@@ -29,13 +27,11 @@
         </div>
         <div class="containerItem" id="loginContainer">
         <form method="POST" action="/generate/login" id="formList">
-
             <h3>Iniciar Sesión</h3>
             <label for="email">Correo electrónico</label>
             <input type="email" placeholder="nombre@email.com" name="email" class="input width100" />
             <label for="password">Contraseña</label>
             <input type="password" placeholder="Escribe tu contraseña aquí..." name="password" class="input width100">
-            <p>¿Has olvidado tu contraseña? <span>Pincha aquí</span></p>
             <input type="submit" value="Iniciar Sesión" class="buttonAction">
             <p class="haveAccount">¿No tienes cuenta? <span id="register">Crear una cuenta</span></p>
             </form>

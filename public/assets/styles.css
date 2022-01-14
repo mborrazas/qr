@@ -4,17 +4,148 @@ html {
     margin: 0px;
 }
 
+header nav{
+    background: rgb(0, 0, 0);
+}
+
+header{
+    margin-bottom: 30px;
+}
+
+#home header{
+    background: transparent;
+    border-bottom: 0px !important;
+}
+
+#home header nav{
+    background: transparent;
+}
+
+#home header a{
+    color:#5A5B70;
+}
+
 #home {
     font-family: Manrope, sans-serif;
 }
 
+#home #step4{
+    background: white;
+}
+
+#home #step2 h2{
+    padding-top: 6%;
+    font-weight: 100;
+}
+
+#home #step2 button{
+    margin-top: 31px;
+}
+
+#home #step2 #title{
+    margin-bottom: 60px;
+}
+
+#home #step4 svg{
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
+
+#home #step4 #box{
+    width: 62%;
+    margin-top: 29px;
+    box-shadow: 1px 1px 6px 12px whitesmoke;
+    margin: 0 auto;
+    margin-top: 43px;
+    border-radius: 18px;
+}
+
+#home #step4 #top{
+    height: 121px;
+}
+
+#home #step4 #bottom{
+    margin-top: 37px;
+}
+
+#home #step4 h2{
+    font-weight: 300;
+}
+
+#home #step4 #bottom .item{
+    width: 40%;
+    display: inline-block;
+    padding: 18px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px #ededed;
+    margin-bottom: 30px;
+}
+
+
+#home #step4 #bottom .title{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+#home #step4 #bottom .days{
+    color: rgb(90, 91, 112);
+    font-size: 13px;
+}
+
+#home #step4 #bottom .price{
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 17px;
+}
+
+#home #step4 #bottom button{
+    margin-top: 23px;
+    height: 47px;
+    width: 90%;
+}
+
+#home #step4 #bottom .item:first-of-type{
+    margin-right: 10px;
+}
+
+#home #step4 #top #title{
+    text-align: left;
+    display: inline-block;
+    width: 36%;
+    height: 120px;
+    color: #000;
+}
+#home #step4 #top #list{
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 18px;
+}
+
+#home #step4 #top #list p{
+    font-weight: 100;
+    font-size: 13px;
+    width: 47%;
+}
+
+#home header .nav:last-child{
+    padding-right: 20px;
+}
+
 #home .leftHeader {
-    padding-left: 11%;
+    padding-left: 5%;
+    padding-top: 85px;
 }
 
 #home .rightHeader {
     display: inline-block;
     height: 294px;
+    padding-right: 5%;
 }
 
 .col a {
@@ -41,7 +172,7 @@ html {
     margin-top: 26px;
 }
 
-#home #buttonHeader {
+#home .button {
     color: #FFF;
     background-color: #000;
     padding: 8px 22px;
@@ -65,11 +196,12 @@ html {
 }
 
 #home #first {
-    min-height: 100vh;
+    padding-top: 50px;
+    min-height: 90vh;
 }
 
 #home #first img {
-    width: 70%;
+    width: 100%;
 }
 
 #home ul {
@@ -179,6 +311,7 @@ html {
     border-radius: 5px;
     padding: 13px;
     font-family: Manrope, sans-serif;
+    margin-top: 10px;
 }
 
 #step4 #containerData #registerContainer h3,
@@ -315,6 +448,20 @@ html {
     padding-top: 40px;
 }
 
+#step3 .btnCorner{
+    background: white;
+    padding: 0px;
+    width: 10%;
+    height: 50px;
+    margin-right: 7px;
+    margin-top: 19px;
+    border: 2px solid #CDD1E0;
+}
+
+#step3 .btnCorner svg{
+    height: 26px;
+}
+
 #step4 {
     min-height: 100vh;
     background-color: #e4e7ee;
@@ -445,6 +592,10 @@ html {
     width: 100%;
     text-align: left;
     color: #5A5B70;
+}
+
+#step4 #congratulations{
+    margin-top: 20px;
 }
 
 #bar .step {
@@ -1310,6 +1461,10 @@ font-size: 12px;
 padding: 0px;
 }
 
+#step5 #title{
+    font-weight: 100;
+}
+
 #step5 .totalToPay{
     color: #5A5B70;
     font-size: 16px;
@@ -1359,6 +1514,14 @@ width: 15em;
 
 
 
+.floatleft{
+    float: left;
+}
+
+.floatright{
+    float: right;
+}
+
 *:focus {
 border-radius: 0;
 outline: none;
@@ -1373,7 +1536,6 @@ border: 0;
 border-radius: 0;
 }
 
-::-moz-color-swatch,
 ::-moz-focus-inner {
 border: 0;
 }

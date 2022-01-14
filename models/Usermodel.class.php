@@ -46,10 +46,11 @@ class Usermodel extends Model
         try {
             $sql = "INSERT INTO users(email,password) VALUES(?,?);";
             $sentencia = $this->conexion->prepare($sql);
+            $password = $this->encryptPassword();
             $sentencia->bind_param(
                 "ss",
-                $this->getEmail(),
-                $this->encryptPassword()
+                $this->email,
+                $password
             );
             $sentencia->execute();
             if ($sentencia->error) {
@@ -65,10 +66,11 @@ class Usermodel extends Model
         try{
             $sql = "SELECT * from users where email = ? AND password = ?";
             $sentencia = $this->conexion->prepare($sql);
+            $password = $this->encryptPassword();
             $sentencia->bind_param(
                 "ss",
-                $this->getEmail(),
-                $this->encryptPassword()
+                $this->email,
+                $password
             );
             $sentencia->execute();
             if ($sentencia->error) {

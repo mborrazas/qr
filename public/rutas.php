@@ -16,4 +16,5 @@ Routes::Add("/site", "get", "TemplateController::init");
 Routes::Add("/payment/success", "get", "PaymentsController::success");
 Routes::Add("/payment/cancel", "get", "PaymentsController::cancel");
 Routes::Add("/generate/step5", "get", "PaymentsController::init");
+Routes::Add("/logout", "get", "UserController::logout");
 Routes::Run();
