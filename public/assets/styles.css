@@ -25,6 +25,15 @@ header{
     color:#5A5B70;
 }
 
+#home header img{
+    width: 37%;
+    margin-left: 16%;
+}
+
+header img{
+    width: 19%;
+}
+
 #home {
     font-family: Manrope, sans-serif;
 }

@@ -93,7 +93,7 @@ class GenerateController
     }
 
     public static function step3()
-    {
+    {   header('Location: /generate/step4');
         return generarHtml("generate/step3", []);
     }
 
@@ -102,11 +102,7 @@ class GenerateController
         $qr = self::getQR();
         $qr['design'] = $request['post'];
         self::saveQR($qr);
-        if (isset($_SESSION['user']) && $_SESSION['user'] !== null) {
-            header('Location: /generate/createqr');
-        } else {
-            header('Location: /generate/step4');
-        }
+        header('Location: /generate/step4');
     }
 
     public static function step6()

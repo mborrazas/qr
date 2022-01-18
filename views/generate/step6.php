@@ -10,7 +10,7 @@
         <p class="subtitle">Descargalo y utilizalo.</p>
     </div>
     <div class="containerItem" id="registerContainer">
-        <div id="canvas"></div>
+      <!--  <div id="canvas"></div> -->
         <img src="/<?php echo $url.'.png'?>" alt="">
     </div>
    </section>

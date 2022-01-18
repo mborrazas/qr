@@ -4,6 +4,9 @@ class UserController
 {
     public static function step4()
     {
+        if (isset($_SESSION['user']) && $_SESSION['user'] !== null) {
+            header('Location: /generate/createqr');
+        }
         return generarHtml("generate/step4", []);
     }
 
