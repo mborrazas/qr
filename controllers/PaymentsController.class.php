@@ -6,7 +6,6 @@ class PaymentsController
 {
     public static function init($request)
     {
-        header('Location: /generate/step6');
         if(!$_SESSION['user'] instanceof Usermodel){
             throw new Exception('El usuario no es válido');
         }
