@@ -94,7 +94,8 @@ class GenerateController
 
     public static function step3()
     {
-        return generarHtml("generate/step3", []);
+        $qr = self::getQR();
+        return generarHtml("generate/step3", ['type' => $qr['type']]);
     }
 
     public static function requestStep3($request)
