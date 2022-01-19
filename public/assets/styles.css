@@ -141,6 +141,7 @@ header img{
     font-weight: 100;
     font-size: 13px;
     width: 47%;
+    text-align: left;
 }
 
 #home header .nav:last-child{
@@ -270,7 +271,7 @@ header img{
     padding-left: 16%;
     display: inline-block;
     max-height: 90vh;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 #step2 #containerData,

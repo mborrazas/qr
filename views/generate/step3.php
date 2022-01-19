@@ -138,10 +138,6 @@
                 </div>
             </div>
         </div>
-        <div class="containerItem">
-            <h3>Añadir logo</h3>
-            <input type="file" name="logo" />
-        </div>
     </section>
     <aside>
 
@@ -153,9 +149,9 @@
                 <button id="cancelar">Atras</button>
             </div>
             <div class="col">
-                <span class="step">Tipo de QR</span>
-                <span class="step">Contenido</span>
-                <span class="step">Diseño del QR</span>
+                <span class="step disabled">Tipo de QR</span>
+                <span class="step disabled">Contenido</span>
+                <span class="step selected">Diseño del QR</span>
             </div>
             <div class="col">
                 <input type="text" hidden name="type" id="inputType" />
