@@ -12,6 +12,9 @@
         <div class="containerItem" id="registerContainer">
         <form method="POST" action="/generate/createAccount" id="formList">
             <h3>Crear cuenta</h3>
+            <?php if(isset($_GET['error'])){ ?>
+                <p>Error al crear la cuenta.</p>
+            <?php } ?>
             <label for="email" >Correo electrónico</label>
             <input type="email" placeholder="nombre@email.com" name="email" class="input width100"  required />
             <label for="password">Contraseña</label>
@@ -23,24 +26,29 @@
             <input type="submit" value="Crear cuenta" class="buttonAction">
             <p class="haveAccount">¿Ya tienes cuenta? <span id="login">Iniciar Sesión</span></p>
             </form>
-
         </div>
         <div class="containerItem" id="loginContainer">
-        <form method="POST" action="/generate/login" id="formList">
-            <h3>Iniciar Sesión</h3>
-            <label for="email">Correo electrónico</label>
-            <input type="email" placeholder="nombre@email.com" name="email" class="input width100" />
-            <label for="password">Contraseña</label>
-            <input type="password" placeholder="Escribe tu contraseña aquí..." name="password" class="input width100">
-            <input type="submit" value="Iniciar Sesión" class="buttonAction">
-            <p class="haveAccount">¿No tienes cuenta? <span id="register">Crear una cuenta</span></p>
+            <form method="POST" action="/generate/login" id="formList">
+                <h3>Iniciar Sesión</h3>
+                <?php if(isset($_GET['errorLogin'])){ ?>
+                    <p>Usuario o contraseña incorrecto.</p>
+                <?php } ?>
+                <label for="email">Correo electrónico</label>
+                <input type="email" placeholder="nombre@email.com" name="email" class="input width100" />
+                <label for="password">Contraseña</label>
+                <input type="password" placeholder="Escribe tu contraseña aquí..." name="password" class="input width100">
+                <input type="submit" value="Iniciar Sesión" class="buttonAction">
+                <p class="haveAccount">¿No tienes cuenta? <span id="register">Crear una cuenta</span></p>
             </form>
-
         </div>
     </section>
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/footer.php"; ?>
 <script>
     $( document ).ready(function() {
+        <?php if(isset($_GET['errorLogin'])): ?>
+            $('#registerContainer').hide();
+            $('#loginContainer').show();
+        <?php endif; ?>
         var form = $('#formList');
         $('#next').click(function(){
             form.submit();

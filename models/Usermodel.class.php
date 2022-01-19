@@ -83,6 +83,7 @@ class Usermodel extends Model
                 $usuario->setId($row['id']);
                 return $usuario;
             }
+            return false;
         }catch(Exception $e){
             error_log($e->getMessage());
         }

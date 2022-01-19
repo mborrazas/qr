@@ -40,10 +40,14 @@ class UserController
             $userModel->setPassword($request['post']['password']);
             $userModel->save();
             $user = $userModel->getUser();
-            self::createSesion($user);
-            header("Location: /generate/createqr");
+            if(!$user){
+                header("Location: /generate/step4?error=true");
+            }else{
+                self::createSesion($user);
+                header("Location: /generate/createqr");
+            }
         }catch(Exception $e){
-            return $e->getMessage();
+            header("Location: /generate/step4?error=true");
         }
     }
 
@@ -60,8 +64,12 @@ class UserController
             $userModel->setEmail($request['post']['email']);
             $userModel->setPassword($request['post']['password']);
             $user = $userModel->getUser();
-            self::createSesion($user);
-            header("Location: /generate/createqr");
+            if(!$user){
+                header("Location: /generate/step4?errorLogin=true");
+            }else{
+                self::createSesion($user);
+                header("Location: /generate/createqr");
+            }
         }catch(Exception $e){
             return $e->getMessage();
         }
