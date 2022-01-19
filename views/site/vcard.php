@@ -32,9 +32,14 @@ if($data instanceof vcardplusQRmodel){
             position: absolute;
             margin-top: 0px;
             top: 47px;
-            left: 27%;
+            left: 30%;
             box-shadow: 0 4px 6px 0 #cdd1e0;
             border: 2px solid #CDD1E0;
+        }
+        @media(min-width: 720px){
+            img{
+                left: 44%;
+            }
         }
         #social p{
             font-size: 16px;
@@ -69,7 +74,8 @@ if($data instanceof vcardplusQRmodel){
         }
         .item{
             border-bottom: 1px solid #CDD1E0;
-            height: 82px;
+            height: fit-content;
+            padding-bottom: 13px;
         }
         .item .icon{
             display: inline-block;
@@ -108,13 +114,8 @@ if($data instanceof vcardplusQRmodel){
             font-size: 14px;
             padding: 12px;
         }
-        #addContact{
-            padding: 10px;
-            margin-top: 17px;
-            margin-bottom: 17px;
-            background: white;
-            border: 2px solid #d7d7d7;
-            border-radius: 5px;
+        .addressIcon{
+            margin-top: 12px;
         }
         h1{
             font-size: 50px;
@@ -122,6 +123,12 @@ if($data instanceof vcardplusQRmodel){
         }
         p{
             font-size: 35px;
+        }
+        .social{
+            padding: 10px !important;
+        }
+        .social svg{
+            height: 50px !important;
         }
     </style>
 </head>
@@ -178,11 +185,11 @@ if(!is_null($data->getImage())){ ; ?>
     <?php endif; ?>
     <?php if(!is_null($data->getAddress()) || !is_null($data->getCountry()) || !is_null($data->getCity()) || !is_null($data->getState())): ?>
         <div class="item">
-            <div class="icon">
+            <div class="icon addressIcon">
                 <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 24px;"><path d="M12,21a1,1,0,0,1-.41-.09C11.28,20.77,4,17.4,4,11.28V11a8,8,0,0,1,16,0,.66.66,0,0,1,0,.14.66.66,0,0,1,0,.14c0,6.12-7.28,9.49-7.59,9.63A1,1,0,0,1,12,21ZM12,5a6,6,0,0,0-6,6v.1s0,.12,0,.15c0,4.14,4.58,6.88,6,7.63,1.42-.75,6-3.5,6-7.6,0,0,0-.16,0-.18s0-.09,0-.1h0A6,6,0,0,0,12,5Z"></path><path d="M12,15a4,4,0,1,1,4-4A4,4,0,0,1,12,15Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,12,9Z"></path></svg>
             </div>
             <div class="text">
-                <p class="gray"><?php echo $data->getAddress(); echo $data->getNumeration() ?> , PC: <?php echo $data->getPostalCode(); ?>, <?php echo $data->getState(); ?>, <?php echo $data->getCity(); ?>, <?php echo $data->getCountry(); ?></p>
+                <p class="gray"><?php echo $data->getAddress(); echo $data->getNumeration() ?> ,  PC: <?php echo $data->getPostalCode(); ?>, <?php echo $data->getState(); ?>, <?php echo $data->getCity(); ?>, <?php echo $data->getCountry(); ?></p>
             </div>
         </div>
     <?php endif; ?>

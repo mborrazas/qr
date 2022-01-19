@@ -40,10 +40,12 @@
 
 <div class="containerItem">
     <h3 class="title">Archivo pdf</h3>
-    <input type="file" name="pdf" >
-    <div>
-        <input type="checkbox" name="onlypdf" />
-        <label class="label" for="onlypdf">Solo mostrar pdf</label>
+    <input type="file" name="pdf" accept="application/pdf" >
+    <div id="onlypdfCheck">
+        <input type="checkbox" name="onlypdf">
+        <label for="onlypdf">
+            Solo mostrar pdf
+        </label>
     </div>
 </div>
 <div class="containerItem">

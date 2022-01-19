@@ -1,5 +1,6 @@
 <?php $data = $parametros['data'];
-if($data instanceof bussinesQRmodel){ $socialNetworks = $data->getSocialNetworks(); ?>
+if($data instanceof bussinesQRmodel){  $design = json_decode($data->getdesgin());
+    $socialNetworks = $data->getSocialNetworks(); ?>
     <!doctype html>
     <html lang="en">
     <head>
@@ -100,8 +101,10 @@ if($data instanceof bussinesQRmodel){ $socialNetworks = $data->getSocialNetworks
             }
             .item{
                 border-bottom: 1px solid #CDD1E0;
-                height: 82px;
+                height: fit-content;
+                padding-bottom: 11px;
             }
+
             .item .icon{
                 display: inline-block;
                 background: #dddddd;
@@ -165,12 +168,16 @@ if($data instanceof bussinesQRmodel){ $socialNetworks = $data->getSocialNetworks
             p{
                 font-size: 35px;
             }
+            #facilities .text{
+                width: 100%;
+            }
             #facilities .text .title{
                 margin-top: 5px;
                 font-size: 20px;
                 text-align: left;
                 margin-left: 0px;
-                padding-left: 36px;
+                padding-left: 31px;
+                margin-bottom: 10px;
             }
             #aboutCompany .title{
                 margin-top: 9px;
@@ -202,6 +209,10 @@ if($data instanceof bussinesQRmodel){ $socialNetworks = $data->getSocialNetworks
                 font-size: 13px;
                 text-align: center;
                 font-weight: 300;
+            }
+            #ubication .icon{
+                margin-top: 11px;
+                margin-left: 8px;
             }
         </style>
     </head>

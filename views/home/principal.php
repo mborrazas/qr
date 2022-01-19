@@ -6,8 +6,7 @@
     </a>
     <ul class="nav nav-pills">
         <li class="nav-item"><a href="#step4" class="nav-link">Precios</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Inicia sesión</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Registrate</a></li>
+        <li class="nav-item"><a href="/generate" class="nav-link">Crear código QR</a></li>
     </ul>
 </header>
     <section id="first" class="row">

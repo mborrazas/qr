@@ -29,7 +29,7 @@
 
 <div class="containerItem">
     <h3 class="title">Imágenes</h3>
-    <input type="file" name="imgTitle[]" multiple>
+    <input type="file" name="imgTitle[]" multiple  accept="image/*">
 </div>
 <div class="containerItem">
     <h3 class="title">Información</h3>

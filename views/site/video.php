@@ -1,5 +1,5 @@
 <?php $data = $parametros['data'];
-if ($data instanceof videoQRmodel) {  ?>
+if ($data instanceof videoQRmodel) {  $design = json_decode($data->getdesgin()); ?>
     <!doctype html>
     <html lang="en">
     <head>

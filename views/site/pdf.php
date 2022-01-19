@@ -1,5 +1,5 @@
 <?php $data = $parametros['data'];
-if ($data instanceof pdfQRmodel) { ?>
+if ($data instanceof pdfQRmodel) {  $design = json_decode($data->getdesgin());   ?>
     <!doctype html>
     <html lang="en">
     <head>
@@ -64,12 +64,12 @@ if ($data instanceof pdfQRmodel) { ?>
                 line-height: 21px;
             }
             #containerPdf{
-                max-width: 100vw;
+                max-width: 55vw;
                 overflow: hidden;
                 padding: 19px;
-                height: 65vh;
+                height: 52vh;
                 background: white;
-                margin: 16px;
+                margin: 0 auto;
                 border-radius: 10px;
             }
             img {
@@ -128,13 +128,7 @@ if ($data instanceof pdfQRmodel) { ?>
     </head>
     <body>
     <?php
-    if($data->getOnlypdf() == 'f') : ?>
-    <object data="<?php echo $data->getPdf(); ?>" type="application/pdf" width="100%" height="100%">
-        <p id="pdfOpenButtonTitle"> Abre el pdf </p>
-        <a id="linkpdfButton" href="<?php echo $data->getPdf(); ?>">
-            <button id="pdfOpenButton">Aquí</button>
-        </a>
-    </object>
+    if($data->getOnlypdf() == 'on') :  header('Location: '.$data->getPdf() );?>
      <?php else : ?>
     <section id="top">
         <?php if (!is_null($data->getCompany())): ?>

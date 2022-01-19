@@ -93,14 +93,23 @@ class GenerateController
     }
 
     public static function step3()
-    {   header('Location: /generate/step4');
+    {
         return generarHtml("generate/step3", []);
     }
 
     public static function requestStep3($request)
     {
         $qr = self::getQR();
-        $qr['design'] = $request['post'];
+        $design = [
+          'dataType' => $request['post']['dataType'],
+            'color' => $request['post']['color'],
+            'background' => $request['post']['background'],
+            'colorCorner' => $request['post']['colorCorner'],
+            'backgroundCorner' => $request['post']['backgroundCorner'],
+            'dataExternal' => $request['post']['dataExternal'],
+            'dataInteral' => $request['post']['dataInteral']
+        ];
+        $qr['design'] = $design;
         self::saveQR($qr);
         header('Location: /generate/step4');
     }
@@ -108,14 +117,7 @@ class GenerateController
     public static function step6()
     {
         $qr = self::getQR();
-        return generarHtml("generate/step6", ['url' => $qr['url']]);
-    }
-
-    private static function generateQR($url)
-    {
-        require $_SERVER["DOCUMENT_ROOT"] . "/../qrlib.php";
-        $ruta_qr = $_SERVER["DOCUMENT_ROOT"] . "/{$url}.png";
-        QRcode::png('https://7867-2800-a4-16e5-eb00-c45-34f0-8eac-e580.ngrok.io/site?data=' . $url, $ruta_qr, "Q", 10, 1);
+        return generarHtml("generate/step6", ['url' => $qr['url'], 'design' => $qr['design']]);
     }
 
     public static function createqr()
@@ -138,7 +140,6 @@ class GenerateController
                     $model->setTypeQR(QRmodel::WEBSITE);
                     $model->setUrl($data['url']);
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -168,7 +169,6 @@ class GenerateController
                     }
                     $model->setSocialNetworks(json_encode($social));
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -179,7 +179,6 @@ class GenerateController
                     $model->setImage($img['imgTitle'] ?? '');
                     $model->setData($data);
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -190,7 +189,6 @@ class GenerateController
                     $model->setLogo($img['imgTitle']?? '');
                     $model->setData($data);
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -201,7 +199,6 @@ class GenerateController
                     $model->setData($data);
                     $model->setPdf($img['pdf'] ?? '');
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -211,7 +208,6 @@ class GenerateController
                     $model->setTypeQR(QRmodel::MENU);
                     $model->setData($data);
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -244,7 +240,6 @@ class GenerateController
                     }
                     $model->setSocialNetworks(json_encode($social));
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -255,7 +250,6 @@ class GenerateController
                     $model->setNetworkName($data['nameWifi']);
                     $model->setNetworkPassword($data['passwordWifi']);
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -272,7 +266,6 @@ class GenerateController
                     }
                     $model->setImages(json_encode($images));
                     $url = $model->save();
-                    self::generateQR($url);
                     $qr = self::getQR();
                     $qr['url'] = $url;
                     self::saveQR($qr);
@@ -286,7 +279,6 @@ class GenerateController
                      $model->setVideoTitle($data['title']);
                      $model->setButton(json_encode(['text' => $data['textBoton'], 'url' => $data['url']]));
                      $url = $model->save();
-                     self::generateQR($url);
                      $qr = self::getQR();
                      $qr['url'] = $url;
                      self::saveQR($qr);

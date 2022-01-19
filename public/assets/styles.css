@@ -34,6 +34,7 @@ header img{
     width: 19%;
 }
 
+
 #home {
     font-family: Manrope, sans-serif;
 }
@@ -1509,6 +1510,23 @@ padding: 0px;
     height: 27px;
 }
 
+#containerFrames .containerImgFrame button{
+    background: transparent;
+    height: fit-content;
+    width: fit-content;
+    padding: 0px;
+    border: 2px solid #c7c7c7;
+    margin-right: 27px;
+}
+
+#containerFrames .containerImgFrame{
+    padding-top: 14px;
+}
+
+#containerFrames .containerImgFrame button svg{
+    height: 56px;
+}
+
 input[type="color"] {
 appearance: none;
 -moz-appearance: none;
@@ -1522,6 +1540,30 @@ width: 15em;
 }
 
 
+#download{
+    color: #FFF;
+    background-color: #000;
+    padding: 8px 22px;
+    height: 64px;
+    font-size: 18px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    font-family: Manrope, sans-serif;
+    border-radius: 5px;
+    border:0;
+    margin-top: 20px;
+}
+
+#onlypdfCheck{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#onlypdfCheck input{
+    height: 32px;
+    width: 11% !important;
+}
 
 .floatleft{
     float: left;

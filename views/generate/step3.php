@@ -4,7 +4,7 @@
 <form method="POST" action="/generate/step3" id="formList">
     <section id="containerData">
         <h2 id="title">3. Diseño de tu código QR</h2>
-        <div class="containerItem">
+       <!-- <div class="containerItem">
             <h3>Marco</h3>
             <div id="containerFrames" class="row">
                 <div class="containerImgFrame col">
@@ -55,44 +55,67 @@
                     <input type="checkbox" name="backgroundTransparent" class="input">
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="containerItem">
             <h3>Estilo del QR</h3>
             <div id="containerFrames" class="row">
+                <input type="text" name="dataType" id="dataType" hidden>
                 <div class="containerImgFrame col">
-                    <img src="/assets/img/design9.svg" alt="" class="imgFrame">
+                    <button class="btnTypeQR" data-type="square">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" style="fill: rgb(0, 0, 0);"><polygon points="48 32 48 16 40 16 40 24 32 24 32 32 40 32 40 40 48 40 48 48 56 48 56 56 48 56 48 64 64 64 64 32 48 32"></polygon><rect x="56" y="16" width="8" height="8"></rect><polygon points="32 24 32 16 16 16 16 32 24 32 24 24 32 24"></polygon><path d="M40,48V40H32V32H24v8H16V64H40V56h8V48Zm-8,8H24V48h8Z"></path></svg>
+                    </button>
+                    <button class="btnTypeQR" data-type="rounded">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" style="fill: rgb(0, 0, 0);"><rect x="56" y="16" width="8" height="8" rx="2"></rect><path d="M18,32h4a2,2,0,0,0,2-2V24h6a2,2,0,0,0,2-2V18a2,2,0,0,0-2-2H18a2,2,0,0,0-2,2V30A2,2,0,0,0,18,32Z"></path><path d="M48,50a2,2,0,0,0-2-2H40V42a2,2,0,0,0-2-2H32V34a2,2,0,0,0-2-2H26a2,2,0,0,0-2,2v6H18a2,2,0,0,0-2,2V62a2,2,0,0,0,2,2H38a2,2,0,0,0,2-2V56h6a2,2,0,0,0,2-2ZM32,56H24V48h8Z"></path><path d="M62,32H48V18a2,2,0,0,0-2-2H42a2,2,0,0,0-2,2v6H34a2,2,0,0,0-2,2v4a2,2,0,0,0,2,2h6v6a2,2,0,0,0,2,2h6v6a2,2,0,0,0,2,2h6v8H50a2,2,0,0,0-2,2v4a2,2,0,0,0,2,2H62a2,2,0,0,0,2-2V34A2,2,0,0,0,62,32Z"></path></svg>
+                    </button>
+                    <button class="btnTypeQR" data-type="extra-rounded">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" style="fill: rgb(0, 0, 0);"><rect x="56" y="16" width="8" height="8" rx="3"></rect><path d="M60,32H48V20a4,4,0,0,0-8,0v4H36a4,4,0,0,0,0,8h4v4a4,4,0,0,0,4,4h4v4a4,4,0,0,0,4,4h4v8H52a4,4,0,0,0,0,8h8a4,4,0,0,0,4-4V36A4,4,0,0,0,60,32Z"></path><path d="M20,32a4,4,0,0,0,4-4V24h4a4,4,0,0,0,0-8H20a4,4,0,0,0-4,4v8A4,4,0,0,0,20,32Z"></path><path d="M44,48H40V44a4,4,0,0,0-4-4H32V36a4,4,0,0,0-8,0v4H20a4,4,0,0,0-4,4V60a4,4,0,0,0,4,4H36a4,4,0,0,0,4-4V56h4a4,4,0,0,0,0-8ZM32,56H24V48h8Z"></path></svg>
+                    </button>
+                    <button class="btnTypeQR" data-type="dots">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" style="fill: rgb(0, 0, 0);"><circle cx="28" cy="36" r="4"></circle><circle cx="36" cy="44" r="4"></circle><circle cx="28" cy="44" r="4"></circle><circle cx="20" cy="44" r="4"></circle><circle cx="36" cy="60" r="4"></circle><circle cx="28" cy="60" r="4"></circle><circle cx="20" cy="60" r="4"></circle><circle cx="36" cy="52" r="4"></circle><circle cx="20" cy="52" r="4"></circle><circle cx="36" cy="28" r="4"></circle><circle cx="44" cy="20" r="4"></circle><circle cx="44" cy="28" r="4"></circle><circle cx="44" cy="36" r="4"></circle><circle cx="52" cy="36" r="4"></circle><circle cx="60" cy="20" r="4"></circle><circle cx="60" cy="36" r="4"></circle><circle cx="60" cy="44" r="4"></circle><circle cx="20" cy="28" r="4"></circle><circle cx="20" cy="20" r="4"></circle><circle cx="28" cy="20" r="4"></circle><circle cx="44" cy="52" r="4"></circle><circle cx="52" cy="44" r="4"></circle><circle cx="60" cy="52" r="4"></circle><circle cx="60" cy="60" r="4"></circle><circle cx="52" cy="60" r="4"></circle></svg>
+                    </button>
+                    <button class="btnTypeQR" data-type="classy">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" style="fill: rgb(0, 0, 0);"><path d="M48,32V16H42a2,2,0,0,0-2,2v6H34a2,2,0,0,0-2,2v6h8v8h8v8h8v8H50a2,2,0,0,0-2,2v6H62a2,2,0,0,0,2-2V32Z"></path><path d="M58,16a2,2,0,0,0-2,2v6h6a2,2,0,0,0,2-2V16Z"></path><path d="M24,30V24h6a2,2,0,0,0,2-2V16H18a2,2,0,0,0-2,2V32h6A2,2,0,0,0,24,30Z"></path><path d="M40,40H32V32H26a2,2,0,0,0-2,2v6H18a2,2,0,0,0-2,2V64H38a2,2,0,0,0,2-2V56h6a2,2,0,0,0,2-2V48H40ZM32,56H24V48h8Z"></path></svg>
+                    </button>
+                    <button class="btnTypeQR" data-type="classy-rounded">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" style="fill: rgb(0, 0, 0);"><path d="M47.91,32C48,31.67,48,16,48,16H46a6,6,0,0,0-6,6v2H38a6,6,0,0,0-6,6v2h8v8h8v8h8v8H54a6,6,0,0,0-6,6v2H58a6,6,0,0,0,6-6V32Z"></path><path d="M62,16a6,6,0,0,0-6,6v2h2a6,6,0,0,0,6-6V16Z"></path><path d="M24,26V24h2a6,6,0,0,0,6-6V16H22a6,6,0,0,0-6,6V32h2A6,6,0,0,0,24,26Z"></path><path d="M40,40H32V32H30a6,6,0,0,0-6,6v2H22a6,6,0,0,0-6,6V64H34a6,6,0,0,0,6-6V56h2a6,6,0,0,0,6-6V48H40ZM24,56V48h8v8Z"></path></svg>
+                    </button>
                 </div>
             </div>
             <div id="miniFrame" class="row">
                 <div>
                     <label for="color">Color de borde</label>
-                    <input type="text" name="color" class="input" />
+                    <input type="color" name="color" class="input" value="#000" />
                     <label for="background">Color de fondo</label>
-                    <input type="text" name="background" class="input">
+                    <input type="color" name="background" class="input" value="#ffffff">
                 </div>
                 <div>
                     <label for="color">Esquinas</label>
-                    <button class="btnCorner">
+                    <button class="btnCorner" data-external="square" data-internal="square">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M0,0V24H24V0ZM20,20H4V4H20Z"></path><rect fill="#940000" x="8" y="8" width="8" height="8"></rect></svg>
                     </button>
-                    <button class="btnCorner">
+                    <button class="btnCorner" data-external="square" data-internal="dot">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M0,0V24H24V0ZM20,20H4V4H20Z"></path><circle fill="#940000" cx="12" cy="12" r="4"></circle></svg>
                     </button>
-                    <button class="btnCorner">
+                    <button class="btnCorner" data-external="extra-rounded" data-internal="square">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M18,0H6A6,6,0,0,0,0,6V18a6,6,0,0,0,6,6H18a6,6,0,0,0,6-6V6A6,6,0,0,0,18,0Zm2,18a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H18a2,2,0,0,1,2,2Z"></path><rect fill="#940000" x="8" y="8" width="8" height="8"></rect></svg>
                     </button>
-                    <button class="btnCorner">
-                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M18,0H6A6,6,0,0,0,0,6V18a6,6,0,0,0,6,6H18a6,6,0,0,0,6-6V6A6,6,0,0,0,18,0Zm2,18a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H18a2,2,0,0,1,2,2Z"></path><rect fill="#940000" x="8" y="8" width="8" height="8"></rect></svg>
-                    </button>
-                    <button class="btnCorner">
+                    <button class="btnCorner" data-external="extra-rounded" data-internal="dot">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M18,0H6A6,6,0,0,0,0,6V18a6,6,0,0,0,6,6H18a6,6,0,0,0,6-6V6A6,6,0,0,0,18,0Zm2,18a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H18a2,2,0,0,1,2,2Z"></path><circle fill="#940000" cx="12" cy="12" r="4"></circle></svg>
                     </button>
-                    <button class="btnCorner">
+                    <button class="btnCorner" data-external="dot" data-internal="square">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,20a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"></path><rect fill="#940000" x="8" y="8" width="8" height="8"></rect></svg>
                     </button>
-                    <button class="btnCorner">
+                    <button class="btnCorner" data-external="dot" data-internal="dot">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,20a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"></path><circle fill="#940000" cx="12" cy="12" r="4"></circle></svg>
                     </button>
+                    <div>
+                        <label for="color">Color de borde</label>
+                        <input type="color" name="colorCorner" class="input" />
+                        <label for="background">Color de fondo</label>
+                        <input type="color" name="backgroundCorner" class="input">
+                    </div>
+                    <input type="text" name="dataExternal" id="dataExternal" hidden>
+                    <input type="text" name="dataInteral" id="dataInternal" hidden>
                 </div>
             </div>
         </div>
@@ -129,6 +152,18 @@
         var form = $('#formList');
         $('#next').click(function(){
             form.submit();
+        });
+        $('.btnTypeQR').click(function(e){
+            e.preventDefault();
+            var type = $(this).data('type');
+            $('#dataType').val(type);
+        });
+        $('.btnCorner').click(function(e){
+            e.preventDefault();
+            var external = $(this).data('external');
+            var internal = $(this).data('internal');
+            $('#dataExternal').val(external);
+            $('#dataInternal').val(internal);
         });
         $('#cancelar').click(function(e){
             e.preventDefault();

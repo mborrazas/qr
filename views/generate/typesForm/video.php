@@ -29,7 +29,7 @@
 
 <div class="containerItem">
     <h3 class="title">Video</h3>
-    <input type="file" name="video">
+    <input type="file" name="video" accept="video/*">
 </div>
 <div class="containerItem">
     <h3 class="title">Información</h3>
