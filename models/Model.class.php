@@ -21,6 +21,7 @@ class Model
             );
             return $this->conexion;
         }catch(Exception $e){
+            var_dump($e->getMessage());die;
             error_log($e->getMessage());
         }  
     }
