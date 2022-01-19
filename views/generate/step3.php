@@ -90,7 +90,7 @@
                         </div>
                     </div>
                     <div id="swatch">
-                        <input type="color" id="background" class="input" name="color" value="#ffffff" style="width:100% ">
+                        <input type="color" id="background" class="input" name="background" value="#ffffff" style="width:100% ">
                         <div class="info">
                             <h2>Color de fondo</h2>
                         </div>

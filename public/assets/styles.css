@@ -1528,15 +1528,15 @@ padding: 0px;
 }
 
 input[type="color"] {
-appearance: none;
--moz-appearance: none;
--webkit-appearance: none;
-background: none;
-border: 0;
-cursor: pointer;
-height: 15em;
-padding: 0;
-width: 15em;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    height: 15em;
+    padding: 0;
+    width: 15em;
 }
 
 .containerImgFrame .active, #miniFrame .active{
