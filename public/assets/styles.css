@@ -274,6 +274,11 @@ header img{
     overflow: hidden;
 }
 
+#step2 #containerData{
+    max-height: fit-content;
+    margin-bottom: 50px;
+}
+
 #step2 #containerData,
 #step3 #containerData,
 #step4 #containerData{
