@@ -19,9 +19,9 @@ class Model
                 $this->passwordDB,
                 $this->nameDB
             );
+            var_dump($this->conexion);die;
             return $this->conexion;
         }catch(Exception $e){
-            var_dump($e->getMessage());die;
             error_log($e->getMessage());
         }  
     }
