@@ -1539,6 +1539,10 @@ padding: 0;
 width: 15em;
 }
 
+.containerImgFrame .active, #miniFrame .active{
+    border: 3px solid #759DFE !important;
+    cursor: pointer;
+}
 
 #download{
     color: #FFF;

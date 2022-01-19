@@ -61,7 +61,7 @@
             <div id="containerFrames" class="row">
                 <input type="text" name="dataType" id="dataType" hidden>
                 <div class="containerImgFrame col">
-                    <button class="btnTypeQR" data-type="square">
+                    <button class="btnTypeQR active" data-type="square">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" style="fill: rgb(0, 0, 0);"><polygon points="48 32 48 16 40 16 40 24 32 24 32 32 40 32 40 40 48 40 48 48 56 48 56 56 48 56 48 64 64 64 64 32 48 32"></polygon><rect x="56" y="16" width="8" height="8"></rect><polygon points="32 24 32 16 16 16 16 32 24 32 24 24 32 24"></polygon><path d="M40,48V40H32V32H24v8H16V64H40V56h8V48Zm-8,8H24V48h8Z"></path></svg>
                     </button>
                     <button class="btnTypeQR" data-type="rounded">
@@ -82,15 +82,26 @@
                 </div>
             </div>
             <div id="miniFrame" class="row">
-                <div>
-                    <label for="color">Color de borde</label>
-                    <input type="color" name="color" class="input" value="#000" />
-                    <label for="background">Color de fondo</label>
-                    <input type="color" name="background" class="input" value="#ffffff">
+                <div id="containerStyles" style="width: 100%">
+                    <div id="swatch">
+                        <input type="color" id="background" class="input" name="color" value="#000" style="width:100% ">
+                        <div class="info">
+                            <h2>Color de borde</h2>
+                        </div>
+                    </div>
+                    <div id="swatch">
+                        <input type="color" id="background" class="input" name="color" value="#ffffff" style="width:100% ">
+                        <div class="info">
+                            <h2>Color de fondo</h2>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <label for="color">Esquinas</label>
-                    <button class="btnCorner" data-external="square" data-internal="square">
+                    <label for="color" style="
+    font-size: 21px;
+    text-align: center;
+    margin-top: 10px;">Esquinas</label>
+                    <button class="btnCorner active" data-external="square" data-internal="square">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M0,0V24H24V0ZM20,20H4V4H20Z"></path><rect fill="#940000" x="8" y="8" width="8" height="8"></rect></svg>
                     </button>
                     <button class="btnCorner" data-external="square" data-internal="dot">
@@ -108,11 +119,19 @@
                     <button class="btnCorner" data-external="dot" data-internal="dot">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,20a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"></path><circle fill="#940000" cx="12" cy="12" r="4"></circle></svg>
                     </button>
-                    <div>
-                        <label for="color">Color de borde</label>
-                        <input type="color" name="colorCorner" class="input" />
-                        <label for="background">Color de fondo</label>
-                        <input type="color" name="backgroundCorner" class="input">
+                    <div id="containerStyles">
+                        <div id="swatch">
+                            <input type="color" id="background" class="input" name="colorCorner" value="#000" style="width:100% ">
+                            <div class="info">
+                                <h2>Color de borde</h2>
+                            </div>
+                        </div>
+                        <div id="swatch">
+                            <input type="color" id="background" class="input" name="backgroundCorner" value="#000" style="width:100% ">
+                            <div class="info">
+                                <h2>Color de fondo</h2>
+                            </div>
+                        </div>
                     </div>
                     <input type="text" name="dataExternal" id="dataExternal" hidden>
                     <input type="text" name="dataInteral" id="dataInternal" hidden>
@@ -155,11 +174,15 @@
         });
         $('.btnTypeQR').click(function(e){
             e.preventDefault();
+            $(".btnTypeQR").removeClass("active");
+            $(this).addClass('active');
             var type = $(this).data('type');
             $('#dataType').val(type);
         });
         $('.btnCorner').click(function(e){
             e.preventDefault();
+            $(".btnCorner").removeClass("active");
+            $(this).addClass('active');
             var external = $(this).data('external');
             var internal = $(this).data('internal');
             $('#dataExternal').val(external);
