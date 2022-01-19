@@ -34,8 +34,8 @@ class PaymentsController
                 'quantity' => 1
             ]],
             'mode' => 'payment',
-            'success_url' => 'https://localhost/payment/success?session_id={CHECKOUT_SESSION_ID}',
-            'cancel_url' => 'https://localhost/payment/cancel?session_id={CHECKOUT_SESSION_ID}'
+            'success_url' => 'https://qrgen.mobi/payment/success?session_id={CHECKOUT_SESSION_ID}',
+            'cancel_url' => 'https://qrgen.mobi/payment/cancel?session_id={CHECKOUT_SESSION_ID}'
         ]);
         return generarHtml("generate/step5", ['session' => $session]);
     }
