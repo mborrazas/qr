@@ -8,7 +8,7 @@
             <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/generate/typesForm/" . $type . ".php"; ?>
         </section>
         <aside id="example">
-            <button id="closeExample">
+            <button id="closeExample" class="mobile">
                 <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 22px;"><path d="M13.41,12l5.3-5.29a1,1,0,1,0-1.42-1.42L12,10.59,6.71,5.29A1,1,0,0,0,5.29,6.71L10.59,12l-5.3,5.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l5.29,5.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
             </button>
             <h2>Ejemplo</h2>
