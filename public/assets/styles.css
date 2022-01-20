@@ -665,10 +665,10 @@ header img{
 }
 
 #bar .cancelar {
-    color: #000;
-    border: 2px solid #CDD1E0;
+    color: #000 !important;
+    border: 2px solid #CDD1E0 !important;
     box-shadow: none;
-    background-color: #FFF;
+    background-color: #FFF !important;
     transition: all 0.2s ease-in-out;
 }
 
