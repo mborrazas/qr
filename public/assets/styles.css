@@ -1496,6 +1496,7 @@ text-align: center;
 align-items: center;
 align-content: center;
 margin-top: 10px;
+    height: fit-content;
 }
 
 #swatch h2 {
