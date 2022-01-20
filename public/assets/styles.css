@@ -1720,4 +1720,104 @@ input[type="file"] {
     #containerStyles #swatch:last-of-type{
         margin-right: 0;
     }
+
+    #first{
+        display: block;
+        padding-top: 0px !important;
+        min-height: fit-content;
+        margin-bottom: 48px;
+        min-height: fit-content !important;
+    }
+
+    #first .leftHeader{
+        padding-top: 0;
+    }
+
+    #first .leftHeader #titleHeader{
+        width: 100%;
+        padding: 0;
+        padding-left: 17px;
+    }
+
+    #first .leftHeader #subtitleHeader{
+        margin-right: 0px;
+        margin-left: 17px;
+    }
+
+    #first .leftHeader button{
+        width: 100%;
+    }
+
+    #first .rightHeader{
+        display: none;
+    }
+
+    #home #step2 {
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    #home #step2 a{
+        padding-left: 16px;
+        padding-right: 16px;
+        display: block;
+        margin-bottom: 19px;
+    }
+
+    #home #step2 a button{
+        width: 100%;
+    }
+    #home #step2 #title{
+        font-size: 30px;
+    }
+
+    #home #step2 .row{
+        display: block;
+    }
+
+    #home #step4 #box{
+        width: 92%;
+    }
+
+    #home #step4 #top{
+        height:fit-content;
+    }
+
+    #home #step4 #top #title{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 23px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        height: 79px;
+    }
+
+    #home #step4 #top #list{
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    #home #step4 #top #list p{
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+    }
+
+    #home #step4 #bottom .item{
+        width: 47%;
+    }
+
+    #socialNetworks button{
+        padding: 0;
+    }
+
+    #step2 .btnDesign{
+        margin-bottom: 10px;
+    }
+
+    #step2 .hourSelect{
+        width: 30%;
+    }
 }

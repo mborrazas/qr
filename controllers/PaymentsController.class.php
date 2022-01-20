@@ -7,7 +7,9 @@ class PaymentsController
     public static function init($request)
     {
         if(!$_SESSION['user'] instanceof Usermodel){
-            throw new Exception('El usuario no es válido');
+            if(empty($qr['data'])){
+                header('Location: /generate/step4');
+            }
         }
         if(self::hasSuscription()){
             header('Location: /generate/step6');

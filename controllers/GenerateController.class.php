@@ -118,6 +118,9 @@ class GenerateController
     public static function step6()
     {
         $qr = self::getQR();
+        if(empty($qr['data'])){
+            header('Location: /generate');
+        }
         return generarHtml("generate/step6", ['url' => $qr['url'], 'design' => $qr['design']]);
     }
 
