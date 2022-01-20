@@ -158,8 +158,8 @@
         <section id="bar">
             <div class="row">
                 <div class="col">
-                    <button id="cancelar" class="desktop">Atras</button>
-                    <button id="cancelar" class="mobile btncancel">
+                    <button class="desktop cancelar">Atras</button>
+                    <button class="mobile btncancel cancelar">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 16 16" aria-hidden="true" style="font-size: 16px;"><path d="M9.69,14.56l-5.5-5.5a1.49,1.49,0,0,1,0-2.12l5.5-5.5,2.12,2.12L7.37,8l4.44,4.44Z"></path></svg>
                     </button>
                 </div>
@@ -201,7 +201,7 @@
 
             $('#<?php echo $type;?>').show();
 
-            $('#cancelar').click(function(e){
+            $('.cancelar').click(function(e){
                 e.preventDefault();
                 history.go(-1);
             });

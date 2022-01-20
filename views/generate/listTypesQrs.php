@@ -231,7 +231,7 @@
     <section id="bar">
         <div class="row">
             <div class="col">
-                <a id="cancelar" href="/">Cancelar</a>
+                <a class="cancelar" href="/">Cancelar</a>
             </div>
             <div class="col" id="steps">
                 <span class="step selected">Tipo de QR</span>

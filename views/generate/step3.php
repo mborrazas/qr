@@ -141,7 +141,10 @@
             </div>
         </div>
     </section>
-    <aside>
+    <aside id="example">
+        <button id="closeExample" class="mobile">
+            <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 22px;"><path d="M13.41,12l5.3-5.29a1,1,0,1,0-1.42-1.42L12,10.59,6.71,5.29A1,1,0,0,0,5.29,6.71L10.59,12l-5.3,5.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l5.29,5.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+        </button>
         <h2>Ejemplo</h2>
         <div id="containerExample">
             <div id="phone">
@@ -160,9 +163,14 @@
     <section id="bar">
         <div class="row">
             <div class="col">
-                <button id="cancelar">Atras</button>
-                <button id="cancelar">
+                <button class="desktop cancelar">Atras</button>
+                <button class="btncancel mobile cancelar">
                     <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 16 16" aria-hidden="true" style="font-size: 16px;"><path d="M9.69,14.56l-5.5-5.5a1.49,1.49,0,0,1,0-2.12l5.5-5.5,2.12,2.12L7.37,8l4.44,4.44Z"></path></svg>
+                </button>
+            </div>
+            <div class="mobile">
+                <button id="showExample">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 16 28" aria-hidden="true"><path d="M12,0 C14.209139,-4.05812251e-16 16,1.790861 16,4 L16,24 C16,26.209139 14.209139,28 12,28 L4,28 C1.790861,28 2.705415e-16,26.209139 0,24 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 L12,0 Z M12,2 L4,2 C2.9456382,2 2.08183488,2.81587779 2.00548574,3.85073766 L2,4 L2,24 C2,25.0543618 2.81587779,25.9181651 3.85073766,25.9945143 L4,26 L12,26 C13.0543618,26 13.9181651,25.1841222 13.9945143,24.1492623 L14,24 L14,4 C14,2.8954305 13.1045695,2 12,2 Z M8,20 C9.1045695,20 10,20.8954305 10,22 C10,23.1045695 9.1045695,24 8,24 C6.8954305,24 6,23.1045695 6,22 C6,20.8954305 6.8954305,20 8,20 Z"></path></svg>
                 </button>
             </div>
             <div class="col"  id="steps">
@@ -202,10 +210,19 @@
             $('#dataInternal').val(internal);
         });
         $('#<?php echo $type;?>').show();
-        $('#cancelar').click(function(e){
+        $('.cancelar').click(function(e){
             e.preventDefault();
             history.go(-1);
         });
+        $('#showExample').click(function(e) {
+            e.preventDefault();
+            $('#example').show();
+        });
+
+        $('#closeExample').click(function(e){
+            e.preventDefault();
+            $('#example').hide();
+        })
     });
 
 
