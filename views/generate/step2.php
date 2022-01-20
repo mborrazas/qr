@@ -157,7 +157,7 @@
                 <div class="col">
                     <button id="cancelar">Atras</button>
                 </div>
-                <div class="col">
+                <div class="col"  id="steps">
                     <span class="step disabled">Tipo de QR</span>
                     <span class="step selected">Contenido</span>
                     <span class="step disabled">Diseño del QR</span>

@@ -203,7 +203,7 @@
             <div class="col">
                 <a id="cancelar" href="/">Cancelar</a>
             </div>
-            <div class="col">
+            <div class="col" id="steps">
                 <span class="step selected">Tipo de QR</span>
                 <span class="step disabled">Contenido</span>
                 <span class="step disabled">Diseño del QR</span>

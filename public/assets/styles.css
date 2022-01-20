@@ -274,6 +274,9 @@ header img{
     overflow: hidden;
 }
 
+
+
+
 #step2 #containerData{
     max-height: fit-content;
     margin-bottom: 50px;
@@ -1607,4 +1610,79 @@ padding: 0;
 
 .hide {
 display: none;
+}
+
+
+@media(max-width: 720px){
+    #step1 #containerTypes{
+        width: 100%;
+        padding-right: 8%;
+        max-height: fit-content;
+        margin-bottom: 75px;
+        padding-left: 8%;
+    }
+
+    #step1 #containerTypes .row{
+        display: block;
+    }
+
+    #step1 #containerTypes .col{
+        width: 100%;
+        display: block;
+    }
+
+    #bar #cancelar{
+        display: inline-block;
+        margin: 0px;
+        font-size: 14px;
+        width: 71%;
+        height: 52px;
+        margin-top: 11px;
+        margin-left: 23px;
+    }
+
+    #bar #steps{
+        display: none;
+    }
+
+    #bar #next {
+        margin: 0px;
+        width: 71%;
+        font-size: 14px;
+        height: 52px;
+        margin-top: 11px;
+    }
+
+    #step2 aside,
+    #step1 aside,
+    #step3 aside{
+        display: none;
+    }
+
+    #containerData{
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+
+    #containerData #titleStep3{
+        padding-left: 26px;
+    }
+
+    #containerData #miniFrame{
+        display: block;
+    }
+
+    #step3 #containerFrames{
+        height: fit-content;
+    }
+    #step2 #containerData #titleForm{
+        margin-left: 28px;
+    }
+
+    #step3 #containerData .btnTypeQR{
+        margin-bottom: 20px;
+    }
+    #containerStyles #swatch:last-of-type{
+        margin-right: 0;
+    }
 }

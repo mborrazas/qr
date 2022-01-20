@@ -6,5 +6,5 @@
 <div class="containerItem">
     <h3 class="title">Información de la página web</h3>
     <label class="label" for="url">URL de la página web</label>
-    <input type="text" name="url" required placeholder="Ej. https://www.miweb.com/" />
+    <input type="url" name="url" required placeholder="Ej. https://www.miweb.com/" />
 </div>
