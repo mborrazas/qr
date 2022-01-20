@@ -24,7 +24,7 @@
                                 <img src="https://qrty.mobi/static/media/mockup_url.fc2d63b8.png" alt="">
                                 <h3>Tu tienda online</h3>
                                 <p id="subtitle">Compra productos al mejor precio</p>
-                                <button>Ver más</button>
+                                <button disabled>Ver más</button>
                             </div>
                         </div>
                         <div class="hide" id="listOfLinks">

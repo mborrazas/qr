@@ -6,46 +6,76 @@
         <h2 id="title">Elige un tipo de QR</h2>
         <div class="row">
             <div class="col element" data-type="website">
+                <div class="containerIcon">
+                    <i class="far fa-window-maximize"></i>
+                </div>
                 <h3 class="title">Página web</h3>
                 <p>Abre una URL</p>
             </div>
             <div class="col element seletType" data-type="listOfLinks">
+                <div class="containerIcon">
+                    <i class="fas fa-list"></i>
+                </div>
                 <h3 class="title">Listado de Enlaces</h3>
                 <p>Agrupa enlaces</p>
             </div>
             <div class="col element seletType" data-type="vcard">
+                <div class="containerIcon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
                 <h3 class="title">Vcard Plus</h3>
                 <p>Comparte detalles de contacto</p>
             </div>
             <div class="col element seletType" data-type="business">
+                <div class="containerIcon">
+                    <i class="fas fa-store"></i>
+                </div>
                 <h3 class="title">Negocio</h3>
                 <p>Comparte información sobre tu negocio</p>
             </div>
         </div>
         <div class="row">
             <div class="col element seletType" data-type="apps">
+                <div class="containerIcon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
                 <h3 class="title">Apps</h3>
                 <p>Redirecciona a una tienda de apps</p>
             </div>
             <div class="col element seletType" data-type="pdf">
+                <div class="containerIcon">
+                    <i class="far fa-file-pdf"></i>
+                </div>
                 <h3 class="title">PDF</h3>
                 <p>Muestra un PDF</p>
             </div>
             <div class="col element seletType" data-type="menu">
+                <div class="containerIcon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
                 <h3 class="title">Carta / Menú</h3>
                 <p>Despliega el menú de un restaurante o bar</p>
             </div>
             <div class="col element seletType" data-type="gallery">
+                <div class="containerIcon">
+                    <i class="fas fa-images"></i>
+                </div>
                 <h3 class="title">Imágenes</h3>
                 <p>Enseña una galería de imágenes</p>
             </div>
         </div>
         <div class="row">
             <div class="col element seletType" data-type="video">
+                <div class="containerIcon">
+                    <i class="fas fa-photo-video"></i>
+                </div>
                 <h3 class="title">Video</h3>
                 <p>Enseña un video</p>
             </div>
             <div class="col element seletType" data-type="wifi">
+                <div class="containerIcon">
+                    <i class="fas fa-wifi"></i>
+                </div>
                 <h3 class="title">WiFi</h3>
                 <p>Conecta a una red WiFi</p>
             </div>
@@ -71,7 +101,7 @@
                             <img src="https://qrty.mobi/static/media/mockup_url.fc2d63b8.png" alt="">
                             <h3>Tu tienda online</h3>
                             <p id="subtitle">Compra productos al mejor precio</p>
-                            <button>Ver más</button>
+                            <button disabled>Ver más</button>
                         </div>
                     </div>
                     <div class="hide" id="listOfLinks">

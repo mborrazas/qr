@@ -49,8 +49,10 @@
     </div>
     <div class="containerItem">
         <h3 class="title">Información de la lista de enlaces</h3>
-        <label class="label" for="imgTitle">Imagen</label>
-        <input type="file" name="imgTitle">
+        <label class="custom-file-upload">
+            <input type="file" name="imgTitle" accept="image/*">
+            <i class="fas fa-upload"></i> Selecciona una imagen
+        </label>
         <label class="label" for="title">Titulo</label>
         <input type="text" name="title" placeholder="">
         <label class="label" for="description">Descripción</label>

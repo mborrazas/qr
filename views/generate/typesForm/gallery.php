@@ -29,7 +29,10 @@
 
 <div class="containerItem">
     <h3 class="title">Imágenes</h3>
-    <input type="file" name="imgTitle[]" multiple  accept="image/*">
+    <label class="custom-file-upload">
+        <input type="file" name="imgTitle[]" multiple  accept="image/*">
+        <i class="fas fa-upload"></i> Selecciona las imagenes
+    </label>
 </div>
 <div class="containerItem">
     <h3 class="title">Información</h3>

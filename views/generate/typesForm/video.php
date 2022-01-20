@@ -28,8 +28,10 @@
 </div>
 
 <div class="containerItem">
-    <h3 class="title">Video</h3>
-    <input type="file" name="video" accept="video/*">
+    <label class="custom-file-upload">
+        <input type="file" name="video" accept="video/*">
+        <i class="fas fa-upload"></i> Selecciona el video
+    </label>
 </div>
 <div class="containerItem">
     <h3 class="title">Información</h3>

@@ -39,8 +39,10 @@
 
 <div class="containerItem">
     <h3 class="title">Informacion de la app</h3>
-    <label for="imgTitle" class="label">Imagen</label>
-    <input type="file" name="imgTitle">
+    <label class="custom-file-upload">
+        <input type="file" name="imgTitle"  accept="image/*">
+        <i class="fas fa-upload"></i> Selecciona una imagen
+    </label>
     <label class="label" for="nameApp">Nombre</label>
     <input type="text" name="nameApp" placeholder="Ej. Myfintech">
     <label class="label" for="appCompany">Desarolladores / Empresa</label>

@@ -39,8 +39,10 @@
 </div>
 
 <div class="containerItem">
-    <h3 class="title">Archivo pdf</h3>
-    <input type="file" name="pdf" accept="application/pdf" >
+    <label class="custom-file-upload">
+        <input type="file" name="pdf" accept="application/pdf" >
+        <i class="fas fa-upload"></i> Selecciona el pdf
+    </label>
     <div id="onlypdfCheck">
         <input type="checkbox" name="onlypdf">
         <label for="onlypdf">

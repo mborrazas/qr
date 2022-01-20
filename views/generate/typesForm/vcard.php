@@ -39,8 +39,10 @@
 
 <div class="containerItem">
     <h3 class="title">Información de la Vcard</h3>
-    <label for="imgTitle" class="label">Imagen</label>
-    <input type="file" name="imgTitle">
+    <label class="custom-file-upload">
+        <input type="file" name="imgTitle" accept="image/*">
+        <i class="fas fa-upload"></i> Selecciona una imagen
+    </label>
     <label for="peopleName" class="label">Nombre *</label>
     <input type="text" name="peopleName" placeholder="Ej. Pablo">
     <label for="peopleLastname" class="label">Apellido</label>

@@ -131,7 +131,7 @@ header img{
     color: #000;
 }
 #home #step4 #top #list{
-    width: 49%;
+    width: 57%;
     display: inline-block;
     vertical-align: middle;
     padding-top: 18px;
@@ -270,8 +270,9 @@ header img{
     width: 67%;
     padding-left: 16%;
     display: inline-block;
-    max-height: 90vh;
+    max-height: fit-content;
     overflow: hidden;
+    margin-bottom: 71px;
 }
 
 
@@ -360,6 +361,23 @@ header img{
     width: 100%;
     text-align: left;
     font-size: 12px;
+}
+
+#step1 .containerIcon{
+    background: #e5e8ee;
+    border-radius: 50%;
+    height: 89px;
+    width: 89px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 13px;
+    line-height: 100px;
+    color: white;
+}
+
+#step1 .containerIcon svg{
+    font-size: 28px;
+    filter: drop-shadow(1px 3px 2px rgb(0 0 0 / 0.4));
 }
 
 #step2 .title {
@@ -475,6 +493,7 @@ header img{
     margin-right: 7px;
     margin-top: 19px;
     border: 2px solid #CDD1E0;
+    margin-bottom: 21px;
 }
 
 #step3 .btnCorner svg{
@@ -508,6 +527,7 @@ header img{
     padding: 20px;
     background: #f1f1f1;
     border-radius: 6px;
+
 }
 
 #step3 #containerFrames {
@@ -538,6 +558,11 @@ header img{
 
 #step3 #miniFrame .one input {
     display: block;
+}
+
+#step3 .containerItem{
+    height: fit-content;
+    margin-bottom: 77px;
 }
 
 #step4 .containerItem .title {
@@ -1612,6 +1637,16 @@ padding: 0;
 display: none;
 }
 
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
 
 @media(max-width: 720px){
     #step1 #containerTypes{
