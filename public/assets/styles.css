@@ -1498,7 +1498,9 @@ align-content: center;
 margin-top: 10px;
     height: fit-content;
 }
-
+#swatch input{
+    height: 100px;
+}
 #swatch h2 {
 font-weight: normal;
 margin: 0;
