@@ -1578,6 +1578,15 @@ input[type="color"] {
     cursor: pointer;
 }
 
+#step3 #canvas svg{
+    background: transparent;
+    margin-top: 30%;
+}
+
+#step3 #canvas svg  rect:first-of-type{
+    height: 0;
+}
+
 #download{
     color: #FFF;
     background-color: #000;
@@ -1657,7 +1666,51 @@ input[type="file"] {
     color: #000;
 }
 
+.desktop{
+    display: inline-block !important;
+}
+
+.mobile{
+    display: none !important;
+}
+
+#closeExample{
+    background: transparent !important;
+    float: right;
+    margin-top: 4px;
+}
+
 @media(max-width: 720px){
+    .mobile{
+        display: inline-block !important;
+    }
+    .desktop{
+        display: none !important;
+    }
+
+    #bar .btncancel{
+        width: 0 !important;
+    }
+
+    #bar .btncancel svg{
+        height: 20px;
+    }
+
+    #bar #showExample{
+        background: transparent;
+        margin-top: 8px;
+        margin-right: 25px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    #step1 aside, #step2 aside, #step3 aside, #step4 aside{
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+        top: 37px;
+        background: #ffffffbd;
+    }
     #step1 #containerTypes{
         width: 100%;
         padding-right: 8%;
