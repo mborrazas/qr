@@ -86,16 +86,16 @@
             <div id="miniFrame" class="row">
                 <div id="containerStyles" style="width: 100%">
                     <div id="swatch">
-                        <input type="color" id="background" class="input" name="color" value="#000" style="width:100% ">
                         <div class="info">
                             <h2>Color de borde</h2>
                         </div>
+                        <input type="color" id="background" class="input" name="color" value="#000" style="width:100% ">
                     </div>
                     <div id="swatch">
-                        <input type="color" id="background" class="input" name="background" value="#ffffff" style="width:100% ">
                         <div class="info">
                             <h2>Color de fondo</h2>
                         </div>
+                        <input type="color" id="background" class="input" name="background" value="#ffffff" style="width:100% ">
                     </div>
                 </div>
                 <div>
@@ -123,16 +123,16 @@
                     </button>
                     <div id="containerStyles">
                         <div id="swatch">
-                            <input type="color" id="background" class="input" name="colorCorner" value="#000" style="width:100% ">
                             <div class="info">
                                 <h2>Color de borde</h2>
                             </div>
+                            <input type="color" id="background" class="input" name="colorCorner" value="#000" style="width:100% ">
                         </div>
                         <div id="swatch">
-                            <input type="color" id="background" class="input" name="backgroundCorner" value="#000" style="width:100% ">
                             <div class="info">
                                 <h2>Color de fondo</h2>
                             </div>
+                            <input type="color" id="background" class="input" name="backgroundCorner" value="#000" style="width:100% ">
                         </div>
                     </div>
                     <input type="text" name="dataExternal" id="dataExternal" hidden>

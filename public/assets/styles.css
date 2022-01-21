@@ -4,9 +4,10 @@ html {
     margin: 0px;
 }
 
-header nav{
-    background: white;
+nav {
+    background: white!important;
 }
+
 
 header{
     margin-bottom: 30px;
@@ -231,6 +232,7 @@ header img{
 #home .navbar {
     padding-left: 11%;
     padding-right: 11%;
+    background: white !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -493,7 +495,7 @@ header img{
     margin-right: 7px;
     margin-top: 19px;
     border: 2px solid #CDD1E0;
-    margin-bottom: 21px;
+    margin-bottom: 37px;
 }
 
 #step3 .btnCorner svg{
@@ -507,6 +509,77 @@ header img{
     padding-top: 40px;
 }
 
+#home #step5{
+    background-color: #e4e7ee;
+    padding-bottom: 20px;
+}
+
+#home #step5 .title{
+    padding-top: 32px;
+}
+
+#home #step5 .subtitle{
+    font-weight: 100;
+    margin-top: 19px;
+    font-size: 17px;
+}
+
+#home #buttons .element{
+    cursor: pointer;
+    border-radius: 9px;
+    width: 14%;
+    background: white;
+    font-size: 12px;
+    height: 85px;
+    box-shadow: rgb(205 209 224) 0px 4px 6px 0px;
+    display: inline-block;
+    margin-right: 19px;
+}
+
+#home #buttons .active{
+    border:2px solid rgb(117, 157, 254);
+}
+
+#home #step5 aside{
+    width: 28%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#home #buttons .element .containerIcon{
+    display: inline-block;
+    float: left;
+    background: rgb(205, 209, 224);
+    height: 57px;
+    width: 57px;
+    border-radius: 50%;
+    margin-top: 13px;
+}
+
+#home #buttons .element .containerIcon svg{
+    color: white;
+    font-size: 20px;
+    margin-top: 13px;
+}
+
+#home #buttons .element .title{
+    display: inline-block;
+    padding-top: 34px;
+    font-size: 13px;
+}
+
+#home #buttons .containerButtons{
+    height: 177px;
+}
+
+#home #buttons{
+    margin-top: 80px;
+}
+
+#home #buttons .containerButtons {
+    height: fit-content;
+    margin-bottom: 30px;
+}
 #step3 #titleStep3 {
     text-align: left;
     font-size: 20px;
@@ -1730,7 +1803,20 @@ input[type="file"] {
         width: 100%;
         display: block;
     }
+    #home #step5 aside{
+        width: 100%;
+    }
 
+    #home #buttons .element .title{
+        display: none;
+    }
+    #home #buttons .element{
+        width: 19%;
+    }
+    #home #buttons .element .containerIcon{
+        height: 50px;
+        width: 50px;
+    }
     #bar .cancelar{
         display: inline-block;
         margin: 0px !important;
@@ -1871,7 +1957,20 @@ input[type="file"] {
     }
 
     #home #step4 #bottom .item{
-        width: 47%;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-right: 0;
+        margin-bottom: 23px;
+    }
+
+    .navbar-brand{
+        width: 72%;
+    }
+
+
+    .navbar-brand img{
+        width: 29%;
     }
 
     #socialNetworks button{
