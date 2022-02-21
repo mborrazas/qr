@@ -1,10 +1,11 @@
+<?php $translate = Translate::getInstance(); ?>
 <input type="text" name="typeText" value='business' hidden />
 <div class="containerItem">
-    <h3 class="title">Nombre de tu código QR</h3>
-    <input type="text" name="qrName" placeholder="Ej. Mi código QR" required>
+    <h3 class="title"><?php $translate->echoTranslate('Nombre de tu código QR'); ?></h3>
+    <input type="text" name="qrName" placeholder="<?php $translate->echoTranslate('Ej. Mi código QR'); ?>" required>
 </div>
 <div class="containerItem">
-    <h3 class="title">Diseño</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Diseño'); ?></h3>
     <button type="button" class="btnDesign" data-first="#0E379A" data-second="#000000">
         <span style="background-color: #0E379A;"></span>
         <span style="background-color: #000000;"></span>
@@ -25,42 +26,42 @@
         <div id="swatch">
             <input type="color" id="background" name="background" value="#0E379A">
             <div class="info">
-                <h2>Color de fondo</h2>
+                <h2><?php $translate->echoTranslate('Color de fondo'); ?></h2>
             </div>
         </div>
         <div id="swatch">
             <input type="color" id="backgroundLink" name="backgroundLink" value="#00000">
             <div class="info">
-                <h2>Color secundario</h2>
+                <h2><?php $translate->echoTranslate('Color secundario'); ?></h2>
             </div>
         </div>
     </div>
 </div>
 <div class="containerItem">
-    <h3 class="title">Información del negocio</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Información del negocio'); ?></h3>
     <label class="custom-file-upload">
         <input type="file" name="imgTitle"  accept="image/*">
-        <i class="fas fa-upload"></i> Selecciona una imagen
+        <i class="fas fa-upload"></i> <?php $translate->echoTranslate('Selecciona una imagen'); ?>
     </label>
-    <label class="label" for="company">Empresa</label>
+    <label class="label" for="company"><?php $translate->echoTranslate('Empresa'); ?></label>
     <input type="text" name="company" placeholder="Ej. Empresa S.L">
-    <label class="label" for="title">Titulo</label>
+    <label class="label" for="title"><?php $translate->echoTranslate('Titulo'); ?></label>
     <input type="text" name="title" placeholder="Ej.">
-    <label class="label" for="subtitle">Subtitulo</label>
+    <label class="label" for="subtitle"><?php $translate->echoTranslate('Subtitulo'); ?></label>
     <input type="text" name="subtitle" placeholder="Ej.">
-    <button id="addButton">Agregar botón</button>
+    <button id="addButton"><?php $translate->echoTranslate('Agregar botón'); ?></button>
     <div id="containerButton">
-        <label class="label" for="textBoton">Botón</label>
-        <input type="text" name="textBoton" placeholder="Escribe aquí el texto del botón...">
+        <label class="label" for="textBoton"><?php $translate->echoTranslate('Botón'); ?></label>
+        <input type="text" name="textBoton" placeholder="<?php $translate->echoTranslate('Escribe aquí el texto del botón...'); ?>">
         <input type="text" name="url" placeholder="http://...">
     </div>
 </div>
 <div class="containerItem">
-    <h3 class="title titleHour">Horarios de apertura</h3>
+    <h3 class="title titleHour"><?php $translate->echoTranslate('Horarios de apertura'); ?></h3>
     <div class="hour">
         <div class="containerHourName">
             <input type="checkbox" name="checkMonday" class="checkbox">
-            <label class="label" for="monday">Lunes</label>
+            <label class="label" for="monday"><?php $translate->echoTranslate('Lunes'); ?></label>
         </div>
         <select name="openingHoursMonday"  class="hourSelect" disabled>
             <option value="00">00 hs</option>
@@ -120,7 +121,7 @@
     <div class="hour">
         <div class="containerHourName">
             <input type="checkbox" name="checkTuesday" class="checkbox">
-            <label class="label" for="tuesday">Martes</label>
+            <label class="label" for="tuesday"><?php $translate->echoTranslate('Martes'); ?></label>
         </div>
         <select name="openingHoursTuesday" class="hourSelect" disabled>
             <option value="00">00 hs</option>
@@ -180,7 +181,7 @@
     <div class="hour">
         <div class="containerHourName">
             <input type="checkbox" name="checkWednesday" class="checkbox">
-            <label class="label" for="wednesday">Miercoles</label>
+            <label class="label" for="wednesday"><?php $translate->echoTranslate('Miercoles'); ?></label>
         </div>
         <select name="openingHoursWednesday" class="hourSelect" disabled>
             <option value="00">00 hs</option>
@@ -240,7 +241,7 @@
     <div class="hour">
         <div class="containerHourName">
             <input type="checkbox" name="checkThursday" class="checkbox">
-            <label class="label" for="thursday">Jueves</label>
+            <label class="label" for="thursday"><?php $translate->echoTranslate('Jueves'); ?></label>
         </div>
         <select name="openingHoursThursday" class="hourSelect" disabled>
             <option value="00">00 hs</option>
@@ -300,7 +301,7 @@
     <div class="hour">
         <div class="containerHourName">
             <input type="checkbox" name="checkFriday" class="checkbox">
-            <label class="label" for="friday">Viernes</label>
+            <label class="label" for="friday"><?php $translate->echoTranslate('Viernes'); ?></label>
         </div>
         <select name="openingHoursFriday" class="hourSelect" disabled>
             <option value="00">00 hs</option>
@@ -360,7 +361,7 @@
     <div class="hour">
         <div class="containerHourName">
             <input type="checkbox" name="checkSaturday" class="checkbox">
-            <label class="label" for="saturday">Sabado</label>
+            <label class="label" for="saturday"><?php $translate->echoTranslate('Sabado'); ?></label>
         </div>
         <select name="openingHoursSaturday" class="hourSelect" disabled>
             <option value="00">00 hs</option>
@@ -420,7 +421,7 @@
     <div class="hour">
         <div class="containerHourName">
             <input type="checkbox" name="checkSunday" class="checkbox">
-            <label class="label" for="sunday">Domingo</label>
+            <label class="label" for="sunday"><?php $translate->echoTranslate('Domingo'); ?></label>
         </div>
         <select name="openingHoursSunday" class="hourSelect" disabled>
             <option value="00">00 hs</option>
@@ -479,26 +480,26 @@
     </div>
 </div>
 <div class="containerItem">
-    <h3 class="title">Ubicación</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Ubicación'); ?></h3>
     <div class="containerButton">
-        <label class="label" for="address">Dirección</label>
+        <label class="label" for="address"><?php $translate->echoTranslate('Dirección'); ?></label>
         <input type="text" name="address" placeholder="Ej. Calle 15">
-        <label class="label" for="numeration">Numeración</label>
+        <label class="label" for="numeration"><?php $translate->echoTranslate('Numeración'); ?></label>
         <input type="text" name="numeration" placeholder="">
-        <label class="label" for="postalCode">Código Postal</label>
+        <label class="label" for="postalCode"><?php $translate->echoTranslate('Código Postal'); ?></label>
         <input type="text" name="postalCode" placeholder="">
     </div>
     <div class="containerButton">
-        <label class="label" for="city">Ciudad</label>
+        <label class="label" for="city"><?php $translate->echoTranslate('Ciudad'); ?></label>
         <input type="text" name="city" placeholder="">
-        <label class="label" for="state">Estado</label>
+        <label class="label" for="state"><?php $translate->echoTranslate('Estado'); ?></label>
         <input type="text" name="state" placeholder="">
     </div>
-    <label class="label" for="country">Pais</label>
+    <label class="label" for="country"><?php $translate->echoTranslate('Pais'); ?></label>
     <input type="text" name="country" placeholder="">
 </div>
 <div class="containerItem">
-    <h3 class="title">Facilidades</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Facilidades'); ?></h3>
     <div id="containerButtons">
         <button class="item" data-info="wifi">
             <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 32 32" aria-hidden="true" style="font-size: 32px;"><path d="M16,20.55a2.73,2.73,0,1,0,2.73,2.72A2.72,2.72,0,0,0,16,20.55Z"></path><path d="M29.43,10.6a19.1,19.1,0,0,0-27,0,1,1,0,0,0,0,1.41,1,1,0,0,0,1.42,0A17.09,17.09,0,0,1,28,12a1,1,0,0,0,1.42,0A1,1,0,0,0,29.43,10.6Z"></path><path d="M15.92,9.89a14.12,14.12,0,0,0-10,4.17,1,1,0,0,0,0,1.41,1,1,0,0,0,1.42,0,12.19,12.19,0,0,1,17.26,0,1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.41A14.12,14.12,0,0,0,15.92,9.89Z"></path><path d="M15.92,14.79a9.26,9.26,0,0,0-6.59,2.73,1,1,0,0,0,0,1.41,1,1,0,0,0,1.42,0,7.32,7.32,0,0,1,10.34,0,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41A9.26,9.26,0,0,0,15.92,14.79Z"></path></svg>
@@ -555,26 +556,26 @@
     </div>
 </div>
 <div class="containerItem">
-    <h3 class="title">Información de contacto</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Información de contacto'); ?></h3>
     <div class="containerButton">
-        <label class="label" for="namePerson">Nombre</label>
+        <label class="label" for="namePerson"><?php $translate->echoTranslate('Nombre'); ?></label>
         <input type="text" name="namePerson" placeholder="Ej. ">
-        <label class="label" for="phone">Teléfono</label>
+        <label class="label" for="phone"><?php $translate->echoTranslate('Teléfono'); ?></label>
         <input type="text" name="phone" placeholder="Ej. 00 000 000">
     </div>
     <div class="containerButton">
-        <label class="label" for="email">Correo eléctronico</label>
+        <label class="label" for="email"><?php $translate->echoTranslate('Correo eléctronico'); ?></label>
         <input type="text" name="email" placeholder="Ej. ">
-        <label class="label" for="website">Página web</label>
+        <label class="label" for="website"><?php $translate->echoTranslate('Página web'); ?></label>
         <input type="text" name="website" placeholder="Ej.">
     </div>
 </div>
 <div class="containerItem">
-    <h3 class="title">Sobre la empresa</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Sobre la empresa'); ?></h3>
     <textarea name="aboutCompany" id="" cols="30" rows="10" placeholder=""></textarea>
 </div>
 <div class="containerItem">
-    <h3 class="title">Redes sociales</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Redes sociales'); ?></h3>
     <div id="containerLinksSocialNetwork">
         <div id="containerLinksSocialNetwork">
             <div id="dribble" class="item">

@@ -2,6 +2,8 @@ version: '3.8'
 services:
   php-apache-environment:
     container_name: php-apache
+    links:
+      - "memcached:memcached"
     build:
       context: ./app
       dockerfile: Dockerfile
@@ -9,3 +11,5 @@ services:
       - ./app:/var/www/html/
     ports:
       - 8000:80
+  memcached:
+    image: memcached

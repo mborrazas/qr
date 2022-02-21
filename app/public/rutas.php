@@ -1,5 +1,8 @@
 <?php
 require $_SERVER["DOCUMENT_ROOT"] . "/../routes/routes.class.php";
+require $_SERVER["DOCUMENT_ROOT"] . "/../helpers/translate.php";
+
+$data = new Translate();
 Routes::Add("/", "get", "HomeController::home");
 Routes::Add("/generate", "get", "GenerateController::listTypes");
 Routes::Add("/generate", "post", "GenerateController::requestListTypes");

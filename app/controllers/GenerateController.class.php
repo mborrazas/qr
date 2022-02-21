@@ -36,6 +36,7 @@ class GenerateController
         if (!isset($request['post']['type'])) {
             throw new Exception('El tipo es requerido.');
         }
+
         $qr = self::getQR();
         $qr['type'] = $request['post']['type'];
         self::saveQR($qr);

@@ -1,3 +1,4 @@
+<?php $translate = Translate::getInstance(); ?>
 <input type="text" name="typeText" value='gallery' hidden />
 <div class="containerItem">
     <h3 class="title">Nombre de tu código QR</h3>

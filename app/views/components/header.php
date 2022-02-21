@@ -17,10 +17,11 @@
                                 echo 'Menu';
                             endif; ?>
                         </a>
+                        <?php $translate = Translate::getInstance(); ?>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Administrador</a>
+                            <a class="dropdown-item" href="#"><?php $translate->echoTranslate('Administrador'); ?></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/logout">Cerrar sesión</a>
+                            <a class="dropdown-item" href="/logout"><?php $translate->echoTranslate('Cerrar sesión'); ?></a>
                         </div>
                     </li>
                 </ul>
