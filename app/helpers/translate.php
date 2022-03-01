@@ -8,8 +8,8 @@ class Translate{
     private $lang = 'EN';
     public function __construct() {
         self::$instance = $this;
-        $this->memcache = new Memcache();
-        $this->memcache->addServer('memcached',11211);
+       // $this->memcache = new Memcache();
+        //$this->memcache->addServer('memcached',11211);
     }
 
     public static function getInstance() {
@@ -28,6 +28,7 @@ class Translate{
     }
 
     private function translate(string $text){
+        return $text;
         $key = sha1($text.$this->lang);
         $cache = $this->memcache->get($key);
         if(!$cache){

@@ -1,10 +1,11 @@
+<?php $translate = Translate::getInstance(); ?>
 <input type="text" name="typeText" value='vcard' hidden />
 <div class="containerItem">
-    <h3 class="title">Nombre de tu código QR</h3>
-    <input type="text" name="qrName" placeholder="Ej. Mi código QR" required>
+    <h3 class="title"><?php $translate->echoTranslate('Nombre de tu código QR'); ?></h3>
+    <input type="text" name="qrName" placeholder="<?php $translate->echoTranslate('Ej. Mi código QR'); ?>" required>
 </div>
 <div class="containerItem">
-    <h3 class="title">Diseño</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Diseño'); ?></h3>
     <button type="button" class="btnDesign" data-first="#0E379A" data-second="#000000">
         <span style="background-color: #0E379A;"></span>
         <span style="background-color: #000000;"></span>
@@ -25,61 +26,61 @@
         <div id="swatch">
             <input type="color" id="background" name="background" value="#0E379A">
             <div class="info">
-                <h2>Color de fondo</h2>
+                <h2><?php $translate->echoTranslate('Color de fondo'); ?></h2>
             </div>
         </div>
         <div id="swatch">
             <input type="color" id="backgroundLink" name="backgroundLink" value="#00000">
             <div class="info">
-                <h2>Color secundario</h2>
+                <h2><?php $translate->echoTranslate('Color secundario'); ?></h2>
             </div>
         </div>
     </div>
 </div>
 
 <div class="containerItem">
-    <h3 class="title">Información de la Vcard</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Información de la Vcard'); ?></h3>
     <label class="custom-file-upload">
         <input type="file" name="imgTitle" accept="image/*">
-        <i class="fas fa-upload"></i> Selecciona una imagen
+        <i class="fas fa-upload"></i> <?php $translate->echoTranslate('Selecciona una imagen'); ?>
     </label>
-    <label for="peopleName" class="label">Nombre *</label>
+    <label for="peopleName" class="label"><?php $translate->echoTranslate('Nombre'); ?> *</label>
     <input type="text" name="peopleName" placeholder="Ej. Pablo">
-    <label for="peopleLastname" class="label">Apellido</label>
+    <label for="peopleLastname" class="label"><?php $translate->echoTranslate('Apellido'); ?></label>
     <input type="text" name="peopleLastname" placeholder="Ej. Pablo">
-    <h3 class="title">Información de contacto</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Información de contacto'); ?></h3>
     <div>
-        <label for="mobilePhone" class="label">Teléfono móvil</label>
+        <label for="mobilePhone" class="label"><?php $translate->echoTranslate('Teléfono móvil'); ?></label>
         <input type="text" name="mobilePhone" placeholder="Ej. 00 000 000">
-        <label for="phone" class="label">Teléfono Fijo</label>
+        <label for="phone" class="label"><?php $translate->echoTranslate('Teléfono Fijo'); ?></label>
         <input type="text" name="phone" placeholder="Ej. 00 000 000">
-        <label for="fax" class="label">Fax</label>
+        <label for="fax" class="label"><?php $translate->echoTranslate('Fax'); ?>Fax</label>
         <input type="text" name="fax" placeholder="Ej. 00 000 000">
     </div>
-    <label for="email" class="label">Correo electrónico</label>
+    <label for="email" class="label"><?php $translate->echoTranslate('Correo electrónico'); ?></label>
     <input type="email" name="email" placeholder="Ej. nombre@correo.com">
-    <label for="website" class="label">Página web personal</label>
+    <label for="website" class="label"><?php $translate->echoTranslate('Página web personal'); ?></label>
     <input type="text" name="website" placeholder="Ej. https://...">
     <div class="city">
-        <label for="city" class="label">Ciudad</label>
+        <label for="city" class="label"><?php $translate->echoTranslate('Ciudad'); ?></label>
         <input type="text" name="city" placeholder="">
-        <label for="state" class="label">Estado</label>
+        <label for="state" class="label"><?php $translate->echoTranslate('Estado'); ?></label>
         <input type="text" name="state" placeholder="">
     </div>
-    <label for="country" class="label">País</label>
+    <label for="country" class="label"><?php $translate->echoTranslate('País'); ?></label>
     <input type="text" name="country" placeholder="">
-    <h3>Empresa</h3>
+    <h3><?php $translate->echoTranslate('Empresa'); ?></h3>
     <div class="company">
-        <label for="company" class="label">Empresa</label>
+        <label for="company" class="label"><?php $translate->echoTranslate('Empresa'); ?></label>
         <input type="text" name="company" placeholder="Ej. Empresa S.L">
-        <label for="company" class="label">Profesión</label>
-        <input type="text" name="profession" placeholder="Ej. Tu profesión / puesto">
+        <label for="company" class="label"><?php $translate->echoTranslate('Profesión'); ?></label>
+        <input type="text" name="profession" placeholder="<?php $translate->echoTranslate('Ej. Tu profesión / puesto'); ?>">
     </div>
-    <h3>Resumen</h3>
+    <h3><?php $translate->echoTranslate('Resumen'); ?></h3>
     <textarea name="resume" id="" cols="30" rows="10" placeholder="Ej. Lorem Ipsum"></textarea>
 </div>
 <div class="containerItem">
-    <h3 class="title">Redes sociales</h3>
+    <h3 class="title"><?php $translate->echoTranslate('Redes sociales'); ?></h3>
     <div id="containerLinksSocialNetwork">
         <div id="dribble" class="item">
             <div class="logo">

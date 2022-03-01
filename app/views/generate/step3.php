@@ -5,61 +5,9 @@
 <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
 <form method="POST" action="/generate/step3" id="formList">
     <section id="containerData">
-        <h2 id="titleStep3">3. Diseño de tu código QR</h2>
-       <!-- <div class="containerItem">
-            <h3>Marco</h3>
-            <div id="containerFrames" class="row">
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design1.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design2.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design3.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design4.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design5.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design6.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design7.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design8.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design9.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design10.svg" alt="" class="imgFrame">
-                </div>
-                <div class="containerImgFrame col">
-                    <img src="/assets/img/design11.svg" alt="" class="imgFrame">
-                </div>
-            </div>
-            <div id="miniFrame" class="row">
-                <div class="col">
-                    <label for="color">Color</label>
-                    <input type="text" name="color" class="input" />
-                    <label for="background">Color de fondo</label>
-                    <input type="text" name="background" class="input">
-                </div>
-                <div class="col">
-                    <label for="color">Texto</label>
-                    <input type="text" placeholder="Scan me!" name="text"  class="input" />
-                    <label for="background">Fondo transparte</label>
-                    <input type="checkbox" name="backgroundTransparent" class="input">
-                </div>
-            </div>
-        </div> -->
+        <h2 id="titleStep3"><?php $translate->echoTranslate('3. Diseño de tu código QR'); ?></h2>
         <div class="containerItem">
-            <h3>Estilo del QR</h3>
+            <h3><?php $translate->echoTranslate('Estilo del QR'); ?></h3>
             <div id="containerFrames" class="row">
                 <input type="text" name="dataType" id="dataType" hidden>
                 <div class="containerImgFrame col">
@@ -87,13 +35,13 @@
                 <div id="containerStyles" style="width: 100%">
                     <div id="swatch">
                         <div class="info">
-                            <h2>Color de borde</h2>
+                            <h2><?php $translate->echoTranslate('Color de borde'); ?></h2>
                         </div>
                         <input type="color" id="background" class="input" name="color" value="#000" style="width:100% ">
                     </div>
                     <div id="swatch">
                         <div class="info">
-                            <h2>Color de fondo</h2>
+                            <h2><?php $translate->echoTranslate('Color de fondo'); ?></h2>
                         </div>
                         <input type="color" id="background" class="input" name="background" value="#ffffff" style="width:100% ">
                     </div>
@@ -102,7 +50,7 @@
                     <label for="color" style="
     font-size: 21px;
     text-align: center;
-    margin-top: 10px;">Esquinas</label>
+    margin-top: 10px;"><?php $translate->echoTranslate('Esquinas'); ?></label>
                     <button class="btnCorner active" data-external="square" data-internal="square">
                         <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000000" d="M0,0V24H24V0ZM20,20H4V4H20Z"></path><rect fill="#940000" x="8" y="8" width="8" height="8"></rect></svg>
                     </button>
@@ -124,13 +72,13 @@
                     <div id="containerStyles">
                         <div id="swatch">
                             <div class="info">
-                                <h2>Color de borde</h2>
+                                <h2><?php $translate->echoTranslate('Color de borde'); ?></h2>
                             </div>
                             <input type="color" id="background" class="input" name="colorCorner" value="#000" style="width:100% ">
                         </div>
                         <div id="swatch">
                             <div class="info">
-                                <h2>Color de fondo</h2>
+                                <h2><?php $translate->echoTranslate('Color de fondo'); ?></h2>
                             </div>
                             <input type="color" id="background" class="input" name="backgroundCorner" value="#000" style="width:100% ">
                         </div>
@@ -145,7 +93,7 @@
         <button id="closeExample" class="mobile">
             <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 22px;"><path d="M13.41,12l5.3-5.29a1,1,0,1,0-1.42-1.42L12,10.59,6.71,5.29A1,1,0,0,0,5.29,6.71L10.59,12l-5.3,5.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l5.29,5.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
         </button>
-        <h2>Ejemplo</h2>
+        <h2><?php $translate->echoTranslate('Ejemplo'); ?></h2>
         <div id="containerExample">
             <div id="phone">
                 <div id="noch">
@@ -163,7 +111,7 @@
     <section id="bar">
         <div class="row">
             <div class="col">
-                <button class="desktop cancelar">Atras</button>
+                <button class="desktop cancelar"><?php $translate->echoTranslate('Atras'); ?></button>
                 <button class="btncancel mobile cancelar">
                     <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 16 16" aria-hidden="true" style="font-size: 16px;"><path d="M9.69,14.56l-5.5-5.5a1.49,1.49,0,0,1,0-2.12l5.5-5.5,2.12,2.12L7.37,8l4.44,4.44Z"></path></svg>
                 </button>
@@ -174,13 +122,13 @@
                 </button>
             </div>
             <div class="col"  id="steps">
-                <span class="step disabled">Tipo de QR</span>
-                <span class="step disabled">Contenido</span>
-                <span class="step selected">Diseño del QR</span>
+                <span class="step disabled"><?php $translate->echoTranslate('Tipo de QR'); ?></span>
+                <span class="step disabled"><?php $translate->echoTranslate('Contenido'); ?></span>
+                <span class="step selected"><?php $translate->echoTranslate('Diseño del QR'); ?></span>
             </div>
             <div class="col">
                 <input type="text" hidden name="type" id="inputType" />
-                <input type="button" id="next" value="Siguiente">
+                <input type="button" id="next" value="<?php $translate->echoTranslate('Siguiente'); ?>">
             </div>
         </div>
     </section>

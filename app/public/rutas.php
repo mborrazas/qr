@@ -1,4 +1,6 @@
 <?php
+
+
 require $_SERVER["DOCUMENT_ROOT"] . "/../routes/routes.class.php";
 require $_SERVER["DOCUMENT_ROOT"] . "/../helpers/translate.php";
 

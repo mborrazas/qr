@@ -1,11 +1,12 @@
+<?php $translate = Translate::getInstance(); ?>
 <div>
     <input type="text" name="typeText" value='links' hidden />
     <div class="containerItem">
-        <h3 class="title">Nombre de tu código QR</h3>
-        <input type="text" name="qrName" placeholder="Ej. Mi código QR" required>
+        <h3 class="title"><?php $translate->echoTranslate('Nombre de tu código QR'); ?></h3>
+        <input type="text" name="qrName" placeholder="<?php $translate->echoTranslate('Ej. Mi código QR'); ?>" required>
     </div>
     <div class="containerItem">
-        <h3 class="title">Diseño</h3>
+        <h3 class="title"><?php $translate->echoTranslate('Diseño'); ?></h3>
         <button type="button" class="btnDesign" data-first="#2F6BFD" data-second="#FFFFFF" data-third="#0E379A">
             <span style="background-color: #2F6BFD;"></span>
             <span style="background-color: #FFFFFF;"></span>
@@ -30,49 +31,49 @@
             <div id="swatch">
                 <input type="color" id="background" name="background" value="#2F6BFD">
                 <div class="info">
-                    <h2>Color de fondo</h2>
+                    <h2><?php $translate->echoTranslate('Color de fondo'); ?></h2>
                 </div>
             </div>
             <div id="swatch">
                 <input type="color" id="backgroundLink" name="backgroundLink" value="#FFFFFF">
                 <div class="info">
-                    <h2>Color de fondo para link</h2>
+                    <h2><?php $translate->echoTranslate('Color de fondo para link'); ?></h2>
                 </div>
             </div>
             <div id="swatch">
                 <input type="color" id="colorText" name="colorText" value="#0E379A">
                 <div class="info">
-                    <h2>Color de texto para link</h2>
+                    <h2><?php $translate->echoTranslate('Color de texto para link'); ?></h2>
                 </div>
             </div>
         </div>
     </div>
     <div class="containerItem">
-        <h3 class="title">Información de la lista de enlaces</h3>
+        <h3 class="title"><?php $translate->echoTranslate('Información de la lista de enlaces'); ?></h3>
         <label class="custom-file-upload">
             <input type="file" name="imgTitle" accept="image/*">
-            <i class="fas fa-upload"></i> Selecciona una imagen
+            <i class="fas fa-upload"></i> <?php $translate->echoTranslate('Selecciona una imagen'); ?>
         </label>
-        <label class="label" for="title">Titulo</label>
+        <label class="label" for="title"><?php $translate->echoTranslate('Titulo'); ?></label>
         <input type="text" name="title" placeholder="">
-        <label class="label" for="description">Descripción</label>
+        <label class="label" for="description"><?php $translate->echoTranslate('Descripción'); ?></label>
         <input type="text" name="description" placeholder="">
     </div>
     <div class="containerItem">
-        <h3 class="title">Enlaces</h3>
+        <h3 class="title"><?php $translate->echoTranslate('Enlaces'); ?></h3>
         <div id="containerEnlaces">
             <div class="containerEnlace">
                 <div class="delete">
                     <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="color: rgb(254, 66, 86); font-size: 24px;"><path d="M20,7H4A1,1,0,0,0,4,9H5.08l.77,9.25a3,3,0,0,0,3,2.75h6.32a3,3,0,0,0,3-2.75L18.92,9H20a1,1,0,0,0,0-2ZM16.16,18.08a1,1,0,0,1-1,.92H8.84a1,1,0,0,1-1-.92L7.09,9h9.82Z"></path><path d="M9,5h6a1,1,0,0,0,0-2H9A1,1,0,0,0,9,5Z"></path></svg>
                 </div>
-                <label class="label" for="textoEnlace">Texto de enlace</label>
-                <input type="text" name="textoEnlace[]" placeholder="Escribe aquí el texto del enlace...">
-                <label class="label" for="url">URL</label>
+                <label class="label" for="textoEnlace"><?php $translate->echoTranslate('Texto de enlace'); ?></label>
+                <input type="text" name="textoEnlace[]" placeholder="<?php $translate->echoTranslate('Escribe aquí el texto del enlace'); ?>...">
+                <label class="label" for="url"><?php $translate->echoTranslate('URL'); ?></label>
                 <input type="text" name="url[]" placeholder="https://...">
                 <hr>
             </div>
         </div>
-        <button id="addLink">Añadir enlace</button>
+        <button id="addLink"><?php $translate->echoTranslate('Añadir enlace'); ?></button>
     </div>
     <div class="containerItem">
         <h3 class="title">Redes sociales</h3>
