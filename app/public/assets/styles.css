@@ -225,7 +225,7 @@ nav .dropdown-item:active {
 }
 
 
-#home .button {
+#home .button, #containerfaq button {
     color: #FFF;
     background-color: #000;
     padding: 8px 22px;
@@ -1728,6 +1728,31 @@ input[type="color"] {
     cursor: pointer;
 }
 
+#containerfaq{
+    padding-top: 20px;
+}
+
+#containerfaq .item{
+    width: 46%;
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#containerfaq .item h2{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+#containerfaq .item p{
+    font-size: 16px;
+    color: gray;
+}
+
+
 #step3 #canvas svg{
     background: transparent;
     margin-top: 30%;
@@ -2112,6 +2137,18 @@ input[type="file"] {
 
     #step2 .hourSelect{
         width: 30%;
+    }
+
+    #headerContact p{
+        width:91% !important;
+    }
+
+    #containerfaq .item{
+        width:89%;
+    }
+
+    #containerfaq button{
+        width: 50% !important;
     }
 
     header .navbar .navbar-toggler{
