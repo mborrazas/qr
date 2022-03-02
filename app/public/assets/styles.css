@@ -13,6 +13,15 @@ header{
     margin-bottom: 30px;
 }
 
+nav #generate{
+    background: #000;
+    width: 150px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
 #home header{
     background: transparent;
     border-bottom: 0px !important;
@@ -40,20 +49,48 @@ header img{
     font-family: Manrope, sans-serif;
 }
 
-#home #step4{
-    background: white;
-}
 
-#home #step2 h2{
+#home #step2 h2, #home #itermediaStep2 .title{
     padding-top: 6%;
     font-weight: 100;
 }
 
+#home .containerOptionsStep2 .row .col div{
+    display: inline-block;
+    margin-right: 10px;
+    height: 100%;
+    vertical-align: middle;
+}
+#home .containerOptionsStep2 div  svg{
+    height: 25px;
+}
+
+#home .containerOptionsStep2 .row{
+    padding: 0px 30%;
+    margin-top: 24px;
+}
+
+#home .containerOptionsStep2 .row:last-of-type{
+    margin-bottom: 20px;
+}
+#home .containerOptionsStep2 p{
+    display: inline-block;
+    text-align: left;
+    width: 84%;
+}
+
+#home .containerOptionsStep2 .row .col{
+    background: white;
+    margin-right: 20px;
+    border-radius: 4px;
+    padding-top: 21px;
+    padding-bottom: 16px;
+}
 #home #step2 button{
     margin-top: 31px;
 }
 
-#home #step2 #title{
+#home #step2 #title, #home #itermediaStep2 #title{
     margin-bottom: 60px;
 }
 
@@ -68,7 +105,6 @@ header img{
 #home #step4 #box{
     width: 62%;
     margin-top: 29px;
-    box-shadow: 1px 1px 6px 12px whitesmoke;
     margin: 0 auto;
     margin-top: 43px;
     border-radius: 18px;
@@ -183,6 +219,11 @@ header img{
     margin-bottom: 51px;
     margin-top: 26px;
 }
+
+nav .dropdown-item:active {
+    background: darkgray;
+}
+
 
 #home .button {
     color: #FFF;
@@ -321,6 +362,10 @@ header img{
     border-radius: 6px;
 }
 
+#home #step5{
+    background: white !important;
+}
+
 #step4 #loginContainer {
     display: none;
 }
@@ -429,10 +474,15 @@ header img{
 #step3,
 #step4,
 #step6,
+#itermediaStep2,
 #step5{
-    min-height: 100vh;
+    min-height: 86vh;
     background-color: #e4e7ee;
     text-align: center;
+}
+
+#step2 {
+    background: white;
 }
 
 #step2 h2 {
@@ -456,6 +506,7 @@ header img{
 }
 
 #step2 button,
+#itermediaStep2 button,
 #step3 button {
     color: #FFF;
     background-color: #000;
@@ -531,9 +582,32 @@ header img{
     background: white;
     font-size: 12px;
     height: 85px;
-    box-shadow: rgb(205 209 224) 0px 4px 6px 0px;
+    box-shadow: rgb(167 167 167) 0px 4px 6px 0px;
     display: inline-block;
     margin-right: 19px;
+    border: 1px solid #dbdbdb;
+}
+
+#home .itemStep6{
+    background: white;
+    width: 47%;
+    margin-top: 27px;
+    margin: 0 auto;
+    margin-top: 27px;
+    padding: 30px;
+    border-radius: 7px;
+}
+
+#home .itemStep6 h2{
+    text-align: left;
+    font-size: 20px;
+}
+
+#home .itemStep6 p{
+    text-align: left;
+    margin-top: 21px;
+    color: gray;
+    line-height: 27px;
 }
 
 #home #buttons .active{
@@ -1919,6 +1993,10 @@ input[type="file"] {
         width: 100%;
     }
     #home #step2 #title{
+        font-size: 30px;
+    }
+
+    #home #itermediaStep2 #title{
         font-size: 30px;
     }
 

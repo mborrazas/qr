@@ -1,3 +1,4 @@
+<?php $translate = Translate::getInstance(); ?>
 <?php $url = $parametros['url'];
 $design = $parametros['design'];
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
@@ -7,14 +8,14 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 <body class="container-fluid" id="step6">
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/header.php"; ?>
 <section id="containerData">
-    <h2 id="congratulations">¡Felicitaciones!</h2>
+    <h2 id="congratulations"><?php $translate->echoTranslate('¡Felicitaciones!'); ?></h2>
     <div class="containerItem">
-        <h3 class="title">¡Tu QR ya está listo!</h3>
-        <p class="subtitle">Descargalo y utilizalo.</p>
+        <h3 class="title"><?php $translate->echoTranslate('¡Tu QR ya está listo!'); ?></h3>
+        <p class="subtitle"><?php $translate->echoTranslate('Descargalo y utilizalo.'); ?></p>
     </div>
     <div class="containerItem" id="registerContainer">
           <div id="canvas"></div>
-        <button id="download">Descargar</button>
+        <button id="download"><?php $translate->echoTranslate('Descargar'); ?></button>
     </div>
    </section>
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/footer.php"; ?>

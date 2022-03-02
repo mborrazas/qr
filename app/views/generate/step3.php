@@ -1,3 +1,4 @@
+<?php $translate = Translate::getInstance(); ?>
 <?php require $_SERVER["DOCUMENT_ROOT"] . "/../views/components/head.php"; ?>
 <?php $type = $parametros['type'] ?? 'website';?>
 <body class="container-fluid" id="step3">
