@@ -32,26 +32,31 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                          style="max-height: 113px;overflow-y:scroll;">
-                        <a class="dropdown-item" href="/de/"> <?php $translate->echoTranslate('Alemán'); ?></a>
-                        <a class="dropdown-item" href="/cs/"><?php $translate->echoTranslate('Checo'); ?></a>
-                        <a class="dropdown-item" href="/ko/"><?php $translate->echoTranslate('Coreano'); ?></a>
-                        <a class="dropdown-item" href="/da/"><?php $translate->echoTranslate('Danés'); ?></a>
-                        <a class="dropdown-item" href="/sl/"><?php $translate->echoTranslate('Esloveno'); ?></a>
-                        <a class="dropdown-item" href="/es/"><?php $translate->echoTranslate('Español'); ?></a>
-                        <a class="dropdown-item" href="/fi/"><?php $translate->echoTranslate('Finés'); ?></a>
-                        <a class="dropdown-item" href="/fr/"><?php $translate->echoTranslate('Francés'); ?></a>
-                        <a class="dropdown-item" href="/en/"><?php $translate->echoTranslate('Inglés'); ?></a>
-                        <a class="dropdown-item" href="/it/"><?php $translate->echoTranslate('Italiano'); ?></a>
-                        <a class="dropdown-item" href="/ja/"><?php $translate->echoTranslate('Japonés'); ?></a>
-                        <a class="dropdown-item" href="/nl/"><?php $translate->echoTranslate('Neerlandés'); ?></a>
-                        <a class="dropdown-item" href="/no/"><?php $translate->echoTranslate('Noruego'); ?></a>
-                        <a class="dropdown-item" href="/pl/"><?php $translate->echoTranslate('Polaco'); ?></a>
-                        <a class="dropdown-item" href="/pt/"><?php $translate->echoTranslate('Portugués'); ?></a>
-                        <a class="dropdown-item" href="/ro/"><?php $translate->echoTranslate('Rumano'); ?></a>
-                        <a class="dropdown-item" href="/ru/"><?php $translate->echoTranslate('Ruso'); ?></a>
-                        <a class="dropdown-item" href="/sv/"><?php $translate->echoTranslate('Sueco'); ?></a>
-                        <a class="dropdown-item" href="/th/"><?php $translate->echoTranslate('Tailandés'); ?></a>
-                        <a class="dropdown-item" href="/tr/"><?php $translate->echoTranslate('Turco'); ?></a>
+                        <a class="dropdown-item" href="/BG/"> <?php $translate->echoTranslate('Bulgarian'); ?></a>
+                        <a class="dropdown-item" href="/CS/"> <?php $translate->echoTranslate('Czech'); ?></a>
+                        <a class="dropdown-item" href="/DA/"> <?php $translate->echoTranslate('Danish'); ?></a>
+                        <a class="dropdown-item" href="/DE/"> <?php $translate->echoTranslate('German'); ?></a>
+                        <a class="dropdown-item" href="/EL/"> <?php $translate->echoTranslate('Greek'); ?></a>
+                        <a class="dropdown-item" href="/EN-GB/"> <?php $translate->echoTranslate('English (British)'); ?></a>
+                        <a class="dropdown-item" href="/EN-US/"> <?php $translate->echoTranslate('English (American)'); ?></a>
+                        <a class="dropdown-item" href="/ET/"> <?php $translate->echoTranslate('Estonian'); ?></a>
+                        <a class="dropdown-item" href="/FI/"> <?php $translate->echoTranslate('Finnish'); ?></a>
+                        <a class="dropdown-item" href="/FR/"> <?php $translate->echoTranslate('French'); ?></a>
+                        <a class="dropdown-item" href="/HU/"> <?php $translate->echoTranslate('Hungarian'); ?></a>
+                        <a class="dropdown-item" href="/IT/"> <?php $translate->echoTranslate('Italian'); ?></a>
+                        <a class="dropdown-item" href="/JA/"> <?php $translate->echoTranslate('Japanese'); ?></a>
+                        <a class="dropdown-item" href="/LT/"> <?php $translate->echoTranslate('Lithuanian'); ?></a>
+                        <a class="dropdown-item" href="/LV/"> <?php $translate->echoTranslate('Latvian'); ?></a>
+                        <a class="dropdown-item" href="/NL/"> <?php $translate->echoTranslate('Dutch'); ?></a>
+                        <a class="dropdown-item" href="/PL/"> <?php $translate->echoTranslate('Polish'); ?></a>
+                        <a class="dropdown-item" href="/PT-BR/"> <?php $translate->echoTranslate('Portuguese (Brazilian)'); ?></a>
+                        <a class="dropdown-item" href="/PT-PT/"> <?php $translate->echoTranslate('Portuguese (European)'); ?></a>
+                        <a class="dropdown-item" href="/RO/"> <?php $translate->echoTranslate('Romanian'); ?></a>
+                        <a class="dropdown-item" href="/RU/"> <?php $translate->echoTranslate('Russian'); ?></a>
+                        <a class="dropdown-item" href="/SK/"> <?php $translate->echoTranslate('Slovak'); ?></a>
+                        <a class="dropdown-item" href="/SL/"> <?php $translate->echoTranslate('Slovenian'); ?></a>
+                        <a class="dropdown-item" href="/SV/"> <?php $translate->echoTranslate('Swedish'); ?></a>
+                        <a class="dropdown-item" href="/ZH/"> <?php $translate->echoTranslate('Chinese'); ?></a>
                     </div>
                 </div>
             </li>
@@ -59,13 +64,13 @@
                 <a class="nav-link" href="#step4"><?php $translate->echoTranslate('Precios'); ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#step4"><?php $translate->echoTranslate('FAQ'); ?></a>
+                <a class="nav-link" href="/faq"><?php $translate->echoTranslate('FAQ'); ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#step4"><?php $translate->echoTranslate('Iniciar Sesión'); ?></a>
+                <a class="nav-link" href=""><?php $translate->echoTranslate('Iniciar Sesión'); ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="generate" href="/generate"><?php $translate->echoTranslate('Registrate'); ?></a>
+                <a class="nav-link" id="generate" href=""><?php $translate->echoTranslate('Registrate'); ?></a>
             </li>
         </ul>
     </div>
@@ -93,7 +98,7 @@
     font-size: 38px;
     font-weight: 500;
 "> <?php $translate->echoTranslate('Qrgen hace la diferencia'); ?></h2>
-    <p style="
+    <p class="subtitle" style="
 
     font-size: 18px;
     line-height: 30px;
@@ -109,7 +114,7 @@
         crezca.'); ?></p>
     <div class="containerOptionsStep2 container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col ">
                 <div>
                     <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                          style="font-size: 24px;">
@@ -123,7 +128,7 @@
                     <?php $translate->echoTranslate('Códigos QR dinámicos, que puedes editar y gestionar cuando quieras.'); ?>
                 </p>
             </div>
-            <div class="col">
+            <div class="col ">
                 <p>
                     <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                          style="font-size: 24px;">
@@ -196,8 +201,9 @@
                 </p>
             </div>
         </div>
-        <button>Crear Qr</button>
+        <a href="/generate"> <button><?php $translate->echoTranslate('Crear Qr'); ?></button></a>
     </div>
+
 </section>
 <section id="step2">
     <h2 id="title"><?php $translate->echoTranslate('Crea tu QR en minutos'); ?></h2>
@@ -416,7 +422,7 @@
                     </div>
                     <div class="hide" id="website">
                         <div id="title">
-                            <p>http://www.tutiendaonline.com</p>
+                            <p><?php $translate->echoTranslate('http://www.tutiendaonline.com'); ?></p>
                         </div>
                         <div id="containerWebsite">
                             <img src="https://qrty.mobi/static/media/mockup_url.fc2d63b8.png" alt="">
@@ -429,7 +435,7 @@
                         <div id="title">
                             <img src="https://d25rq8gxcq0p71.cloudfront.net/dictionary-images/324/419665d2-74b7-49d4-b3c8-3aea253f966f.jpg"
                                  alt="" id="imgTitle">
-                            <h3>Fernando Rodriguez</h3>
+                            <h3><?php $translate->echoTranslate('Fernando Rodriguez'); ?></h3>
                             <p><?php $translate->echoTranslate('Recetas gourmet'); ?></p>
                         </div>
                         <div id="links">
@@ -451,8 +457,8 @@
                         <div id="backgroundTop"></div>
                         <div id="title">
                             <img src="https://qrty.mobi/static/media/mockup_vcard.d33781cd.png" alt="">
-                            <h3>Esteban Rodriguez</h3>
-                            <p>CEO</p>
+                            <h3><?php $translate->echoTranslate('Esteban Rodriguez'); ?></h3>
+                            <p><?php $translate->echoTranslate('CEO'); ?></p>
                         </div>
                         <div id="icons">
 
@@ -474,14 +480,14 @@
                     </div>
                     <div id="apps" class="hide">
                         <div id="title">
-                            <h3>Myfintech</h3>
+                            <h3><?php $translate->echoTranslate('Myfintech'); ?></h3>
                             <p><?php $translate->echoTranslate('Tech & Corp'); ?></p>
                         </div>
                         <div id="containerInfo">
                             <img src="" alt="">
                             <p><?php $translate->echoTranslate('Controla todas tus finanzas de forma sencilla y rápida.'); ?></p>
-                            <button>Google</button>
-                            <button>Apple</button>
+                            <button><?php $translate->echoTranslate('Google'); ?></button>
+                            <button><?php $translate->echoTranslate('Apple'); ?></button>
                         </div>
                     </div>
                     <div id="pdf" class="hide">
@@ -496,7 +502,7 @@
                     </div>
                     <div id="menu" class="hide">
                         <div id="title">
-                            <h2>Don Tulio</h2>
+                            <h2><?php $translate->echoTranslate('Don Tulio'); ?></h2>
                             <p><?php $translate->echoTranslate('100% Parrilla Argentina de campo'); ?></p>
                         </div>
                         <div id="containerMenu">
@@ -504,9 +510,9 @@
                             <div class="item">
                                 <img src="https://qrty.mobi/static/media/mockup_menu_bone.0c9fb772.png" alt="">
                                 <div class="info">
-                                    <p class="title">T-Bone</p>
+                                    <p class="title"><?php $translate->echoTranslate('T-Bone'); ?></p>
                                     <p class="subtitle"><?php $translate->echoTranslate('Nuestra pieza estrella. Una vez lo pruebas, no hay vuelta atrás.'); ?></p>
-                                    <p class="price">65€</p>
+                                    <p class="price"><?php $translate->echoTranslate('65€'); ?></p>
                                 </div>
                             </div>
                             <div class="item">
@@ -514,7 +520,7 @@
                                 <div class="info">
                                     <p class="title"><?php $translate->echoTranslate('Chorizo Criollo'); ?></p>
                                     <p class="subtitle"><?php $translate->echoTranslate('Nuestra pieza estrella. Una vez lo pruebas, no hay vuelta atrás.'); ?></p>
-                                    <p class="price">65€</p>
+                                    <p class="price"><?php $translate->echoTranslate('65€'); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -530,7 +536,7 @@
                         <div id="imagesGallery"></div>
                     </div>
                     <div class="hide" id="video">
-                        <p id="firstTitle">Tech & Corp</p>
+                        <p id="firstTitle"><?php $translate->echoTranslate('Tech & Corp'); ?></p>
                         <img src="https://qrty.mobi/static/media/mockup_business.8d33c299.png" alt="">
                         <p id="title"><?php $translate->echoTranslate('Manifiesto Tech & Corp'); ?></p>
                         <p id="subitle"><?php $translate->echoTranslate('Un decálogo para que conozcas todo lo que somos en Tech & Corp.'); ?></p>
@@ -586,7 +592,7 @@
 "><?php $translate->echoTranslate('¿Quieres saber más?')?></h2>
     <p style="font-size:13px;"><?php $translate->echoTranslate('Consulta nuestras preguntas frecuentes y quítate cualquier duda que puedas tener sobre los códigos QR.'); ?></p>
 
-    <button class="button" style=" margin:0 auto;margin-bottom:80px;width: 20%;font-weight: 100;"><?php $translate->echoTranslate('Sácate las dudas'); ?></button>
+    <a href="/faq"><button class="button" style=" margin:0 auto;margin-bottom:80px;width: 20%;font-weight: 100;"><?php $translate->echoTranslate('Sácate las dudas'); ?></button></a>
 </section>
 <footer style="padding: 0 27%;padding-top: 34px;">
     <div class="logoContainer" style="float:left;">
@@ -602,34 +608,34 @@
         </div>
         <div class="col">
             <p><?php $translate->echoTranslate('Empresa'); ?></p>
-            <a href=""  style="    color: gray;
+            <a href="/prices"  style="    color: gray;
     font-size: 11px;
     display: block;
     margin-bottom: 10px;"><?php $translate->echoTranslate('Precios'); ?></a>
-            <a href=""  style="    color: gray;
+            <a href="/conditions"  style="    color: gray;
     font-size: 11px;
     display: block;
     margin-bottom: 10px;"><?php $translate->echoTranslate('Condiciones de uso y Contratación'); ?></a>
-            <a href=""  style="    color: gray;
+            <a href="/privacity"  style="    color: gray;
     font-size: 11px;
     display: block;
     margin-bottom: 10px;"><?php $translate->echoTranslate('Política de privacidad'); ?></a>
-            <a href=""  style="    color: gray;
+            <a href="/cookies"  style="    color: gray;
     font-size: 11px;
     display: block;
     margin-bottom: 10px;"><?php $translate->echoTranslate('Política de cookies'); ?></a>
         </div>
         <div class="col">
             <p><?php $translate->echoTranslate('Ayuda'); ?></p>
-            <a href="" style="    color: gray;
+            <a href="/contact" style="    color: gray;
     font-size: 11px;
     display: block;
     margin-bottom: 10px;"><?php $translate->echoTranslate('Contáctanos'); ?></a>
-            <a href=""  style="    color: gray;
+            <a href="/faq"  style="    color: gray;
     font-size: 11px;
     display: block;
     margin-bottom: 10px;"><?php $translate->echoTranslate('FAQ'); ?></a>
-            <a href=""  style="    color: gray;
+            <a href="/cancelarSuscription"  style="    color: gray;
     font-size: 11px;
     display: block;
     margin-bottom: 10px;"><?php $translate->echoTranslate('Cancelar suscripción'); ?></a>
