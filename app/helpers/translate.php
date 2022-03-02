@@ -9,8 +9,10 @@ class Translate{
     public function __construct() {
         self::$instance = $this;
         $this->lang = $_SESSION['lang'] ? $_SESSION['lang'] :'ES';
-       // $this->memcache = new Memcache();
-        //$this->memcache->addServer('memcached',11211);
+        
+        $this->memcache = new Memcached();
+        $this->memcache->addServer('memcached',11211);
+
     }
 
     public static function getInstance() {
@@ -29,13 +31,13 @@ class Translate{
     }
 
     private function translate(string $text){
-        return $text;
+  
         $key = sha1($text.$this->lang);
-        //$cache = $this->memcache->get($key);
-        //if(!$cache){
+        $cache = $this->memcache->get($key);
+        if(!$cache){
             return $this->api($text);
-        //}
-        //return $cache;
+        }
+        return $cache;
     }
 
 
@@ -59,7 +61,7 @@ class Translate{
             $resp = curl_exec($curl);
             curl_close($curl);
             $value = json_decode($resp, true)['translations'][0]['text'];
-            //$this->memcache->set( sha1($text.$this->lang), $value);
+            $this->memcache->set( sha1($text.$this->lang), $value);
             return $value;
         }catch(Exception $e){
             return $text;
